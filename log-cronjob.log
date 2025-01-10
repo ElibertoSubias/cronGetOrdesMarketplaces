@@ -1,0 +1,1777 @@
+[2025-01-09 05:19:42.094 PM] info: 	Inicia Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 05:21:05.271 PM] info: 	Comienza exportado - 2025-01-09T17:21:05-06:00
+[2025-01-09 05:21:05.658 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:21:05-06:00
+[2025-01-09 05:21:05.661 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:21:05.662 PM] info: 	Comienza lectura de excel - Facturas_WALMART_sf_2025-01-09T172105-0600.xlsx
+[2025-01-09 05:21:26.765 PM] info: 	Comienza exportado - 2025-01-09T17:21:26-06:00
+[2025-01-09 05:21:27.183 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:21:27-06:00
+[2025-01-09 05:21:27.277 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:21:27.278 PM] info: 	Comienza lectura de excel - NotasDeCredito_WALMART_sf_2025-01-09T172126-0600.xlsx
+[2025-01-09 05:21:27.736 PM] error: 	undefined
+[2025-01-09 05:21:27.821 PM] info: 	Finaliza Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 05:21:27.821 PM] info: 	Inicia Conciliación de Tienda: ELEKTRA - Fuente: ELEKTRA / ELEKTRA
+[2025-01-09 05:23:49.314 PM] error: 	Error en login:TargetCloseError: Protocol error (Page.navigate): Target closed
+[2025-01-09 05:28:04.726 PM] error: 	Error al abrir Visor: TimeoutError: Timed out after waiting 52000ms
+[2025-01-09 05:28:04.727 PM] error: 	Error en Visor: No se encontro la url de descarga.
+[2025-01-09 05:28:58.977 PM] info: 	Comienza exportado - 2025-01-09T17:28:58-06:00
+[2025-01-09 05:28:59.302 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:28:59-06:00
+[2025-01-09 05:28:59.303 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:28:59.303 PM] info: 	Comienza lectura de excel - Facturas_ELEKTRA_sf_2025-01-09T172858-0600.xlsx
+[2025-01-09 05:28:59.323 PM] error: 	undefined
+[2025-01-09 05:28:59.563 PM] info: 	Finaliza Conciliación de Tienda: ELEKTRA - Fuente: ELEKTRA / ELEKTRA
+[2025-01-09 05:28:59.563 PM] info: 	Inicia Conciliación de Tienda: SEARS - Fuente: SEARS / SEARS
+[2025-01-09 05:32:31.321 PM] info: 	Inicia Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 05:34:00.614 PM] info: 	Comienza exportado - 2025-01-09T17:34:00-06:00
+[2025-01-09 05:34:01.145 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:34:01-06:00
+[2025-01-09 05:34:01.414 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:34:01.417 PM] info: 	Comienza lectura de excel - Pedidos_WALMART_sf_2025-01-09T173400-0600.xlsx
+[2025-01-09 05:34:20.054 PM] info: 	Comienza exportado - 2025-01-09T17:34:20-06:00
+[2025-01-09 05:34:20.344 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:34:20-06:00
+[2025-01-09 05:34:20.345 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:34:20.345 PM] info: 	Comienza lectura de excel - Facturas_WALMART_sf_2025-01-09T173420-0600.xlsx
+[2025-01-09 05:34:38.520 PM] info: 	Comienza exportado - 2025-01-09T17:34:38-06:00
+[2025-01-09 05:34:38.922 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:34:38-06:00
+[2025-01-09 05:34:39.022 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:34:39.022 PM] info: 	Comienza lectura de excel - NotasDeCredito_WALMART_sf_2025-01-09T173438-0600.xlsx
+[2025-01-09 05:36:56.997 PM] error: 	Error en login:Error: Navigating frame was detached
+[2025-01-09 05:36:56.999 PM] info: 	Comienza guardado Next-Cloud en BD - Token: 
+[2025-01-09 05:36:58.038 PM] error: 	Error al obtener detalle del pedido: 300667
+[2025-01-09 05:36:58.038 PM] error: 	undefined
+[2025-01-09 05:36:58.289 PM] error: 	Error al obtener detalle del pedido: 300668
+[2025-01-09 05:36:58.293 PM] error: 	undefined
+[2025-01-09 05:36:58.513 PM] error: 	Error al obtener detalle del pedido: 300978
+[2025-01-09 05:36:58.513 PM] error: 	undefined
+[2025-01-09 05:36:58.731 PM] error: 	Error al obtener detalle del pedido: 300983
+[2025-01-09 05:36:58.731 PM] error: 	undefined
+[2025-01-09 05:36:58.902 PM] error: 	Error al obtener detalle del pedido: 301218
+[2025-01-09 05:36:58.902 PM] error: 	undefined
+[2025-01-09 05:36:59.077 PM] error: 	Error al obtener detalle del pedido: 301228
+[2025-01-09 05:36:59.077 PM] error: 	undefined
+[2025-01-09 05:36:59.251 PM] error: 	Error al obtener detalle del pedido: 301792
+[2025-01-09 05:36:59.251 PM] error: 	undefined
+[2025-01-09 05:36:59.440 PM] error: 	Error al obtener detalle del pedido: 302151
+[2025-01-09 05:36:59.441 PM] error: 	undefined
+[2025-01-09 05:36:59.646 PM] error: 	Error al obtener detalle del pedido: 302152
+[2025-01-09 05:36:59.647 PM] error: 	undefined
+[2025-01-09 05:36:59.822 PM] error: 	Error al obtener detalle del pedido: 302456
+[2025-01-09 05:36:59.822 PM] error: 	undefined
+[2025-01-09 05:36:59.998 PM] error: 	Error al obtener detalle del pedido: 302497
+[2025-01-09 05:36:59.998 PM] error: 	undefined
+[2025-01-09 05:37:00.241 PM] error: 	Error al obtener detalle del pedido: 302777
+[2025-01-09 05:37:00.241 PM] error: 	undefined
+[2025-01-09 05:37:00.424 PM] error: 	Error al obtener detalle del pedido: 302913
+[2025-01-09 05:37:00.424 PM] error: 	undefined
+[2025-01-09 05:37:00.614 PM] error: 	Error al obtener detalle del pedido: 302997
+[2025-01-09 05:37:00.614 PM] error: 	undefined
+[2025-01-09 05:37:00.938 PM] error: 	Error al obtener detalle del pedido: 303417
+[2025-01-09 05:37:00.938 PM] error: 	undefined
+[2025-01-09 05:37:01.112 PM] error: 	Error al obtener detalle del pedido: 303949
+[2025-01-09 05:37:01.112 PM] error: 	undefined
+[2025-01-09 05:37:01.290 PM] error: 	Error al obtener detalle del pedido: 303950
+[2025-01-09 05:37:01.290 PM] error: 	undefined
+[2025-01-09 05:37:01.467 PM] error: 	Error al obtener detalle del pedido: 304008
+[2025-01-09 05:37:01.467 PM] error: 	undefined
+[2025-01-09 05:37:01.638 PM] error: 	Error al obtener detalle del pedido: 304402
+[2025-01-09 05:37:01.638 PM] error: 	undefined
+[2025-01-09 05:37:01.818 PM] error: 	Error al obtener detalle del pedido: 304548
+[2025-01-09 05:37:01.818 PM] error: 	undefined
+[2025-01-09 05:37:01.992 PM] error: 	Error al obtener detalle del pedido: 304811
+[2025-01-09 05:37:01.992 PM] error: 	undefined
+[2025-01-09 05:37:02.164 PM] error: 	Error al obtener detalle del pedido: 305752
+[2025-01-09 05:37:02.164 PM] error: 	undefined
+[2025-01-09 05:37:02.339 PM] error: 	Error al obtener detalle del pedido: 305842
+[2025-01-09 05:37:02.339 PM] error: 	undefined
+[2025-01-09 05:37:02.510 PM] error: 	Error al obtener detalle del pedido: 306852
+[2025-01-09 05:37:02.511 PM] error: 	undefined
+[2025-01-09 05:37:03.484 PM] error: 	Error al obtener detalle del pedido: 307137
+[2025-01-09 05:37:03.484 PM] error: 	undefined
+[2025-01-09 05:37:03.672 PM] error: 	Error al obtener detalle del pedido: 307458
+[2025-01-09 05:37:03.672 PM] error: 	undefined
+[2025-01-09 05:37:03.844 PM] error: 	Error al obtener detalle del pedido: 307470
+[2025-01-09 05:37:03.844 PM] error: 	undefined
+[2025-01-09 05:37:04.305 PM] error: 	Error al obtener detalle del pedido: 307560
+[2025-01-09 05:37:04.305 PM] error: 	undefined
+[2025-01-09 05:37:04.480 PM] error: 	Error al obtener detalle del pedido: 306458
+[2025-01-09 05:37:04.480 PM] error: 	undefined
+[2025-01-09 05:37:08.166 PM] error: 	Error al obtener detalle del pedido: 307120
+[2025-01-09 05:37:08.166 PM] error: 	undefined
+[2025-01-09 05:37:11.161 PM] error: 	Error al obtener detalle del pedido: 307122
+[2025-01-09 05:37:11.162 PM] error: 	undefined
+[2025-01-09 05:37:11.333 PM] error: 	Error al obtener detalle del pedido: 299500
+[2025-01-09 05:37:11.333 PM] error: 	undefined
+[2025-01-09 05:37:11.501 PM] error: 	Error al obtener detalle del pedido: 307402
+[2025-01-09 05:37:11.501 PM] error: 	undefined
+[2025-01-09 05:37:11.673 PM] error: 	Error al obtener detalle del pedido: 299501
+[2025-01-09 05:37:11.674 PM] error: 	undefined
+[2025-01-09 05:37:11.853 PM] error: 	Error al obtener detalle del pedido: 302145
+[2025-01-09 05:37:11.853 PM] error: 	undefined
+[2025-01-09 05:37:12.033 PM] error: 	Error al obtener detalle del pedido: 306317
+[2025-01-09 05:37:12.033 PM] error: 	undefined
+[2025-01-09 05:37:12.211 PM] error: 	Error al obtener detalle del pedido: 306318
+[2025-01-09 05:37:12.211 PM] error: 	undefined
+[2025-01-09 05:37:12.382 PM] error: 	Error al obtener detalle del pedido: 305593
+[2025-01-09 05:37:12.382 PM] error: 	undefined
+[2025-01-09 05:37:12.713 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:37:12.713 PM] error: 	undefined
+[2025-01-09 05:37:12.952 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:37:12.952 PM] error: 	undefined
+[2025-01-09 05:37:13.221 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:37:13.221 PM] error: 	undefined
+[2025-01-09 05:37:13.685 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:37:13.686 PM] error: 	undefined
+[2025-01-09 05:37:13.856 PM] error: 	Error al obtener detalle del pedido: 302436
+[2025-01-09 05:37:13.856 PM] error: 	undefined
+[2025-01-09 05:37:14.051 PM] error: 	Error al obtener detalle del pedido: 303666
+[2025-01-09 05:37:14.052 PM] error: 	undefined
+[2025-01-09 05:37:14.223 PM] error: 	Error al obtener detalle del pedido: 303667
+[2025-01-09 05:37:14.223 PM] error: 	undefined
+[2025-01-09 05:37:14.403 PM] error: 	Error al obtener detalle del pedido: 302354
+[2025-01-09 05:37:14.403 PM] error: 	undefined
+[2025-01-09 05:37:14.574 PM] error: 	Error al obtener detalle del pedido: 299902
+[2025-01-09 05:37:14.574 PM] error: 	undefined
+[2025-01-09 05:37:14.752 PM] error: 	Error al obtener detalle del pedido: 307141
+[2025-01-09 05:37:14.752 PM] error: 	undefined
+[2025-01-09 05:37:14.933 PM] error: 	Error al obtener detalle del pedido: 299369
+[2025-01-09 05:37:14.933 PM] error: 	undefined
+[2025-01-09 05:37:16.765 PM] error: 	Error al obtener detalle del pedido: 299370
+[2025-01-09 05:37:16.765 PM] error: 	undefined
+[2025-01-09 05:41:06.644 PM] error: 	Error al obtener detalle del pedido: 299755
+[2025-01-09 05:41:06.646 PM] error: 	undefined
+[2025-01-09 05:41:07.025 PM] error: 	Error al obtener detalle del pedido: 303232
+[2025-01-09 05:41:07.026 PM] error: 	undefined
+[2025-01-09 05:41:07.196 PM] error: 	Error al obtener detalle del pedido: 303623
+[2025-01-09 05:41:07.196 PM] error: 	undefined
+[2025-01-09 05:41:07.367 PM] error: 	Error al obtener detalle del pedido: 303965
+[2025-01-09 05:41:07.367 PM] error: 	undefined
+[2025-01-09 05:41:07.544 PM] error: 	Error al obtener detalle del pedido: 304376
+[2025-01-09 05:41:07.544 PM] error: 	undefined
+[2025-01-09 05:41:07.715 PM] error: 	Error al obtener detalle del pedido: 305700
+[2025-01-09 05:41:07.716 PM] error: 	undefined
+[2025-01-09 05:41:07.884 PM] error: 	Error al obtener detalle del pedido: 299950
+[2025-01-09 05:41:07.884 PM] error: 	undefined
+[2025-01-09 05:41:08.053 PM] error: 	Error al obtener detalle del pedido: 300264
+[2025-01-09 05:41:08.053 PM] error: 	undefined
+[2025-01-09 05:41:08.223 PM] error: 	Error al obtener detalle del pedido: 300318
+[2025-01-09 05:41:08.224 PM] error: 	undefined
+[2025-01-09 05:41:08.438 PM] error: 	Error al obtener detalle del pedido: 300446
+[2025-01-09 05:41:08.438 PM] error: 	undefined
+[2025-01-09 05:41:08.611 PM] error: 	Error al obtener detalle del pedido: 300660
+[2025-01-09 05:41:08.611 PM] error: 	undefined
+[2025-01-09 05:41:08.786 PM] error: 	Error al obtener detalle del pedido: 300661
+[2025-01-09 05:41:08.787 PM] error: 	undefined
+[2025-01-09 05:41:08.968 PM] error: 	Error al obtener detalle del pedido: 300828
+[2025-01-09 05:41:08.968 PM] error: 	undefined
+[2025-01-09 05:41:09.136 PM] error: 	Error al obtener detalle del pedido: 300858
+[2025-01-09 05:41:09.136 PM] error: 	undefined
+[2025-01-09 05:41:09.326 PM] error: 	Error al obtener detalle del pedido: 300859
+[2025-01-09 05:41:09.326 PM] error: 	undefined
+[2025-01-09 05:41:09.504 PM] error: 	Error al obtener detalle del pedido: 301035
+[2025-01-09 05:41:09.504 PM] error: 	undefined
+[2025-01-09 05:41:09.677 PM] error: 	Error al obtener detalle del pedido: 301036
+[2025-01-09 05:41:09.677 PM] error: 	undefined
+[2025-01-09 05:41:09.849 PM] error: 	Error al obtener detalle del pedido: 301046
+[2025-01-09 05:41:09.849 PM] error: 	undefined
+[2025-01-09 05:41:10.018 PM] error: 	Error al obtener detalle del pedido: 301152
+[2025-01-09 05:41:10.018 PM] error: 	undefined
+[2025-01-09 05:41:10.188 PM] error: 	Error al obtener detalle del pedido: 301470
+[2025-01-09 05:41:10.188 PM] error: 	undefined
+[2025-01-09 05:41:10.357 PM] error: 	Error al obtener detalle del pedido: 301600
+[2025-01-09 05:41:10.357 PM] error: 	undefined
+[2025-01-09 05:41:10.528 PM] error: 	Error al obtener detalle del pedido: 301755
+[2025-01-09 05:41:10.529 PM] error: 	undefined
+[2025-01-09 05:41:10.710 PM] error: 	Error al obtener detalle del pedido: 302343
+[2025-01-09 05:41:10.710 PM] error: 	undefined
+[2025-01-09 05:41:10.880 PM] error: 	Error al obtener detalle del pedido: 302358
+[2025-01-09 05:41:10.880 PM] error: 	undefined
+[2025-01-09 05:41:11.050 PM] error: 	Error al obtener detalle del pedido: 302503
+[2025-01-09 05:41:11.050 PM] error: 	undefined
+[2025-01-09 05:41:11.219 PM] error: 	Error al obtener detalle del pedido: 302584
+[2025-01-09 05:41:11.219 PM] error: 	undefined
+[2025-01-09 05:41:11.392 PM] error: 	Error al obtener detalle del pedido: 302586
+[2025-01-09 05:41:11.392 PM] error: 	undefined
+[2025-01-09 05:41:11.560 PM] error: 	Error al obtener detalle del pedido: 302658
+[2025-01-09 05:41:11.560 PM] error: 	undefined
+[2025-01-09 05:41:11.735 PM] error: 	Error al obtener detalle del pedido: 302663
+[2025-01-09 05:41:11.735 PM] error: 	undefined
+[2025-01-09 05:41:11.911 PM] error: 	Error al obtener detalle del pedido: 302709
+[2025-01-09 05:41:11.911 PM] error: 	undefined
+[2025-01-09 05:41:12.080 PM] error: 	Error al obtener detalle del pedido: 302721
+[2025-01-09 05:41:12.080 PM] error: 	undefined
+[2025-01-09 05:41:12.249 PM] error: 	Error al obtener detalle del pedido: 302998
+[2025-01-09 05:41:12.249 PM] error: 	undefined
+[2025-01-09 05:41:12.425 PM] error: 	Error al obtener detalle del pedido: 303275
+[2025-01-09 05:41:12.425 PM] error: 	undefined
+[2025-01-09 05:41:12.601 PM] error: 	Error al obtener detalle del pedido: 303355
+[2025-01-09 05:41:12.601 PM] error: 	undefined
+[2025-01-09 05:41:12.783 PM] error: 	Error al obtener detalle del pedido: 303701
+[2025-01-09 05:41:12.783 PM] error: 	undefined
+[2025-01-09 05:41:12.953 PM] error: 	Error al obtener detalle del pedido: 303962
+[2025-01-09 05:41:12.953 PM] error: 	undefined
+[2025-01-09 05:41:13.123 PM] error: 	Error al obtener detalle del pedido: 303968
+[2025-01-09 05:41:13.123 PM] error: 	undefined
+[2025-01-09 05:41:13.292 PM] error: 	Error al obtener detalle del pedido: 303981
+[2025-01-09 05:41:13.292 PM] error: 	undefined
+[2025-01-09 05:41:13.460 PM] error: 	Error al obtener detalle del pedido: 303986
+[2025-01-09 05:41:13.460 PM] error: 	undefined
+[2025-01-09 05:41:13.638 PM] error: 	Error al obtener detalle del pedido: 304063
+[2025-01-09 05:41:13.638 PM] error: 	undefined
+[2025-01-09 05:41:13.809 PM] error: 	Error al obtener detalle del pedido: 304074
+[2025-01-09 05:41:13.809 PM] error: 	undefined
+[2025-01-09 05:41:13.981 PM] error: 	Error al obtener detalle del pedido: 304092
+[2025-01-09 05:41:13.981 PM] error: 	undefined
+[2025-01-09 05:41:14.151 PM] error: 	Error al obtener detalle del pedido: 304093
+[2025-01-09 05:41:14.151 PM] error: 	undefined
+[2025-01-09 05:41:14.320 PM] error: 	Error al obtener detalle del pedido: 304152
+[2025-01-09 05:41:14.321 PM] error: 	undefined
+[2025-01-09 05:41:14.490 PM] error: 	Error al obtener detalle del pedido: 304165
+[2025-01-09 05:41:14.490 PM] error: 	undefined
+[2025-01-09 05:41:14.666 PM] error: 	Error al obtener detalle del pedido: 304284
+[2025-01-09 05:41:14.666 PM] error: 	undefined
+[2025-01-09 05:41:14.848 PM] error: 	Error al obtener detalle del pedido: 304285
+[2025-01-09 05:41:14.848 PM] error: 	undefined
+[2025-01-09 05:41:15.018 PM] error: 	Error al obtener detalle del pedido: 304357
+[2025-01-09 05:41:15.018 PM] error: 	undefined
+[2025-01-09 05:41:15.185 PM] error: 	Error al obtener detalle del pedido: 304386
+[2025-01-09 05:41:15.186 PM] error: 	undefined
+[2025-01-09 05:41:15.355 PM] error: 	Error al obtener detalle del pedido: 304403
+[2025-01-09 05:41:15.355 PM] error: 	undefined
+[2025-01-09 05:41:15.531 PM] error: 	Error al obtener detalle del pedido: 304429
+[2025-01-09 05:41:15.531 PM] error: 	undefined
+[2025-01-09 05:41:15.713 PM] error: 	Error al obtener detalle del pedido: 304473
+[2025-01-09 05:41:15.713 PM] error: 	undefined
+[2025-01-09 05:41:15.884 PM] error: 	Error al obtener detalle del pedido: 304517
+[2025-01-09 05:41:15.884 PM] error: 	undefined
+[2025-01-09 05:41:16.053 PM] error: 	Error al obtener detalle del pedido: 304542
+[2025-01-09 05:41:16.053 PM] error: 	undefined
+[2025-01-09 05:41:16.223 PM] error: 	Error al obtener detalle del pedido: 304543
+[2025-01-09 05:41:16.223 PM] error: 	undefined
+[2025-01-09 05:41:16.392 PM] error: 	Error al obtener detalle del pedido: 304788
+[2025-01-09 05:41:16.392 PM] error: 	undefined
+[2025-01-09 05:41:16.560 PM] error: 	Error al obtener detalle del pedido: 304805
+[2025-01-09 05:41:16.560 PM] error: 	undefined
+[2025-01-09 05:41:16.728 PM] error: 	Error al obtener detalle del pedido: 305695
+[2025-01-09 05:41:16.728 PM] error: 	undefined
+[2025-01-09 05:41:16.896 PM] error: 	Error al obtener detalle del pedido: 305753
+[2025-01-09 05:41:16.896 PM] error: 	undefined
+[2025-01-09 05:41:17.065 PM] error: 	Error al obtener detalle del pedido: 305754
+[2025-01-09 05:41:17.065 PM] error: 	undefined
+[2025-01-09 05:41:17.243 PM] error: 	Error al obtener detalle del pedido: 305755
+[2025-01-09 05:41:17.243 PM] error: 	undefined
+[2025-01-09 05:41:17.414 PM] error: 	Error al obtener detalle del pedido: 305992
+[2025-01-09 05:41:17.414 PM] error: 	undefined
+[2025-01-09 05:41:17.590 PM] error: 	Error al obtener detalle del pedido: 306003
+[2025-01-09 05:41:17.590 PM] error: 	undefined
+[2025-01-09 05:41:17.774 PM] error: 	Error al obtener detalle del pedido: 306004
+[2025-01-09 05:41:17.774 PM] error: 	undefined
+[2025-01-09 05:41:17.944 PM] error: 	Error al obtener detalle del pedido: 306203
+[2025-01-09 05:41:17.944 PM] error: 	undefined
+[2025-01-09 05:41:18.114 PM] error: 	Error al obtener detalle del pedido: 306337
+[2025-01-09 05:41:18.114 PM] error: 	undefined
+[2025-01-09 05:41:18.283 PM] error: 	Error al obtener detalle del pedido: 306345
+[2025-01-09 05:41:18.283 PM] error: 	undefined
+[2025-01-09 05:41:18.457 PM] error: 	Error al obtener detalle del pedido: 306444
+[2025-01-09 05:41:18.457 PM] error: 	undefined
+[2025-01-09 05:41:18.626 PM] error: 	Error al obtener detalle del pedido: 306445
+[2025-01-09 05:41:18.626 PM] error: 	undefined
+[2025-01-09 05:41:18.793 PM] error: 	Error al obtener detalle del pedido: 306494
+[2025-01-09 05:41:18.793 PM] error: 	undefined
+[2025-01-09 05:41:18.962 PM] error: 	Error al obtener detalle del pedido: 304056
+[2025-01-09 05:41:18.962 PM] error: 	undefined
+[2025-01-09 05:41:19.133 PM] error: 	Error al obtener detalle del pedido: 304349
+[2025-01-09 05:41:19.133 PM] error: 	undefined
+[2025-01-09 05:41:19.316 PM] error: 	Error al obtener detalle del pedido: 305585
+[2025-01-09 05:41:19.316 PM] error: 	undefined
+[2025-01-09 05:41:19.490 PM] error: 	Error al obtener detalle del pedido: 305760
+[2025-01-09 05:41:19.491 PM] error: 	undefined
+[2025-01-09 05:41:19.665 PM] error: 	Error al obtener detalle del pedido: 306495
+[2025-01-09 05:41:19.665 PM] error: 	undefined
+[2025-01-09 05:41:19.834 PM] error: 	Error al obtener detalle del pedido: 306518
+[2025-01-09 05:41:19.834 PM] error: 	undefined
+[2025-01-09 05:41:20.053 PM] error: 	Error al obtener detalle del pedido: 306582
+[2025-01-09 05:41:20.053 PM] error: 	undefined
+[2025-01-09 05:41:20.228 PM] error: 	Error al obtener detalle del pedido: 307732
+[2025-01-09 05:41:20.229 PM] error: 	undefined
+[2025-01-09 05:41:20.396 PM] error: 	Error al obtener detalle del pedido: 307746
+[2025-01-09 05:41:20.397 PM] error: 	undefined
+[2025-01-09 05:41:20.566 PM] error: 	Error al obtener detalle del pedido: 306127
+[2025-01-09 05:41:20.566 PM] error: 	undefined
+[2025-01-09 05:41:20.736 PM] error: 	Error al obtener detalle del pedido: 306131
+[2025-01-09 05:41:20.736 PM] error: 	undefined
+[2025-01-09 05:41:20.922 PM] error: 	Error al obtener detalle del pedido: 306446
+[2025-01-09 05:41:20.922 PM] error: 	undefined
+[2025-01-09 05:41:21.092 PM] error: 	Error al obtener detalle del pedido: 302999
+[2025-01-09 05:41:21.092 PM] error: 	undefined
+[2025-01-09 05:41:21.265 PM] error: 	Error al obtener detalle del pedido: 302406
+[2025-01-09 05:41:21.265 PM] error: 	undefined
+[2025-01-09 05:41:21.433 PM] error: 	Error al obtener detalle del pedido: 299026
+[2025-01-09 05:41:21.433 PM] error: 	undefined
+[2025-01-09 05:41:21.602 PM] error: 	Error al obtener detalle del pedido: 299027
+[2025-01-09 05:41:21.602 PM] error: 	undefined
+[2025-01-09 05:41:21.770 PM] error: 	Error al obtener detalle del pedido: 299375
+[2025-01-09 05:41:21.770 PM] error: 	undefined
+[2025-01-09 05:41:21.946 PM] error: 	Error al obtener detalle del pedido: 299376
+[2025-01-09 05:41:21.947 PM] error: 	undefined
+[2025-01-09 05:41:22.114 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:41:22.115 PM] error: 	undefined
+[2025-01-09 05:41:22.287 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:41:22.287 PM] error: 	undefined
+[2025-01-09 05:41:22.457 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:41:22.457 PM] error: 	undefined
+[2025-01-09 05:41:22.684 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:41:22.685 PM] error: 	undefined
+[2025-01-09 05:41:22.860 PM] error: 	Error al obtener detalle del pedido: 302656
+[2025-01-09 05:41:22.860 PM] error: 	undefined
+[2025-01-09 05:41:23.045 PM] error: 	Error al obtener detalle del pedido: 302657
+[2025-01-09 05:41:23.045 PM] error: 	undefined
+[2025-01-09 05:41:23.222 PM] error: 	Error al obtener detalle del pedido: 303354
+[2025-01-09 05:41:23.223 PM] error: 	undefined
+[2025-01-09 05:41:23.390 PM] error: 	Error al obtener detalle del pedido: 304126
+[2025-01-09 05:41:23.390 PM] error: 	undefined
+[2025-01-09 05:41:23.563 PM] error: 	Error al obtener detalle del pedido: 304334
+[2025-01-09 05:41:23.564 PM] error: 	undefined
+[2025-01-09 05:41:23.737 PM] error: 	Error al obtener detalle del pedido: 304335
+[2025-01-09 05:41:23.737 PM] error: 	undefined
+[2025-01-09 05:41:23.909 PM] error: 	Error al obtener detalle del pedido: 301299
+[2025-01-09 05:41:23.910 PM] error: 	undefined
+[2025-01-09 05:41:24.078 PM] error: 	Error al obtener detalle del pedido: 301680
+[2025-01-09 05:41:24.078 PM] error: 	undefined
+[2025-01-09 05:41:24.245 PM] error: 	Error al obtener detalle del pedido: 304729
+[2025-01-09 05:41:24.246 PM] error: 	undefined
+[2025-01-09 05:41:24.559 PM] error: 	Error al obtener detalle del pedido: 306183
+[2025-01-09 05:41:24.560 PM] error: 	undefined
+[2025-01-09 05:41:24.755 PM] error: 	Error al obtener detalle del pedido: 306467
+[2025-01-09 05:41:24.755 PM] error: 	undefined
+[2025-01-09 05:41:24.928 PM] error: 	Error al obtener detalle del pedido: 301679
+[2025-01-09 05:41:24.928 PM] error: 	undefined
+[2025-01-09 05:41:25.096 PM] error: 	Error al obtener detalle del pedido: 303655
+[2025-01-09 05:41:25.096 PM] error: 	undefined
+[2025-01-09 05:41:25.265 PM] error: 	Error al obtener detalle del pedido: 301614
+[2025-01-09 05:41:25.266 PM] error: 	undefined
+[2025-01-09 05:41:25.438 PM] error: 	Error al obtener detalle del pedido: 302544
+[2025-01-09 05:41:25.438 PM] error: 	undefined
+[2025-01-09 05:41:25.610 PM] error: 	Error al obtener detalle del pedido: 306272
+[2025-01-09 05:41:25.610 PM] error: 	undefined
+[2025-01-09 05:41:25.778 PM] error: 	Error al obtener detalle del pedido: 306611
+[2025-01-09 05:41:25.778 PM] error: 	undefined
+[2025-01-09 05:41:25.947 PM] error: 	Error al obtener detalle del pedido: 299552
+[2025-01-09 05:41:25.947 PM] error: 	undefined
+[2025-01-09 05:41:26.115 PM] error: 	Error al obtener detalle del pedido: 307076
+[2025-01-09 05:41:26.115 PM] error: 	undefined
+[2025-01-09 05:41:26.283 PM] error: 	Error al obtener detalle del pedido: 300352
+[2025-01-09 05:41:26.283 PM] error: 	undefined
+[2025-01-09 05:41:26.454 PM] error: 	Error al obtener detalle del pedido: 299257
+[2025-01-09 05:41:26.454 PM] error: 	undefined
+[2025-01-09 05:41:26.623 PM] error: 	Error al obtener detalle del pedido: 300075
+[2025-01-09 05:41:26.624 PM] error: 	undefined
+[2025-01-09 05:41:26.804 PM] error: 	Error al obtener detalle del pedido: 301298
+[2025-01-09 05:41:26.804 PM] error: 	undefined
+[2025-01-09 05:41:26.974 PM] error: 	Error al obtener detalle del pedido: 302638
+[2025-01-09 05:41:26.974 PM] error: 	undefined
+[2025-01-09 05:41:27.148 PM] error: 	Error al obtener detalle del pedido: 302639
+[2025-01-09 05:41:27.148 PM] error: 	undefined
+[2025-01-09 05:41:27.319 PM] error: 	Error al obtener detalle del pedido: 304024
+[2025-01-09 05:41:27.319 PM] error: 	undefined
+[2025-01-09 05:41:27.487 PM] error: 	Error al obtener detalle del pedido: 304119
+[2025-01-09 05:41:27.487 PM] error: 	undefined
+[2025-01-09 05:41:27.660 PM] error: 	Error al obtener detalle del pedido: 304120
+[2025-01-09 05:41:27.660 PM] error: 	undefined
+[2025-01-09 05:41:27.829 PM] error: 	Error al obtener detalle del pedido: 307079
+[2025-01-09 05:41:27.829 PM] error: 	undefined
+[2025-01-09 05:41:27.999 PM] error: 	Error al obtener detalle del pedido: 307743
+[2025-01-09 05:41:27.999 PM] error: 	undefined
+[2025-01-09 05:41:28.166 PM] error: 	Error al obtener detalle del pedido: 307744
+[2025-01-09 05:41:28.167 PM] error: 	undefined
+[2025-01-09 05:41:28.340 PM] error: 	Error al obtener detalle del pedido: 299256
+[2025-01-09 05:41:28.341 PM] error: 	undefined
+[2025-01-09 05:41:28.509 PM] error: 	Error al obtener detalle del pedido: 304801
+[2025-01-09 05:41:28.509 PM] error: 	undefined
+[2025-01-09 05:41:28.679 PM] error: 	Error al obtener detalle del pedido: 302400
+[2025-01-09 05:41:28.679 PM] error: 	undefined
+[2025-01-09 05:41:28.850 PM] error: 	Error al obtener detalle del pedido: 302401
+[2025-01-09 05:41:28.850 PM] error: 	undefined
+[2025-01-09 05:41:29.017 PM] error: 	Error al obtener detalle del pedido: 300583
+[2025-01-09 05:41:29.018 PM] error: 	undefined
+[2025-01-09 05:41:29.198 PM] error: 	Error al obtener detalle del pedido: 300659
+[2025-01-09 05:41:29.198 PM] error: 	undefined
+[2025-01-09 05:41:29.370 PM] error: 	Error al obtener detalle del pedido: 301219
+[2025-01-09 05:41:29.370 PM] error: 	undefined
+[2025-01-09 05:41:29.543 PM] error: 	Error al obtener detalle del pedido: 301220
+[2025-01-09 05:41:29.543 PM] error: 	undefined
+[2025-01-09 05:41:29.712 PM] error: 	Error al obtener detalle del pedido: 301221
+[2025-01-09 05:41:29.712 PM] error: 	undefined
+[2025-01-09 05:41:29.880 PM] error: 	Error al obtener detalle del pedido: 301222
+[2025-01-09 05:41:29.880 PM] error: 	undefined
+[2025-01-09 05:41:30.048 PM] error: 	Error al obtener detalle del pedido: 301223
+[2025-01-09 05:41:30.048 PM] error: 	undefined
+[2025-01-09 05:41:30.220 PM] error: 	Error al obtener detalle del pedido: 301224
+[2025-01-09 05:41:30.220 PM] error: 	undefined
+[2025-01-09 05:41:30.388 PM] error: 	Error al obtener detalle del pedido: 301429
+[2025-01-09 05:41:30.388 PM] error: 	undefined
+[2025-01-09 05:41:30.556 PM] error: 	Error al obtener detalle del pedido: 302662
+[2025-01-09 05:41:30.556 PM] error: 	undefined
+[2025-01-09 05:41:30.723 PM] error: 	Error al obtener detalle del pedido: 303651
+[2025-01-09 05:41:30.723 PM] error: 	undefined
+[2025-01-09 05:41:30.893 PM] error: 	Error al obtener detalle del pedido: 303708
+[2025-01-09 05:41:30.893 PM] error: 	undefined
+[2025-01-09 05:41:31.061 PM] error: 	Error al obtener detalle del pedido: 303709
+[2025-01-09 05:41:31.061 PM] error: 	undefined
+[2025-01-09 05:41:31.229 PM] error: 	Error al obtener detalle del pedido: 304333
+[2025-01-09 05:41:31.229 PM] error: 	undefined
+[2025-01-09 05:41:31.397 PM] error: 	Error al obtener detalle del pedido: 305829
+[2025-01-09 05:41:31.397 PM] error: 	undefined
+[2025-01-09 05:41:31.565 PM] error: 	Error al obtener detalle del pedido: 306193
+[2025-01-09 05:41:31.565 PM] error: 	undefined
+[2025-01-09 05:41:31.735 PM] error: 	Error al obtener detalle del pedido: 306821
+[2025-01-09 05:41:31.735 PM] error: 	undefined
+[2025-01-09 05:41:31.915 PM] error: 	Error al obtener detalle del pedido: 307326
+[2025-01-09 05:41:31.915 PM] error: 	undefined
+[2025-01-09 05:41:32.082 PM] error: 	Error al obtener detalle del pedido: 307538
+[2025-01-09 05:41:32.082 PM] error: 	undefined
+[2025-01-09 05:41:32.251 PM] error: 	Error al obtener detalle del pedido: 300263
+[2025-01-09 05:41:32.251 PM] error: 	undefined
+[2025-01-09 05:41:32.418 PM] error: 	Error al obtener detalle del pedido: 300269
+[2025-01-09 05:41:32.419 PM] error: 	undefined
+[2025-01-09 05:41:32.620 PM] error: 	Error al obtener detalle del pedido: 300582
+[2025-01-09 05:41:32.621 PM] error: 	undefined
+[2025-01-09 05:41:32.790 PM] error: 	Error al obtener detalle del pedido: 306939
+[2025-01-09 05:41:32.790 PM] error: 	undefined
+[2025-01-09 05:41:32.961 PM] error: 	Error al obtener detalle del pedido: 300139
+[2025-01-09 05:41:32.961 PM] error: 	undefined
+[2025-01-09 05:41:33.129 PM] error: 	Error al obtener detalle del pedido: 304451
+[2025-01-09 05:41:33.129 PM] error: 	undefined
+[2025-01-09 05:41:33.297 PM] error: 	Error al obtener detalle del pedido: 306454
+[2025-01-09 05:41:33.298 PM] error: 	undefined
+[2025-01-09 05:41:33.468 PM] error: 	Error al obtener detalle del pedido: 304323
+[2025-01-09 05:41:33.468 PM] error: 	undefined
+[2025-01-09 05:41:33.637 PM] error: 	Error al obtener detalle del pedido: 307613
+[2025-01-09 05:41:33.637 PM] error: 	undefined
+[2025-01-09 05:41:33.807 PM] error: 	Error al obtener detalle del pedido: 304356
+[2025-01-09 05:41:33.808 PM] error: 	undefined
+[2025-01-09 05:41:33.988 PM] error: 	Error al obtener detalle del pedido: 301280
+[2025-01-09 05:41:33.989 PM] error: 	undefined
+[2025-01-09 05:41:34.166 PM] error: 	Error al obtener detalle del pedido: 303471
+[2025-01-09 05:41:34.166 PM] error: 	undefined
+[2025-01-09 05:41:34.334 PM] error: 	Error al obtener detalle del pedido: 304450
+[2025-01-09 05:41:34.334 PM] error: 	undefined
+[2025-01-09 05:41:34.568 PM] error: 	Error al obtener detalle del pedido: 301622
+[2025-01-09 05:41:34.568 PM] error: 	undefined
+[2025-01-09 05:41:34.744 PM] error: 	Error al obtener detalle del pedido: 299759
+[2025-01-09 05:41:34.744 PM] error: 	undefined
+[2025-01-09 05:41:34.912 PM] error: 	Error al obtener detalle del pedido: 302392
+[2025-01-09 05:41:34.912 PM] error: 	undefined
+[2025-01-09 05:41:35.081 PM] error: 	Error al obtener detalle del pedido: 302844
+[2025-01-09 05:41:35.081 PM] error: 	undefined
+[2025-01-09 05:41:35.250 PM] error: 	Error al obtener detalle del pedido: 303170
+[2025-01-09 05:41:35.250 PM] error: 	undefined
+[2025-01-09 05:41:35.493 PM] error: 	Error al obtener detalle del pedido: 304419
+[2025-01-09 05:41:35.493 PM] error: 	undefined
+[2025-01-09 05:41:35.666 PM] error: 	Error al obtener detalle del pedido: 298995
+[2025-01-09 05:41:35.666 PM] error: 	undefined
+[2025-01-09 05:41:35.848 PM] error: 	Error al obtener detalle del pedido: 299810
+[2025-01-09 05:41:35.848 PM] error: 	undefined
+[2025-01-09 05:41:36.016 PM] error: 	Error al obtener detalle del pedido: 299859
+[2025-01-09 05:41:36.016 PM] error: 	undefined
+[2025-01-09 05:41:36.184 PM] error: 	Error al obtener detalle del pedido: 301482
+[2025-01-09 05:41:36.184 PM] error: 	undefined
+[2025-01-09 05:41:36.353 PM] error: 	Error al obtener detalle del pedido: 302197
+[2025-01-09 05:41:36.353 PM] error: 	undefined
+[2025-01-09 05:41:36.520 PM] error: 	Error al obtener detalle del pedido: 302760
+[2025-01-09 05:41:36.520 PM] error: 	undefined
+[2025-01-09 05:41:36.687 PM] error: 	Error al obtener detalle del pedido: 303643
+[2025-01-09 05:41:36.687 PM] error: 	undefined
+[2025-01-09 05:41:36.856 PM] error: 	Error al obtener detalle del pedido: 304055
+[2025-01-09 05:41:36.857 PM] error: 	undefined
+[2025-01-09 05:41:37.027 PM] error: 	Error al obtener detalle del pedido: 299509
+[2025-01-09 05:41:37.027 PM] error: 	undefined
+[2025-01-09 05:41:37.197 PM] error: 	Error al obtener detalle del pedido: 304340
+[2025-01-09 05:41:37.197 PM] error: 	undefined
+[2025-01-09 05:41:37.366 PM] error: 	Error al obtener detalle del pedido: 302756
+[2025-01-09 05:41:37.366 PM] error: 	undefined
+[2025-01-09 05:41:37.535 PM] error: 	Error al obtener detalle del pedido: 303985
+[2025-01-09 05:41:37.535 PM] error: 	undefined
+[2025-01-09 05:41:37.702 PM] error: 	Error al obtener detalle del pedido: 304437
+[2025-01-09 05:41:37.703 PM] error: 	undefined
+[2025-01-09 05:41:37.870 PM] error: 	Error al obtener detalle del pedido: 307745
+[2025-01-09 05:41:37.870 PM] error: 	undefined
+[2025-01-09 05:41:38.038 PM] error: 	Error al obtener detalle del pedido: 304094
+[2025-01-09 05:41:38.038 PM] error: 	undefined
+[2025-01-09 05:41:38.206 PM] error: 	Error al obtener detalle del pedido: 305596
+[2025-01-09 05:41:38.206 PM] error: 	undefined
+[2025-01-09 05:41:38.374 PM] error: 	Error al obtener detalle del pedido: 306459
+[2025-01-09 05:41:38.374 PM] error: 	undefined
+[2025-01-09 05:41:38.554 PM] error: 	Error al obtener detalle del pedido: 307142
+[2025-01-09 05:41:38.554 PM] error: 	undefined
+[2025-01-09 05:41:38.723 PM] error: 	Error al obtener detalle del pedido: 303233
+[2025-01-09 05:41:38.723 PM] error: 	undefined
+[2025-01-09 05:41:38.894 PM] error: 	Error al obtener detalle del pedido: 304167
+[2025-01-09 05:41:38.894 PM] error: 	undefined
+[2025-01-09 05:41:39.063 PM] error: 	Error al obtener detalle del pedido: 304062
+[2025-01-09 05:41:39.063 PM] error: 	undefined
+[2025-01-09 05:41:39.231 PM] error: 	Error al obtener detalle del pedido: 306443
+[2025-01-09 05:41:39.231 PM] error: 	undefined
+[2025-01-09 05:41:39.403 PM] error: 	Error al obtener detalle del pedido: 300076
+[2025-01-09 05:41:39.403 PM] error: 	undefined
+[2025-01-09 05:41:39.575 PM] error: 	Error al obtener detalle del pedido: 307114
+[2025-01-09 05:41:39.575 PM] error: 	undefined
+[2025-01-09 05:41:39.747 PM] error: 	Error al obtener detalle del pedido: 298850
+[2025-01-09 05:41:39.747 PM] error: 	undefined
+[2025-01-09 05:41:39.915 PM] error: 	Error al obtener detalle del pedido: 299198
+[2025-01-09 05:41:39.916 PM] error: 	undefined
+[2025-01-09 05:41:40.083 PM] error: 	Error al obtener detalle del pedido: 299483
+[2025-01-09 05:41:40.083 PM] error: 	undefined
+[2025-01-09 05:41:40.252 PM] error: 	Error al obtener detalle del pedido: 299556
+[2025-01-09 05:41:40.252 PM] error: 	undefined
+[2025-01-09 05:41:40.423 PM] error: 	Error al obtener detalle del pedido: 299747
+[2025-01-09 05:41:40.423 PM] error: 	undefined
+[2025-01-09 05:41:40.598 PM] error: 	Error al obtener detalle del pedido: 299748
+[2025-01-09 05:41:40.598 PM] error: 	undefined
+[2025-01-09 05:41:40.765 PM] error: 	Error al obtener detalle del pedido: 299749
+[2025-01-09 05:41:40.765 PM] error: 	undefined
+[2025-01-09 05:41:40.933 PM] error: 	Error al obtener detalle del pedido: 299751
+[2025-01-09 05:41:40.934 PM] error: 	undefined
+[2025-01-09 05:41:41.127 PM] error: 	Error al obtener detalle del pedido: 299753
+[2025-01-09 05:41:41.127 PM] error: 	undefined
+[2025-01-09 05:41:41.296 PM] error: 	Error al obtener detalle del pedido: 299865
+[2025-01-09 05:41:41.296 PM] error: 	undefined
+[2025-01-09 05:41:41.469 PM] error: 	Error al obtener detalle del pedido: 299866
+[2025-01-09 05:41:41.469 PM] error: 	undefined
+[2025-01-09 05:41:41.643 PM] error: 	Error al obtener detalle del pedido: 300366
+[2025-01-09 05:41:41.643 PM] error: 	undefined
+[2025-01-09 05:41:41.812 PM] error: 	Error al obtener detalle del pedido: 300665
+[2025-01-09 05:41:41.813 PM] error: 	undefined
+[2025-01-09 05:41:41.981 PM] error: 	Error al obtener detalle del pedido: 300666
+[2025-01-09 05:41:41.981 PM] error: 	undefined
+[2025-01-09 05:41:42.149 PM] error: 	Error al obtener detalle del pedido: 305701
+[2025-01-09 05:41:42.149 PM] error: 	undefined
+[2025-01-09 05:41:42.317 PM] error: 	Error al obtener detalle del pedido: 307701
+[2025-01-09 05:41:42.317 PM] error: 	undefined
+[2025-01-09 05:41:42.485 PM] error: 	Error al obtener detalle del pedido: 299371
+[2025-01-09 05:41:42.485 PM] error: 	undefined
+[2025-01-09 05:41:42.654 PM] error: 	Error al obtener detalle del pedido: 301799
+[2025-01-09 05:41:42.654 PM] error: 	undefined
+[2025-01-09 05:41:42.823 PM] error: 	Error al obtener detalle del pedido: 306083
+[2025-01-09 05:41:42.823 PM] error: 	undefined
+[2025-01-09 05:41:42.993 PM] error: 	Error al obtener detalle del pedido: 301481
+[2025-01-09 05:41:42.994 PM] error: 	undefined
+[2025-01-09 05:41:43.186 PM] error: 	Error al obtener detalle del pedido: 299035
+[2025-01-09 05:41:43.187 PM] error: 	undefined
+[2025-01-09 05:41:43.375 PM] error: 	Error al obtener detalle del pedido: 299551
+[2025-01-09 05:41:43.375 PM] error: 	undefined
+[2025-01-09 05:41:43.542 PM] error: 	Error al obtener detalle del pedido: 301276
+[2025-01-09 05:41:43.542 PM] error: 	undefined
+[2025-01-09 05:41:43.810 PM] error: 	Error al obtener detalle del pedido: 301277
+[2025-01-09 05:41:43.810 PM] error: 	undefined
+[2025-01-09 05:41:43.980 PM] error: 	Error al obtener detalle del pedido: 302570
+[2025-01-09 05:41:43.980 PM] error: 	undefined
+[2025-01-09 05:41:44.160 PM] error: 	Error al obtener detalle del pedido: 304283
+[2025-01-09 05:41:44.161 PM] error: 	undefined
+[2025-01-09 05:41:44.342 PM] error: 	Error al obtener detalle del pedido: 305783
+[2025-01-09 05:41:44.342 PM] error: 	undefined
+[2025-01-09 05:41:44.510 PM] error: 	Error al obtener detalle del pedido: 305835
+[2025-01-09 05:41:44.510 PM] error: 	undefined
+[2025-01-09 05:41:44.731 PM] error: 	Error al obtener detalle del pedido: 307568
+[2025-01-09 05:41:44.732 PM] error: 	undefined
+[2025-01-09 05:41:44.900 PM] error: 	Error al obtener detalle del pedido: 299911
+[2025-01-09 05:41:44.900 PM] error: 	undefined
+[2025-01-09 05:41:45.068 PM] error: 	Error al obtener detalle del pedido: 301430
+[2025-01-09 05:41:45.068 PM] error: 	undefined
+[2025-01-09 05:41:45.235 PM] error: 	Error al obtener detalle del pedido: 301872
+[2025-01-09 05:41:45.235 PM] error: 	undefined
+[2025-01-09 05:41:45.403 PM] error: 	Error al obtener detalle del pedido: 302352
+[2025-01-09 05:41:45.403 PM] error: 	undefined
+[2025-01-09 05:41:45.572 PM] error: 	Error al obtener detalle del pedido: 302353
+[2025-01-09 05:41:45.572 PM] error: 	undefined
+[2025-01-09 05:41:45.745 PM] error: 	Error al obtener detalle del pedido: 303126
+[2025-01-09 05:41:45.745 PM] error: 	undefined
+[2025-01-09 05:41:45.916 PM] error: 	Error al obtener detalle del pedido: 306781
+[2025-01-09 05:41:45.916 PM] error: 	undefined
+[2025-01-09 05:41:46.084 PM] error: 	Error al obtener detalle del pedido: 306782
+[2025-01-09 05:41:46.084 PM] error: 	undefined
+[2025-01-09 05:41:46.253 PM] error: 	Error al obtener detalle del pedido: 306783
+[2025-01-09 05:41:46.253 PM] error: 	undefined
+[2025-01-09 05:41:46.420 PM] error: 	Error al obtener detalle del pedido: 307173
+[2025-01-09 05:41:46.421 PM] error: 	undefined
+[2025-01-09 05:41:46.589 PM] error: 	Error al obtener detalle del pedido: 301112
+[2025-01-09 05:41:46.589 PM] error: 	undefined
+[2025-01-09 05:41:46.767 PM] error: 	Error al obtener detalle del pedido: 303274
+[2025-01-09 05:41:46.767 PM] error: 	undefined
+[2025-01-09 05:41:46.936 PM] error: 	Error al obtener detalle del pedido: 300039
+[2025-01-09 05:41:46.937 PM] error: 	undefined
+[2025-01-09 05:41:47.105 PM] error: 	Error al obtener detalle del pedido: 302908
+[2025-01-09 05:41:47.105 PM] error: 	undefined
+[2025-01-09 05:41:47.273 PM] error: 	Error al obtener detalle del pedido: 303961
+[2025-01-09 05:41:47.273 PM] error: 	undefined
+[2025-01-09 05:41:47.443 PM] error: 	Error al obtener detalle del pedido: 302269
+[2025-01-09 05:41:47.444 PM] error: 	undefined
+[2025-01-09 05:41:47.706 PM] error: 	Error al obtener detalle del pedido: 304132
+[2025-01-09 05:41:47.706 PM] error: 	undefined
+[2025-01-09 05:41:47.879 PM] error: 	Error al obtener detalle del pedido: 298646
+[2025-01-09 05:41:47.879 PM] error: 	undefined
+[2025-01-09 05:41:48.045 PM] error: 	Error al obtener detalle del pedido: 299006
+[2025-01-09 05:41:48.045 PM] error: 	undefined
+[2025-01-09 05:41:48.215 PM] error: 	Error al obtener detalle del pedido: 299065
+[2025-01-09 05:41:48.215 PM] error: 	undefined
+[2025-01-09 05:41:48.400 PM] error: 	Error al obtener detalle del pedido: 299108
+[2025-01-09 05:41:48.400 PM] error: 	undefined
+[2025-01-09 05:41:48.578 PM] error: 	Error al obtener detalle del pedido: 299122
+[2025-01-09 05:41:48.578 PM] error: 	undefined
+[2025-01-09 05:41:48.754 PM] error: 	Error al obtener detalle del pedido: 299308
+[2025-01-09 05:41:48.755 PM] error: 	undefined
+[2025-01-09 05:41:48.923 PM] error: 	Error al obtener detalle del pedido: 299436
+[2025-01-09 05:41:48.923 PM] error: 	undefined
+[2025-01-09 05:41:49.092 PM] error: 	Error al obtener detalle del pedido: 299437
+[2025-01-09 05:41:49.092 PM] error: 	undefined
+[2025-01-09 05:41:49.261 PM] error: 	Error al obtener detalle del pedido: 299444
+[2025-01-09 05:41:49.262 PM] error: 	undefined
+[2025-01-09 05:41:49.443 PM] error: 	Error al obtener detalle del pedido: 299499
+[2025-01-09 05:41:49.443 PM] error: 	undefined
+[2025-01-09 05:41:49.613 PM] error: 	Error al obtener detalle del pedido: 299568
+[2025-01-09 05:41:49.613 PM] error: 	undefined
+[2025-01-09 05:41:49.782 PM] error: 	Error al obtener detalle del pedido: 299597
+[2025-01-09 05:41:49.782 PM] error: 	undefined
+[2025-01-09 05:41:49.950 PM] error: 	Error al obtener detalle del pedido: 299598
+[2025-01-09 05:41:49.951 PM] error: 	undefined
+[2025-01-09 05:41:50.127 PM] error: 	Error al obtener detalle del pedido: 299606
+[2025-01-09 05:41:50.128 PM] error: 	undefined
+[2025-01-09 05:41:50.302 PM] error: 	Error al obtener detalle del pedido: 299607
+[2025-01-09 05:41:50.302 PM] error: 	undefined
+[2025-01-09 05:41:50.471 PM] error: 	Error al obtener detalle del pedido: 299613
+[2025-01-09 05:41:50.472 PM] error: 	undefined
+[2025-01-09 05:41:50.640 PM] error: 	Error al obtener detalle del pedido: 299614
+[2025-01-09 05:41:50.640 PM] error: 	undefined
+[2025-01-09 05:41:50.809 PM] error: 	Error al obtener detalle del pedido: 299615
+[2025-01-09 05:41:50.809 PM] error: 	undefined
+[2025-01-09 05:41:50.977 PM] error: 	Error al obtener detalle del pedido: 299616
+[2025-01-09 05:41:50.977 PM] error: 	undefined
+[2025-01-09 05:41:51.150 PM] error: 	Error al obtener detalle del pedido: 299649
+[2025-01-09 05:41:51.150 PM] error: 	undefined
+[2025-01-09 05:41:51.318 PM] error: 	Error al obtener detalle del pedido: 299650
+[2025-01-09 05:41:51.318 PM] error: 	undefined
+[2025-01-09 05:41:51.487 PM] error: 	Error al obtener detalle del pedido: 299652
+[2025-01-09 05:41:51.487 PM] error: 	undefined
+[2025-01-09 05:41:51.657 PM] error: 	Error al obtener detalle del pedido: 299653
+[2025-01-09 05:41:51.657 PM] error: 	undefined
+[2025-01-09 05:41:51.831 PM] error: 	Error al obtener detalle del pedido: 299818
+[2025-01-09 05:41:51.831 PM] error: 	undefined
+[2025-01-09 05:41:52.007 PM] error: 	Error al obtener detalle del pedido: 299819
+[2025-01-09 05:41:52.007 PM] error: 	undefined
+[2025-01-09 05:41:52.174 PM] error: 	Error al obtener detalle del pedido: 299912
+[2025-01-09 05:41:52.174 PM] error: 	undefined
+[2025-01-09 05:41:52.342 PM] error: 	Error al obtener detalle del pedido: 299943
+[2025-01-09 05:41:52.343 PM] error: 	undefined
+[2025-01-09 05:41:52.511 PM] error: 	Error al obtener detalle del pedido: 299949
+[2025-01-09 05:41:52.511 PM] error: 	undefined
+[2025-01-09 05:41:52.682 PM] error: 	Error al obtener detalle del pedido: 306699
+[2025-01-09 05:41:52.682 PM] error: 	undefined
+[2025-01-09 05:41:52.866 PM] error: 	Error al obtener detalle del pedido: 306887
+[2025-01-09 05:41:52.866 PM] error: 	undefined
+[2025-01-09 05:41:53.042 PM] error: 	Error al obtener detalle del pedido: 307239
+[2025-01-09 05:41:53.042 PM] error: 	undefined
+[2025-01-09 05:41:53.216 PM] error: 	Error al obtener detalle del pedido: 307244
+[2025-01-09 05:41:53.216 PM] error: 	undefined
+[2025-01-09 05:41:53.387 PM] error: 	Error al obtener detalle del pedido: 307245
+[2025-01-09 05:41:53.388 PM] error: 	undefined
+[2025-01-09 05:41:53.563 PM] error: 	Error al obtener detalle del pedido: 307313
+[2025-01-09 05:41:53.563 PM] error: 	undefined
+[2025-01-09 05:41:53.737 PM] error: 	Error al obtener detalle del pedido: 307380
+[2025-01-09 05:41:53.737 PM] error: 	undefined
+[2025-01-09 05:41:53.923 PM] error: 	Error al obtener detalle del pedido: 307463
+[2025-01-09 05:41:53.923 PM] error: 	undefined
+[2025-01-09 05:41:54.099 PM] error: 	Error al obtener detalle del pedido: 307464
+[2025-01-09 05:41:54.099 PM] error: 	undefined
+[2025-01-09 05:41:54.272 PM] error: 	Error al obtener detalle del pedido: 307486
+[2025-01-09 05:41:54.272 PM] error: 	undefined
+[2025-01-09 05:41:54.441 PM] error: 	Error al obtener detalle del pedido: 307612
+[2025-01-09 05:41:54.441 PM] error: 	undefined
+[2025-01-09 05:41:54.611 PM] error: 	Error al obtener detalle del pedido: 307621
+[2025-01-09 05:41:54.611 PM] error: 	undefined
+[2025-01-09 05:41:54.788 PM] error: 	Error al obtener detalle del pedido: 307747
+[2025-01-09 05:41:54.788 PM] error: 	undefined
+[2025-01-09 05:41:54.964 PM] error: 	Error al obtener detalle del pedido: 299154
+[2025-01-09 05:41:54.964 PM] error: 	undefined
+[2025-01-09 05:41:55.136 PM] error: 	Error al obtener detalle del pedido: 299612
+[2025-01-09 05:41:55.136 PM] error: 	undefined
+[2025-01-09 05:41:55.306 PM] error: 	Error al obtener detalle del pedido: 299956
+[2025-01-09 05:41:55.306 PM] error: 	undefined
+[2025-01-09 05:41:55.474 PM] error: 	Error al obtener detalle del pedido: 300217
+[2025-01-09 05:41:55.474 PM] error: 	undefined
+[2025-01-09 05:41:55.646 PM] error: 	Error al obtener detalle del pedido: 300705
+[2025-01-09 05:41:55.646 PM] error: 	undefined
+[2025-01-09 05:41:55.823 PM] error: 	Error al obtener detalle del pedido: 300971
+[2025-01-09 05:41:55.823 PM] error: 	undefined
+[2025-01-09 05:41:55.999 PM] error: 	Error al obtener detalle del pedido: 301160
+[2025-01-09 05:41:55.999 PM] error: 	undefined
+[2025-01-09 05:41:56.166 PM] error: 	Error al obtener detalle del pedido: 301615
+[2025-01-09 05:41:56.166 PM] error: 	undefined
+[2025-01-09 05:41:56.335 PM] error: 	Error al obtener detalle del pedido: 303182
+[2025-01-09 05:41:56.335 PM] error: 	undefined
+[2025-01-09 05:41:56.503 PM] error: 	Error al obtener detalle del pedido: 303339
+[2025-01-09 05:41:56.503 PM] error: 	undefined
+[2025-01-09 05:41:56.679 PM] error: 	Error al obtener detalle del pedido: 303621
+[2025-01-09 05:41:56.679 PM] error: 	undefined
+[2025-01-09 05:41:56.846 PM] error: 	Error al obtener detalle del pedido: 303624
+[2025-01-09 05:41:56.846 PM] error: 	undefined
+[2025-01-09 05:41:57.016 PM] error: 	Error al obtener detalle del pedido: 303966
+[2025-01-09 05:41:57.016 PM] error: 	undefined
+[2025-01-09 05:41:57.196 PM] error: 	Error al obtener detalle del pedido: 304001
+[2025-01-09 05:41:57.196 PM] error: 	undefined
+[2025-01-09 05:41:57.364 PM] error: 	Error al obtener detalle del pedido: 304023
+[2025-01-09 05:41:57.364 PM] error: 	undefined
+[2025-01-09 05:41:57.532 PM] error: 	Error al obtener detalle del pedido: 304336
+[2025-01-09 05:41:57.532 PM] error: 	undefined
+[2025-01-09 05:41:57.700 PM] error: 	Error al obtener detalle del pedido: 304411
+[2025-01-09 05:41:57.700 PM] error: 	undefined
+[2025-01-09 05:41:57.889 PM] error: 	Error al obtener detalle del pedido: 304549
+[2025-01-09 05:41:57.889 PM] error: 	undefined
+[2025-01-09 05:41:58.069 PM] error: 	Error al obtener detalle del pedido: 304564
+[2025-01-09 05:41:58.070 PM] error: 	undefined
+[2025-01-09 05:41:58.239 PM] error: 	Error al obtener detalle del pedido: 305771
+[2025-01-09 05:41:58.239 PM] error: 	undefined
+[2025-01-09 05:41:58.408 PM] error: 	Error al obtener detalle del pedido: 306508
+[2025-01-09 05:41:58.408 PM] error: 	undefined
+[2025-01-09 05:41:58.576 PM] error: 	Error al obtener detalle del pedido: 306510
+[2025-01-09 05:41:58.576 PM] error: 	undefined
+[2025-01-09 05:41:58.748 PM] error: 	Error al obtener detalle del pedido: 306694
+[2025-01-09 05:41:58.748 PM] error: 	undefined
+[2025-01-09 05:41:58.919 PM] error: 	Error al obtener detalle del pedido: 301171
+[2025-01-09 05:41:58.919 PM] error: 	undefined
+[2025-01-09 05:41:59.089 PM] error: 	Error al obtener detalle del pedido: 302357
+[2025-01-09 05:41:59.089 PM] error: 	undefined
+[2025-01-09 05:41:59.261 PM] error: 	Error al obtener detalle del pedido: 301743
+[2025-01-09 05:41:59.261 PM] error: 	undefined
+[2025-01-09 05:41:59.429 PM] error: 	Error al obtener detalle del pedido: 301744
+[2025-01-09 05:41:59.429 PM] error: 	undefined
+[2025-01-09 05:41:59.598 PM] error: 	Error al obtener detalle del pedido: 305694
+[2025-01-09 05:41:59.598 PM] error: 	undefined
+[2025-01-09 05:41:59.767 PM] error: 	Error al obtener detalle del pedido: 306016
+[2025-01-09 05:41:59.767 PM] error: 	undefined
+[2025-01-09 05:41:59.941 PM] error: 	Error al obtener detalle del pedido: 299312
+[2025-01-09 05:41:59.941 PM] error: 	undefined
+[2025-01-09 05:42:00.110 PM] error: 	Error al obtener detalle del pedido: 299510
+[2025-01-09 05:42:00.111 PM] error: 	undefined
+[2025-01-09 05:42:00.280 PM] error: 	Error al obtener detalle del pedido: 299901
+[2025-01-09 05:42:00.280 PM] error: 	undefined
+[2025-01-09 05:42:00.449 PM] error: 	Error al obtener detalle del pedido: 300183
+[2025-01-09 05:42:00.449 PM] error: 	undefined
+[2025-01-09 05:42:00.619 PM] error: 	Error al obtener detalle del pedido: 301601
+[2025-01-09 05:42:00.619 PM] error: 	undefined
+[2025-01-09 05:42:00.788 PM] error: 	Error al obtener detalle del pedido: 302757
+[2025-01-09 05:42:00.788 PM] error: 	undefined
+[2025-01-09 05:42:00.957 PM] error: 	Error al obtener detalle del pedido: 303287
+[2025-01-09 05:42:00.957 PM] error: 	undefined
+[2025-01-09 05:42:01.135 PM] error: 	Error al obtener detalle del pedido: 304258
+[2025-01-09 05:42:01.135 PM] error: 	undefined
+[2025-01-09 05:42:01.303 PM] error: 	Error al obtener detalle del pedido: 305606
+[2025-01-09 05:42:01.303 PM] error: 	undefined
+[2025-01-09 05:42:01.470 PM] error: 	Error al obtener detalle del pedido: 305775
+[2025-01-09 05:42:01.470 PM] error: 	undefined
+[2025-01-09 05:42:01.637 PM] error: 	Error al obtener detalle del pedido: 307143
+[2025-01-09 05:42:01.637 PM] error: 	undefined
+[2025-01-09 05:42:01.846 PM] error: 	Error al obtener detalle del pedido: 307451
+[2025-01-09 05:42:01.846 PM] error: 	undefined
+[2025-01-09 05:42:02.016 PM] error: 	Error al obtener detalle del pedido: 299206
+[2025-01-09 05:42:02.016 PM] error: 	undefined
+[2025-01-09 05:42:02.184 PM] error: 	Error al obtener detalle del pedido: 301050
+[2025-01-09 05:42:02.184 PM] error: 	undefined
+[2025-01-09 05:42:02.352 PM] error: 	Error al obtener detalle del pedido: 301153
+[2025-01-09 05:42:02.352 PM] error: 	undefined
+[2025-01-09 05:42:02.524 PM] error: 	Error al obtener detalle del pedido: 301240
+[2025-01-09 05:42:02.524 PM] error: 	undefined
+[2025-01-09 05:42:02.693 PM] error: 	Error al obtener detalle del pedido: 303610
+[2025-01-09 05:42:02.693 PM] error: 	undefined
+[2025-01-09 05:42:02.868 PM] error: 	Error al obtener detalle del pedido: 303686
+[2025-01-09 05:42:02.868 PM] error: 	undefined
+[2025-01-09 05:42:03.047 PM] error: 	Error al obtener detalle del pedido: 303697
+[2025-01-09 05:42:03.047 PM] error: 	undefined
+[2025-01-09 05:42:03.222 PM] error: 	Error al obtener detalle del pedido: 302402
+[2025-01-09 05:42:03.222 PM] error: 	undefined
+[2025-01-09 05:42:03.391 PM] error: 	Error al obtener detalle del pedido: 302822
+[2025-01-09 05:42:03.391 PM] error: 	undefined
+[2025-01-09 05:42:03.559 PM] error: 	Error al obtener detalle del pedido: 299708
+[2025-01-09 05:42:03.559 PM] error: 	undefined
+[2025-01-09 05:42:03.726 PM] error: 	Error al obtener detalle del pedido: 300630
+[2025-01-09 05:42:03.727 PM] error: 	undefined
+[2025-01-09 05:42:03.985 PM] error: 	Error al obtener detalle del pedido: 300631
+[2025-01-09 05:42:03.985 PM] error: 	undefined
+[2025-01-09 05:42:04.152 PM] error: 	Error al obtener detalle del pedido: 299124
+[2025-01-09 05:42:04.152 PM] error: 	undefined
+[2025-01-09 05:42:04.320 PM] error: 	Error al obtener detalle del pedido: 299313
+[2025-01-09 05:42:04.320 PM] error: 	undefined
+[2025-01-09 05:42:04.487 PM] error: 	Error al obtener detalle del pedido: 299820
+[2025-01-09 05:42:04.487 PM] error: 	undefined
+[2025-01-09 05:42:04.657 PM] error: 	Error al obtener detalle del pedido: 300045
+[2025-01-09 05:42:04.657 PM] error: 	undefined
+[2025-01-09 05:42:04.869 PM] error: 	Error al obtener detalle del pedido: 300635
+[2025-01-09 05:42:04.869 PM] error: 	undefined
+[2025-01-09 05:42:05.103 PM] error: 	Error al obtener detalle del pedido: 300706
+[2025-01-09 05:42:05.103 PM] error: 	undefined
+[2025-01-09 05:42:05.270 PM] error: 	Error al obtener detalle del pedido: 301793
+[2025-01-09 05:42:05.270 PM] error: 	undefined
+[2025-01-09 05:42:05.443 PM] error: 	Error al obtener detalle del pedido: 301800
+[2025-01-09 05:42:05.443 PM] error: 	undefined
+[2025-01-09 05:42:05.610 PM] error: 	Error al obtener detalle del pedido: 301879
+[2025-01-09 05:42:05.610 PM] error: 	undefined
+[2025-01-09 05:42:05.779 PM] error: 	Error al obtener detalle del pedido: 301931
+[2025-01-09 05:42:05.779 PM] error: 	undefined
+[2025-01-09 05:42:05.948 PM] error: 	Error al obtener detalle del pedido: 302270
+[2025-01-09 05:42:05.948 PM] error: 	undefined
+[2025-01-09 05:42:06.120 PM] error: 	Error al obtener detalle del pedido: 302315
+[2025-01-09 05:42:06.120 PM] error: 	undefined
+[2025-01-09 05:42:06.290 PM] error: 	Error al obtener detalle del pedido: 302440
+[2025-01-09 05:42:06.290 PM] error: 	undefined
+[2025-01-09 05:42:06.462 PM] error: 	Error al obtener detalle del pedido: 302498
+[2025-01-09 05:42:06.462 PM] error: 	undefined
+[2025-01-09 05:42:06.630 PM] error: 	Error al obtener detalle del pedido: 302552
+[2025-01-09 05:42:06.630 PM] error: 	undefined
+[2025-01-09 05:42:06.798 PM] error: 	Error al obtener detalle del pedido: 303967
+[2025-01-09 05:42:06.798 PM] error: 	undefined
+[2025-01-09 05:42:06.969 PM] error: 	Error al obtener detalle del pedido: 304112
+[2025-01-09 05:42:06.969 PM] error: 	undefined
+[2025-01-09 05:42:07.142 PM] error: 	Error al obtener detalle del pedido: 304294
+[2025-01-09 05:42:07.142 PM] error: 	undefined
+[2025-01-09 05:42:07.310 PM] error: 	Error al obtener detalle del pedido: 305602
+[2025-01-09 05:42:07.310 PM] error: 	undefined
+[2025-01-09 05:42:07.479 PM] error: 	Error al obtener detalle del pedido: 305605
+[2025-01-09 05:42:07.479 PM] error: 	undefined
+[2025-01-09 05:42:07.647 PM] error: 	Error al obtener detalle del pedido: 305774
+[2025-01-09 05:42:07.647 PM] error: 	undefined
+[2025-01-09 05:42:07.827 PM] error: 	Error al obtener detalle del pedido: 306132
+[2025-01-09 05:42:07.827 PM] error: 	undefined
+[2025-01-09 05:42:07.995 PM] error: 	Error al obtener detalle del pedido: 306784
+[2025-01-09 05:42:07.995 PM] error: 	undefined
+[2025-01-09 05:42:08.163 PM] error: 	Error al obtener detalle del pedido: 306999
+[2025-01-09 05:42:08.163 PM] error: 	undefined
+[2025-01-09 05:42:08.332 PM] error: 	Error al obtener detalle del pedido: 299662
+[2025-01-09 05:42:08.332 PM] error: 	undefined
+[2025-01-09 05:42:08.500 PM] error: 	Error al obtener detalle del pedido: 300790
+[2025-01-09 05:42:08.500 PM] error: 	undefined
+[2025-01-09 05:42:08.673 PM] error: 	Error al obtener detalle del pedido: 300982
+[2025-01-09 05:42:08.673 PM] error: 	undefined
+[2025-01-09 05:42:08.847 PM] error: 	Error al obtener detalle del pedido: 301275
+[2025-01-09 05:42:08.847 PM] error: 	undefined
+[2025-01-09 05:42:09.022 PM] error: 	Error al obtener detalle del pedido: 301469
+[2025-01-09 05:42:09.022 PM] error: 	undefined
+[2025-01-09 05:42:09.195 PM] error: 	Error al obtener detalle del pedido: 301480
+[2025-01-09 05:42:09.195 PM] error: 	undefined
+[2025-01-09 05:42:09.363 PM] error: 	Error al obtener detalle del pedido: 302922
+[2025-01-09 05:42:09.363 PM] error: 	undefined
+[2025-01-09 05:42:09.534 PM] error: 	Error al obtener detalle del pedido: 303165
+[2025-01-09 05:42:09.535 PM] error: 	undefined
+[2025-01-09 05:42:09.705 PM] error: 	Error al obtener detalle del pedido: 303685
+[2025-01-09 05:42:09.705 PM] error: 	undefined
+[2025-01-09 05:42:09.874 PM] error: 	Error al obtener detalle del pedido: 304436
+[2025-01-09 05:42:09.874 PM] error: 	undefined
+[2025-01-09 05:42:10.041 PM] error: 	Error al obtener detalle del pedido: 305679
+[2025-01-09 05:42:10.042 PM] error: 	undefined
+[2025-01-09 05:42:10.209 PM] error: 	Error al obtener detalle del pedido: 305855
+[2025-01-09 05:42:10.209 PM] error: 	undefined
+[2025-01-09 05:42:10.379 PM] error: 	Error al obtener detalle del pedido: 306511
+[2025-01-09 05:42:10.379 PM] error: 	undefined
+[2025-01-09 05:42:10.549 PM] error: 	Error al obtener detalle del pedido: 307407
+[2025-01-09 05:42:10.549 PM] error: 	undefined
+[2025-01-09 05:42:10.717 PM] error: 	Error al obtener detalle del pedido: 299948
+[2025-01-09 05:42:10.717 PM] error: 	undefined
+[2025-01-09 05:42:10.885 PM] error: 	Error al obtener detalle del pedido: 302697
+[2025-01-09 05:42:10.885 PM] error: 	undefined
+[2025-01-09 05:42:11.053 PM] error: 	Error al obtener detalle del pedido: 302755
+[2025-01-09 05:42:11.053 PM] error: 	undefined
+[2025-01-09 05:42:11.238 PM] error: 	Error al obtener detalle del pedido: 304412
+[2025-01-09 05:42:11.238 PM] error: 	undefined
+[2025-01-09 05:42:11.413 PM] error: 	Error al obtener detalle del pedido: 306002
+[2025-01-09 05:42:11.413 PM] error: 	undefined
+[2025-01-09 05:42:11.594 PM] error: 	Error al obtener detalle del pedido: 306082
+[2025-01-09 05:42:11.594 PM] error: 	undefined
+[2025-01-09 05:42:11.761 PM] error: 	Error al obtener detalle del pedido: 306640
+[2025-01-09 05:42:11.761 PM] error: 	undefined
+[2025-01-09 05:42:11.929 PM] error: 	Error al obtener detalle del pedido: 298910
+[2025-01-09 05:42:11.930 PM] error: 	undefined
+[2025-01-09 05:42:12.099 PM] error: 	Error al obtener detalle del pedido: 299030
+[2025-01-09 05:42:12.099 PM] error: 	undefined
+[2025-01-09 05:42:12.266 PM] error: 	Error al obtener detalle del pedido: 299074
+[2025-01-09 05:42:12.266 PM] error: 	undefined
+[2025-01-09 05:42:12.435 PM] error: 	Error al obtener detalle del pedido: 299123
+[2025-01-09 05:42:12.435 PM] error: 	undefined
+[2025-01-09 05:42:12.603 PM] error: 	Error al obtener detalle del pedido: 299166
+[2025-01-09 05:42:12.603 PM] error: 	undefined
+[2025-01-09 05:42:12.773 PM] error: 	Error al obtener detalle del pedido: 299658
+[2025-01-09 05:42:12.773 PM] error: 	undefined
+[2025-01-09 05:42:12.944 PM] error: 	Error al obtener detalle del pedido: 300343
+[2025-01-09 05:42:12.944 PM] error: 	undefined
+[2025-01-09 05:42:14.566 PM] error: 	Total pedidos grabados: 431
+[2025-01-09 05:42:14.567 PM] info: 	Finaliza guardado de Pedidos Next-Cloud
+[2025-01-09 05:42:14.567 PM] info: 	Comienza guardado Walmart en BD
+[2025-01-09 05:42:14.703 PM] info: 	Total pedidos encontrados: 0
+[2025-01-09 05:42:14.704 PM] info: 	Total sub pedidos encontrados: 0
+[2025-01-09 05:42:14.704 PM] info: 	Total pedidos grabados: 0
+[2025-01-09 05:42:14.704 PM] info: 	Finaliza guardado Walmart en BD
+[2025-01-09 05:42:14.704 PM] info: 	Comienza guardado de Facturas Next-Cloud en BD - Token: 
+[2025-01-09 05:42:18.428 PM] error: 	Total pedidos grabados: 57
+[2025-01-09 05:42:18.428 PM] info: 	Comienza guardado de Notas de Credito Next-Cloud en BD - Token: 
+[2025-01-09 05:43:49.168 PM] info: 	Inicia Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 05:49:08.639 PM] error: 	Error en login:Error: net::ERR_TIMED_OUT at https://empresas.next-cloud.mx/
+[2025-01-09 05:50:36.123 PM] error: 	Error al abrir Visor: TimeoutError: Timed out after waiting 52000ms
+[2025-01-09 05:50:36.124 PM] error: 	Error en Visor: No se encontro la url de descarga.
+[2025-01-09 05:50:55.293 PM] info: 	Comienza exportado - 2025-01-09T17:50:55-06:00
+[2025-01-09 05:50:55.675 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:50:55-06:00
+[2025-01-09 05:50:55.678 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:50:55.679 PM] info: 	Comienza lectura de excel - Facturas_WALMART_sf_2025-01-09T175055-0600.xlsx
+[2025-01-09 05:50:55.724 PM] error: 	undefined
+[2025-01-09 05:50:55.969 PM] info: 	Finaliza Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 05:53:55.720 PM] info: 	Inicia Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 05:55:23.926 PM] info: 	Comienza exportado - 2025-01-09T17:55:23-06:00
+[2025-01-09 05:55:24.336 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:55:24-06:00
+[2025-01-09 05:55:24.640 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:55:24.641 PM] info: 	Comienza lectura de excel - Pedidos_WALMART_sf_2025-01-09T175523-0600.xlsx
+[2025-01-09 05:55:42.582 PM] info: 	Comienza exportado - 2025-01-09T17:55:42-06:00
+[2025-01-09 05:55:42.968 PM] info: 	Finaliza exportado con exito - 2025-01-09T17:55:42-06:00
+[2025-01-09 05:55:43.062 PM] info: 	Descarga de Excel correcta
+[2025-01-09 05:55:43.062 PM] info: 	Comienza lectura de excel - NotasDeCredito_WALMART_sf_2025-01-09T175542-0600.xlsx
+[2025-01-09 05:56:03.351 PM] info: 	Comienza guardado Next-Cloud en BD - Token: 06DD7A89-9DC3-BAF4-C56C957224AF1229
+[2025-01-09 05:57:43.507 PM] error: 	Error: TypeError: fetch failed
+[2025-01-09 05:57:43.507 PM] error: 	Error al obtener detalle del pedido: 305593
+[2025-01-09 05:57:43.507 PM] error: 	false
+[2025-01-09 05:58:13.513 PM] error: 	[34m[1mError al grabar registro: MongoServerSelectionError: connect ETIMEDOUT 213.210.13.30:27017[22m[39m
+[2025-01-09 05:58:13.513 PM] error: 	{"IDTienda":9,"tienda":"WALMART","IDFuente":43,"fuente":"WALMART","numOrden":"600000000017394-1-1","pedido":305593,"formadePago":"FIRMA","factura":258837,"fechaFactura":"08/01/2025 11:48","cliente":123,"razonSocial":"NUEVA WAL MART DE MEXICO","estadoFactura":"Facturado","importeFactura":1852.59,"fleteFactura":0,"imptoFactura":296.41,"totalFactura":2149,"sku":"COOK-03","SKUDescripcion":"ECOCINARE - PARRILLA DOBLE DE INDUCCION MAGNETICA-UPC 7502239863324","SKUNumParte":"0","cantFact":1,"precioUnitario":1852.59,"imptoUnitario":296.4144,"embarque":271743,"entrega":298890,"estadoEntrega":"Confirmado","medio":"WALMART","guia":"MXFDDWM09866022","domicilio":"Av. del maestro","colonia":"Lomas de Hidalgo","ciudad":"Morelia","estado":"MICHOACAN","cp":"58240","detalleUbicacion":"                                        ","emisionPedido":"08/01/2025 11:07","fechaAutorizacion":"08/01/2025 11:01","fechaAsignacion":"08/01/2025 12:03","fechaSalida":"09/01/2025 12:57","fechaEntrega":"08/01/25 12:03","personaRecibe":"WALMART","personaRecibe2":"                              ","fechaConfirmacion":"09/01/2025 00:00","observaciones":"Remisión OC SYSTEM 3.0 600000000017394-1-1","telefono":"5549917007","telefono2":"0000000000","lote":20967,"peso":5,"emailCliente":"testnext@easy-shop.com","telefonoCliente":"43186798","telefono2Cliente":"55","costo":841.7121,"IDSeccion":6,"seccion":"COCINA Y ELECTRODOMESTICOS","IDCategoria":11,"categoria":"ECOCINARE","IDLinea":11,"linea":"General"}
+[2025-01-09 05:58:23.519 PM] error: 	Error: TypeError: fetch failed
+[2025-01-09 05:58:23.519 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:58:23.519 PM] error: 	false
+[2025-01-09 05:58:53.524 PM] error: 	[34m[1mError al grabar registro: MongoServerSelectionError: connect ETIMEDOUT 213.210.13.30:27017[22m[39m
+[2025-01-09 05:58:53.524 PM] error: 	{"IDTienda":9,"tienda":"WALMART","IDFuente":43,"fuente":"WALMART","numOrden":"600000001554788-1-1","pedido":302377,"formadePago":"FIRMA","factura":255645,"fechaFactura":"06/01/2025 11:49","cliente":123,"razonSocial":"NUEVA WAL MART DE MEXICO","estadoFactura":"Facturado","importeFactura":3361.21,"fleteFactura":0,"imptoFactura":537.79,"totalFactura":3899,"sku":"COOK-04","SKUDescripcion":"ECOCINARE - PARRILA DE INDUCCION DE 4 QUEMADORES 7502239865625","SKUNumParte":"0","cantFact":1,"precioUnitario":3361.21,"imptoUnitario":537.7936,"embarque":268501,"entrega":295438,"estadoEntrega":"REENVIADO","medio":"FEDEX ES","guia":"MXFDDWM10053299","domicilio":"Av. del maestro","colonia":"Lomas de Hidalgo","ciudad":"Morelia","estado":"MICHOACAN","cp":"58240","detalleUbicacion":"                                        ","emisionPedido":"06/01/2025 11:40","fechaAutorizacion":"06/01/2025 11:40","fechaAsignacion":"06/01/2025 14:13","fechaSalida":"07/01/2025 15:24","fechaEntrega":"06/01/25 14:13","personaRecibe":"WALMART","personaRecibe2":"                              ","fechaConfirmacion":"07/01/2025 00:00","observaciones":"Remisión OC SYSTEM 3.0 600000001554788-1-1","telefono":"5549917007","telefono2":"0000000000","lote":20802,"peso":11,"emailCliente":"testnext@easy-shop.com","telefonoCliente":"43186798","telefono2Cliente":"55","costo":1670.9922,"IDSeccion":6,"seccion":"COCINA Y ELECTRODOMESTICOS","IDCategoria":11,"categoria":"ECOCINARE","IDLinea":11,"linea":"General"}
+[2025-01-09 05:59:03.528 PM] error: 	Error: TypeError: fetch failed
+[2025-01-09 05:59:03.528 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:59:03.528 PM] error: 	false
+[2025-01-09 05:59:33.813 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:59:33.813 PM] error: 	undefined
+[2025-01-09 05:59:33.983 PM] error: 	Error al obtener detalle del pedido: 302377
+[2025-01-09 05:59:33.983 PM] error: 	undefined
+[2025-01-09 05:59:34.151 PM] error: 	Error al obtener detalle del pedido: 302436
+[2025-01-09 05:59:34.151 PM] error: 	undefined
+[2025-01-09 05:59:34.324 PM] error: 	Error al obtener detalle del pedido: 303666
+[2025-01-09 05:59:34.324 PM] error: 	undefined
+[2025-01-09 05:59:34.498 PM] error: 	Error al obtener detalle del pedido: 303667
+[2025-01-09 05:59:34.498 PM] error: 	undefined
+[2025-01-09 05:59:34.667 PM] error: 	Error al obtener detalle del pedido: 302354
+[2025-01-09 05:59:34.667 PM] error: 	undefined
+[2025-01-09 05:59:34.832 PM] error: 	Error al obtener detalle del pedido: 299902
+[2025-01-09 05:59:34.833 PM] error: 	undefined
+[2025-01-09 05:59:35.002 PM] error: 	Error al obtener detalle del pedido: 307141
+[2025-01-09 05:59:35.002 PM] error: 	undefined
+[2025-01-09 05:59:35.171 PM] error: 	Error al obtener detalle del pedido: 299369
+[2025-01-09 05:59:35.171 PM] error: 	undefined
+[2025-01-09 05:59:35.341 PM] error: 	Error al obtener detalle del pedido: 299370
+[2025-01-09 05:59:35.341 PM] error: 	undefined
+[2025-01-09 05:59:35.512 PM] error: 	Error al obtener detalle del pedido: 299755
+[2025-01-09 05:59:35.512 PM] error: 	undefined
+[2025-01-09 05:59:35.680 PM] error: 	Error al obtener detalle del pedido: 303232
+[2025-01-09 05:59:35.680 PM] error: 	undefined
+[2025-01-09 05:59:35.859 PM] error: 	Error al obtener detalle del pedido: 303623
+[2025-01-09 05:59:35.859 PM] error: 	undefined
+[2025-01-09 05:59:36.036 PM] error: 	Error al obtener detalle del pedido: 303965
+[2025-01-09 05:59:36.036 PM] error: 	undefined
+[2025-01-09 05:59:36.202 PM] error: 	Error al obtener detalle del pedido: 304376
+[2025-01-09 05:59:36.202 PM] error: 	undefined
+[2025-01-09 05:59:36.373 PM] error: 	Error al obtener detalle del pedido: 305700
+[2025-01-09 05:59:36.373 PM] error: 	undefined
+[2025-01-09 05:59:36.542 PM] error: 	Error al obtener detalle del pedido: 299950
+[2025-01-09 05:59:36.542 PM] error: 	undefined
+[2025-01-09 05:59:36.705 PM] error: 	Error al obtener detalle del pedido: 300264
+[2025-01-09 05:59:36.705 PM] error: 	undefined
+[2025-01-09 05:59:36.869 PM] error: 	Error al obtener detalle del pedido: 300318
+[2025-01-09 05:59:36.869 PM] error: 	undefined
+[2025-01-09 05:59:37.033 PM] error: 	Error al obtener detalle del pedido: 300446
+[2025-01-09 05:59:37.033 PM] error: 	undefined
+[2025-01-09 05:59:37.197 PM] error: 	Error al obtener detalle del pedido: 300660
+[2025-01-09 05:59:37.197 PM] error: 	undefined
+[2025-01-09 05:59:37.361 PM] error: 	Error al obtener detalle del pedido: 300661
+[2025-01-09 05:59:37.361 PM] error: 	undefined
+[2025-01-09 05:59:37.525 PM] error: 	Error al obtener detalle del pedido: 300828
+[2025-01-09 05:59:37.526 PM] error: 	undefined
+[2025-01-09 05:59:37.689 PM] error: 	Error al obtener detalle del pedido: 300858
+[2025-01-09 05:59:37.689 PM] error: 	undefined
+[2025-01-09 05:59:37.852 PM] error: 	Error al obtener detalle del pedido: 300859
+[2025-01-09 05:59:37.853 PM] error: 	undefined
+[2025-01-09 05:59:38.018 PM] error: 	Error al obtener detalle del pedido: 301035
+[2025-01-09 05:59:38.019 PM] error: 	undefined
+[2025-01-09 05:59:38.182 PM] error: 	Error al obtener detalle del pedido: 301036
+[2025-01-09 05:59:38.183 PM] error: 	undefined
+[2025-01-09 05:59:38.347 PM] error: 	Error al obtener detalle del pedido: 301046
+[2025-01-09 05:59:38.347 PM] error: 	undefined
+[2025-01-09 05:59:38.511 PM] error: 	Error al obtener detalle del pedido: 301152
+[2025-01-09 05:59:38.511 PM] error: 	undefined
+[2025-01-09 05:59:38.674 PM] error: 	Error al obtener detalle del pedido: 301470
+[2025-01-09 05:59:38.674 PM] error: 	undefined
+[2025-01-09 05:59:38.848 PM] error: 	Error al obtener detalle del pedido: 301600
+[2025-01-09 05:59:38.848 PM] error: 	undefined
+[2025-01-09 05:59:39.018 PM] error: 	Error al obtener detalle del pedido: 301755
+[2025-01-09 05:59:39.018 PM] error: 	undefined
+[2025-01-09 05:59:39.180 PM] error: 	Error al obtener detalle del pedido: 302343
+[2025-01-09 05:59:39.181 PM] error: 	undefined
+[2025-01-09 05:59:39.343 PM] error: 	Error al obtener detalle del pedido: 302358
+[2025-01-09 05:59:39.343 PM] error: 	undefined
+[2025-01-09 05:59:39.508 PM] error: 	Error al obtener detalle del pedido: 302503
+[2025-01-09 05:59:39.508 PM] error: 	undefined
+[2025-01-09 05:59:39.673 PM] error: 	Error al obtener detalle del pedido: 302584
+[2025-01-09 05:59:39.673 PM] error: 	undefined
+[2025-01-09 05:59:39.837 PM] error: 	Error al obtener detalle del pedido: 302586
+[2025-01-09 05:59:39.837 PM] error: 	undefined
+[2025-01-09 05:59:40.001 PM] error: 	Error al obtener detalle del pedido: 302658
+[2025-01-09 05:59:40.001 PM] error: 	undefined
+[2025-01-09 05:59:40.163 PM] error: 	Error al obtener detalle del pedido: 302663
+[2025-01-09 05:59:40.163 PM] error: 	undefined
+[2025-01-09 05:59:40.326 PM] error: 	Error al obtener detalle del pedido: 302709
+[2025-01-09 05:59:40.326 PM] error: 	undefined
+[2025-01-09 05:59:40.488 PM] error: 	Error al obtener detalle del pedido: 302721
+[2025-01-09 05:59:40.489 PM] error: 	undefined
+[2025-01-09 05:59:40.651 PM] error: 	Error al obtener detalle del pedido: 302998
+[2025-01-09 05:59:40.651 PM] error: 	undefined
+[2025-01-09 05:59:40.813 PM] error: 	Error al obtener detalle del pedido: 303275
+[2025-01-09 05:59:40.813 PM] error: 	undefined
+[2025-01-09 05:59:40.980 PM] error: 	Error al obtener detalle del pedido: 303355
+[2025-01-09 05:59:40.980 PM] error: 	undefined
+[2025-01-09 05:59:41.152 PM] error: 	Error al obtener detalle del pedido: 303701
+[2025-01-09 05:59:41.153 PM] error: 	undefined
+[2025-01-09 05:59:41.320 PM] error: 	Error al obtener detalle del pedido: 303962
+[2025-01-09 05:59:41.320 PM] error: 	undefined
+[2025-01-09 05:59:41.482 PM] error: 	Error al obtener detalle del pedido: 303968
+[2025-01-09 05:59:41.482 PM] error: 	undefined
+[2025-01-09 05:59:41.656 PM] error: 	Error al obtener detalle del pedido: 303981
+[2025-01-09 05:59:41.656 PM] error: 	undefined
+[2025-01-09 05:59:41.828 PM] error: 	Error al obtener detalle del pedido: 303986
+[2025-01-09 05:59:41.828 PM] error: 	undefined
+[2025-01-09 05:59:41.992 PM] error: 	Error al obtener detalle del pedido: 304063
+[2025-01-09 05:59:41.993 PM] error: 	undefined
+[2025-01-09 05:59:42.156 PM] error: 	Error al obtener detalle del pedido: 304074
+[2025-01-09 05:59:42.156 PM] error: 	undefined
+[2025-01-09 05:59:42.321 PM] error: 	Error al obtener detalle del pedido: 304092
+[2025-01-09 05:59:42.322 PM] error: 	undefined
+[2025-01-09 05:59:42.486 PM] error: 	Error al obtener detalle del pedido: 304093
+[2025-01-09 05:59:42.487 PM] error: 	undefined
+[2025-01-09 05:59:42.668 PM] error: 	Error al obtener detalle del pedido: 304152
+[2025-01-09 05:59:42.668 PM] error: 	undefined
+[2025-01-09 05:59:42.836 PM] error: 	Error al obtener detalle del pedido: 304165
+[2025-01-09 05:59:42.836 PM] error: 	undefined
+[2025-01-09 05:59:43.006 PM] error: 	Error al obtener detalle del pedido: 304284
+[2025-01-09 05:59:43.008 PM] error: 	undefined
+[2025-01-09 05:59:43.175 PM] error: 	Error al obtener detalle del pedido: 304285
+[2025-01-09 05:59:43.175 PM] error: 	undefined
+[2025-01-09 05:59:43.344 PM] error: 	Error al obtener detalle del pedido: 304357
+[2025-01-09 05:59:43.344 PM] error: 	undefined
+[2025-01-09 05:59:43.513 PM] error: 	Error al obtener detalle del pedido: 304386
+[2025-01-09 05:59:43.513 PM] error: 	undefined
+[2025-01-09 05:59:43.686 PM] error: 	Error al obtener detalle del pedido: 304403
+[2025-01-09 05:59:43.686 PM] error: 	undefined
+[2025-01-09 05:59:43.856 PM] error: 	Error al obtener detalle del pedido: 304429
+[2025-01-09 05:59:43.856 PM] error: 	undefined
+[2025-01-09 05:59:44.020 PM] error: 	Error al obtener detalle del pedido: 304473
+[2025-01-09 05:59:44.020 PM] error: 	undefined
+[2025-01-09 05:59:44.185 PM] error: 	Error al obtener detalle del pedido: 304517
+[2025-01-09 05:59:44.185 PM] error: 	undefined
+[2025-01-09 05:59:44.349 PM] error: 	Error al obtener detalle del pedido: 304542
+[2025-01-09 05:59:44.349 PM] error: 	undefined
+[2025-01-09 05:59:44.516 PM] error: 	Error al obtener detalle del pedido: 304543
+[2025-01-09 05:59:44.516 PM] error: 	undefined
+[2025-01-09 05:59:44.680 PM] error: 	Error al obtener detalle del pedido: 304788
+[2025-01-09 05:59:44.680 PM] error: 	undefined
+[2025-01-09 05:59:44.850 PM] error: 	Error al obtener detalle del pedido: 304805
+[2025-01-09 05:59:44.850 PM] error: 	undefined
+[2025-01-09 05:59:45.026 PM] error: 	Error al obtener detalle del pedido: 305695
+[2025-01-09 05:59:45.026 PM] error: 	undefined
+[2025-01-09 05:59:45.193 PM] error: 	Error al obtener detalle del pedido: 305753
+[2025-01-09 05:59:45.193 PM] error: 	undefined
+[2025-01-09 05:59:45.361 PM] error: 	Error al obtener detalle del pedido: 305754
+[2025-01-09 05:59:45.361 PM] error: 	undefined
+[2025-01-09 05:59:45.531 PM] error: 	Error al obtener detalle del pedido: 305755
+[2025-01-09 05:59:45.531 PM] error: 	undefined
+[2025-01-09 05:59:45.699 PM] error: 	Error al obtener detalle del pedido: 305992
+[2025-01-09 05:59:45.699 PM] error: 	undefined
+[2025-01-09 05:59:45.866 PM] error: 	Error al obtener detalle del pedido: 306003
+[2025-01-09 05:59:45.867 PM] error: 	undefined
+[2025-01-09 05:59:46.035 PM] error: 	Error al obtener detalle del pedido: 306004
+[2025-01-09 05:59:46.035 PM] error: 	undefined
+[2025-01-09 05:59:46.203 PM] error: 	Error al obtener detalle del pedido: 306203
+[2025-01-09 05:59:46.203 PM] error: 	undefined
+[2025-01-09 05:59:46.382 PM] error: 	Error al obtener detalle del pedido: 306337
+[2025-01-09 05:59:46.383 PM] error: 	undefined
+[2025-01-09 05:59:46.547 PM] error: 	Error al obtener detalle del pedido: 306345
+[2025-01-09 05:59:46.547 PM] error: 	undefined
+[2025-01-09 05:59:46.714 PM] error: 	Error al obtener detalle del pedido: 306444
+[2025-01-09 05:59:46.714 PM] error: 	undefined
+[2025-01-09 05:59:46.877 PM] error: 	Error al obtener detalle del pedido: 306445
+[2025-01-09 05:59:46.877 PM] error: 	undefined
+[2025-01-09 05:59:47.041 PM] error: 	Error al obtener detalle del pedido: 306494
+[2025-01-09 05:59:47.041 PM] error: 	undefined
+[2025-01-09 05:59:47.204 PM] error: 	Error al obtener detalle del pedido: 304056
+[2025-01-09 05:59:47.204 PM] error: 	undefined
+[2025-01-09 05:59:47.368 PM] error: 	Error al obtener detalle del pedido: 304349
+[2025-01-09 05:59:47.369 PM] error: 	undefined
+[2025-01-09 05:59:47.530 PM] error: 	Error al obtener detalle del pedido: 305585
+[2025-01-09 05:59:47.530 PM] error: 	undefined
+[2025-01-09 05:59:47.751 PM] error: 	Error al obtener detalle del pedido: 305760
+[2025-01-09 05:59:47.751 PM] error: 	undefined
+[2025-01-09 05:59:47.921 PM] error: 	Error al obtener detalle del pedido: 306495
+[2025-01-09 05:59:47.921 PM] error: 	undefined
+[2025-01-09 05:59:48.092 PM] error: 	Error al obtener detalle del pedido: 306518
+[2025-01-09 05:59:48.092 PM] error: 	undefined
+[2025-01-09 05:59:48.263 PM] error: 	Error al obtener detalle del pedido: 306582
+[2025-01-09 05:59:48.263 PM] error: 	undefined
+[2025-01-09 05:59:48.437 PM] error: 	Error al obtener detalle del pedido: 307732
+[2025-01-09 05:59:48.437 PM] error: 	undefined
+[2025-01-09 05:59:48.612 PM] error: 	Error al obtener detalle del pedido: 307746
+[2025-01-09 05:59:48.612 PM] error: 	undefined
+[2025-01-09 05:59:48.780 PM] error: 	Error al obtener detalle del pedido: 306127
+[2025-01-09 05:59:48.780 PM] error: 	undefined
+[2025-01-09 05:59:48.948 PM] error: 	Error al obtener detalle del pedido: 306131
+[2025-01-09 05:59:48.948 PM] error: 	undefined
+[2025-01-09 05:59:49.116 PM] error: 	Error al obtener detalle del pedido: 306446
+[2025-01-09 05:59:49.116 PM] error: 	undefined
+[2025-01-09 05:59:49.287 PM] error: 	Error al obtener detalle del pedido: 302999
+[2025-01-09 05:59:49.287 PM] error: 	undefined
+[2025-01-09 05:59:49.458 PM] error: 	Error al obtener detalle del pedido: 302406
+[2025-01-09 05:59:49.458 PM] error: 	undefined
+[2025-01-09 05:59:49.754 PM] error: 	Error al obtener detalle del pedido: 299026
+[2025-01-09 05:59:49.756 PM] error: 	undefined
+[2025-01-09 05:59:49.937 PM] error: 	Error al obtener detalle del pedido: 299027
+[2025-01-09 05:59:49.937 PM] error: 	undefined
+[2025-01-09 05:59:50.103 PM] error: 	Error al obtener detalle del pedido: 299375
+[2025-01-09 05:59:50.103 PM] error: 	undefined
+[2025-01-09 05:59:50.303 PM] error: 	Error al obtener detalle del pedido: 299376
+[2025-01-09 05:59:50.303 PM] error: 	undefined
+[2025-01-09 05:59:50.469 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:59:50.469 PM] error: 	undefined
+[2025-01-09 05:59:50.972 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:59:50.972 PM] error: 	undefined
+[2025-01-09 05:59:51.145 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:59:51.145 PM] error: 	undefined
+[2025-01-09 05:59:51.358 PM] error: 	Error al obtener detalle del pedido: 302457
+[2025-01-09 05:59:51.358 PM] error: 	undefined
+[2025-01-09 05:59:51.521 PM] error: 	Error al obtener detalle del pedido: 302656
+[2025-01-09 05:59:51.522 PM] error: 	undefined
+[2025-01-09 05:59:51.706 PM] error: 	Error al obtener detalle del pedido: 302657
+[2025-01-09 05:59:51.706 PM] error: 	undefined
+[2025-01-09 05:59:51.869 PM] error: 	Error al obtener detalle del pedido: 303354
+[2025-01-09 05:59:51.869 PM] error: 	undefined
+[2025-01-09 05:59:52.043 PM] error: 	Error al obtener detalle del pedido: 304126
+[2025-01-09 05:59:52.043 PM] error: 	undefined
+[2025-01-09 05:59:52.206 PM] error: 	Error al obtener detalle del pedido: 304334
+[2025-01-09 05:59:52.206 PM] error: 	undefined
+[2025-01-09 05:59:52.371 PM] error: 	Error al obtener detalle del pedido: 304335
+[2025-01-09 05:59:52.371 PM] error: 	undefined
+[2025-01-09 05:59:52.533 PM] error: 	Error al obtener detalle del pedido: 301299
+[2025-01-09 05:59:52.533 PM] error: 	undefined
+[2025-01-09 05:59:52.703 PM] error: 	Error al obtener detalle del pedido: 301680
+[2025-01-09 05:59:52.703 PM] error: 	undefined
+[2025-01-09 05:59:52.870 PM] error: 	Error al obtener detalle del pedido: 304729
+[2025-01-09 05:59:52.871 PM] error: 	undefined
+[2025-01-09 05:59:53.045 PM] error: 	Error al obtener detalle del pedido: 306183
+[2025-01-09 05:59:53.045 PM] error: 	undefined
+[2025-01-09 05:59:53.215 PM] error: 	Error al obtener detalle del pedido: 306467
+[2025-01-09 05:59:53.215 PM] error: 	undefined
+[2025-01-09 05:59:53.382 PM] error: 	Error al obtener detalle del pedido: 301679
+[2025-01-09 05:59:53.382 PM] error: 	undefined
+[2025-01-09 05:59:53.546 PM] error: 	Error al obtener detalle del pedido: 303655
+[2025-01-09 05:59:53.546 PM] error: 	undefined
+[2025-01-09 05:59:53.710 PM] error: 	Error al obtener detalle del pedido: 301614
+[2025-01-09 05:59:53.710 PM] error: 	undefined
+[2025-01-09 05:59:53.875 PM] error: 	Error al obtener detalle del pedido: 302544
+[2025-01-09 05:59:53.875 PM] error: 	undefined
+[2025-01-09 05:59:54.043 PM] error: 	Error al obtener detalle del pedido: 306272
+[2025-01-09 05:59:54.043 PM] error: 	undefined
+[2025-01-09 05:59:54.295 PM] error: 	Error al obtener detalle del pedido: 306611
+[2025-01-09 05:59:54.295 PM] error: 	undefined
+[2025-01-09 05:59:54.459 PM] error: 	Error al obtener detalle del pedido: 299552
+[2025-01-09 05:59:54.459 PM] error: 	undefined
+[2025-01-09 05:59:54.624 PM] error: 	Error al obtener detalle del pedido: 307076
+[2025-01-09 05:59:54.627 PM] error: 	undefined
+[2025-01-09 05:59:54.790 PM] error: 	Error al obtener detalle del pedido: 300352
+[2025-01-09 05:59:54.790 PM] error: 	undefined
+[2025-01-09 05:59:54.959 PM] error: 	Error al obtener detalle del pedido: 299257
+[2025-01-09 05:59:54.959 PM] error: 	undefined
+[2025-01-09 05:59:55.127 PM] error: 	Error al obtener detalle del pedido: 300075
+[2025-01-09 05:59:55.127 PM] error: 	undefined
+[2025-01-09 05:59:55.292 PM] error: 	Error al obtener detalle del pedido: 301298
+[2025-01-09 05:59:55.292 PM] error: 	undefined
+[2025-01-09 05:59:55.461 PM] error: 	Error al obtener detalle del pedido: 302638
+[2025-01-09 05:59:55.461 PM] error: 	undefined
+[2025-01-09 05:59:55.626 PM] error: 	Error al obtener detalle del pedido: 302639
+[2025-01-09 05:59:55.626 PM] error: 	undefined
+[2025-01-09 05:59:55.791 PM] error: 	Error al obtener detalle del pedido: 304024
+[2025-01-09 05:59:55.791 PM] error: 	undefined
+[2025-01-09 05:59:55.967 PM] error: 	Error al obtener detalle del pedido: 304119
+[2025-01-09 05:59:55.967 PM] error: 	undefined
+[2025-01-09 05:59:56.145 PM] error: 	Error al obtener detalle del pedido: 304120
+[2025-01-09 05:59:56.145 PM] error: 	undefined
+[2025-01-09 05:59:56.310 PM] error: 	Error al obtener detalle del pedido: 307079
+[2025-01-09 05:59:56.311 PM] error: 	undefined
+[2025-01-09 05:59:56.475 PM] error: 	Error al obtener detalle del pedido: 307743
+[2025-01-09 05:59:56.476 PM] error: 	undefined
+[2025-01-09 05:59:56.647 PM] error: 	Error al obtener detalle del pedido: 307744
+[2025-01-09 05:59:56.647 PM] error: 	undefined
+[2025-01-09 05:59:56.812 PM] error: 	Error al obtener detalle del pedido: 299256
+[2025-01-09 05:59:56.812 PM] error: 	undefined
+[2025-01-09 05:59:56.978 PM] error: 	Error al obtener detalle del pedido: 304801
+[2025-01-09 05:59:56.981 PM] error: 	undefined
+[2025-01-09 05:59:57.148 PM] error: 	Error al obtener detalle del pedido: 307767
+[2025-01-09 05:59:57.148 PM] error: 	undefined
+[2025-01-09 05:59:57.317 PM] error: 	Error al obtener detalle del pedido: 302400
+[2025-01-09 05:59:57.317 PM] error: 	undefined
+[2025-01-09 05:59:57.482 PM] error: 	Error al obtener detalle del pedido: 300343
+[2025-01-09 05:59:57.482 PM] error: 	undefined
+[2025-01-09 05:59:57.649 PM] error: 	Error al obtener detalle del pedido: 300583
+[2025-01-09 05:59:57.649 PM] error: 	undefined
+[2025-01-09 05:59:57.812 PM] error: 	Error al obtener detalle del pedido: 300659
+[2025-01-09 05:59:57.812 PM] error: 	undefined
+[2025-01-09 05:59:57.981 PM] error: 	Error al obtener detalle del pedido: 301219
+[2025-01-09 05:59:57.982 PM] error: 	undefined
+[2025-01-09 05:59:58.146 PM] error: 	Error al obtener detalle del pedido: 301220
+[2025-01-09 05:59:58.146 PM] error: 	undefined
+[2025-01-09 05:59:58.310 PM] error: 	Error al obtener detalle del pedido: 301221
+[2025-01-09 05:59:58.310 PM] error: 	undefined
+[2025-01-09 05:59:58.478 PM] error: 	Error al obtener detalle del pedido: 301222
+[2025-01-09 05:59:58.478 PM] error: 	undefined
+[2025-01-09 05:59:58.642 PM] error: 	Error al obtener detalle del pedido: 301223
+[2025-01-09 05:59:58.644 PM] error: 	undefined
+[2025-01-09 05:59:58.809 PM] error: 	Error al obtener detalle del pedido: 301224
+[2025-01-09 05:59:58.809 PM] error: 	undefined
+[2025-01-09 05:59:59.031 PM] error: 	Error al obtener detalle del pedido: 301429
+[2025-01-09 05:59:59.031 PM] error: 	undefined
+[2025-01-09 05:59:59.194 PM] error: 	Error al obtener detalle del pedido: 302662
+[2025-01-09 05:59:59.195 PM] error: 	undefined
+[2025-01-09 05:59:59.358 PM] error: 	Error al obtener detalle del pedido: 303651
+[2025-01-09 05:59:59.359 PM] error: 	undefined
+[2025-01-09 05:59:59.522 PM] error: 	Error al obtener detalle del pedido: 303708
+[2025-01-09 05:59:59.522 PM] error: 	undefined
+[2025-01-09 05:59:59.684 PM] error: 	Error al obtener detalle del pedido: 303709
+[2025-01-09 05:59:59.684 PM] error: 	undefined
+[2025-01-09 05:59:59.859 PM] error: 	Error al obtener detalle del pedido: 304333
+[2025-01-09 05:59:59.859 PM] error: 	undefined
+[2025-01-09 06:00:00.034 PM] error: 	Error al obtener detalle del pedido: 305829
+[2025-01-09 06:00:00.034 PM] error: 	undefined
+[2025-01-09 06:00:00.206 PM] error: 	Error al obtener detalle del pedido: 306193
+[2025-01-09 06:00:00.206 PM] error: 	undefined
+[2025-01-09 06:00:00.372 PM] error: 	Error al obtener detalle del pedido: 306821
+[2025-01-09 06:00:00.372 PM] error: 	undefined
+[2025-01-09 06:00:00.537 PM] error: 	Error al obtener detalle del pedido: 307326
+[2025-01-09 06:00:00.537 PM] error: 	undefined
+[2025-01-09 06:00:00.706 PM] error: 	Error al obtener detalle del pedido: 307538
+[2025-01-09 06:00:00.706 PM] error: 	undefined
+[2025-01-09 06:00:00.877 PM] error: 	Error al obtener detalle del pedido: 300263
+[2025-01-09 06:00:00.877 PM] error: 	undefined
+[2025-01-09 06:00:01.043 PM] error: 	Error al obtener detalle del pedido: 300269
+[2025-01-09 06:00:01.043 PM] error: 	undefined
+[2025-01-09 06:00:01.228 PM] error: 	Error al obtener detalle del pedido: 300582
+[2025-01-09 06:00:01.228 PM] error: 	undefined
+[2025-01-09 06:00:01.407 PM] error: 	Error al obtener detalle del pedido: 306939
+[2025-01-09 06:00:01.408 PM] error: 	undefined
+[2025-01-09 06:00:01.572 PM] error: 	Error al obtener detalle del pedido: 300139
+[2025-01-09 06:00:01.572 PM] error: 	undefined
+[2025-01-09 06:00:01.743 PM] error: 	Error al obtener detalle del pedido: 304451
+[2025-01-09 06:00:01.743 PM] error: 	undefined
+[2025-01-09 06:00:01.909 PM] error: 	Error al obtener detalle del pedido: 306454
+[2025-01-09 06:00:01.909 PM] error: 	undefined
+[2025-01-09 06:00:02.073 PM] error: 	Error al obtener detalle del pedido: 304323
+[2025-01-09 06:00:02.074 PM] error: 	undefined
+[2025-01-09 06:00:02.239 PM] error: 	Error al obtener detalle del pedido: 307613
+[2025-01-09 06:00:02.239 PM] error: 	undefined
+[2025-01-09 06:00:02.403 PM] error: 	Error al obtener detalle del pedido: 304356
+[2025-01-09 06:00:02.403 PM] error: 	undefined
+[2025-01-09 06:00:02.568 PM] error: 	Error al obtener detalle del pedido: 301280
+[2025-01-09 06:00:02.568 PM] error: 	undefined
+[2025-01-09 06:00:02.732 PM] error: 	Error al obtener detalle del pedido: 303471
+[2025-01-09 06:00:02.732 PM] error: 	undefined
+[2025-01-09 06:00:02.900 PM] error: 	Error al obtener detalle del pedido: 304450
+[2025-01-09 06:00:02.900 PM] error: 	undefined
+[2025-01-09 06:00:03.082 PM] error: 	Error al obtener detalle del pedido: 301622
+[2025-01-09 06:00:03.082 PM] error: 	undefined
+[2025-01-09 06:00:03.248 PM] error: 	Error al obtener detalle del pedido: 299759
+[2025-01-09 06:00:03.248 PM] error: 	undefined
+[2025-01-09 06:00:03.467 PM] error: 	Error al obtener detalle del pedido: 302392
+[2025-01-09 06:00:03.467 PM] error: 	undefined
+[2025-01-09 06:00:03.631 PM] error: 	Error al obtener detalle del pedido: 302844
+[2025-01-09 06:00:03.631 PM] error: 	undefined
+[2025-01-09 06:00:03.842 PM] error: 	Error al obtener detalle del pedido: 303170
+[2025-01-09 06:00:03.842 PM] error: 	undefined
+[2025-01-09 06:00:04.005 PM] error: 	Error al obtener detalle del pedido: 304419
+[2025-01-09 06:00:04.005 PM] error: 	undefined
+[2025-01-09 06:00:04.168 PM] error: 	Error al obtener detalle del pedido: 298995
+[2025-01-09 06:00:04.169 PM] error: 	undefined
+[2025-01-09 06:00:04.334 PM] error: 	Error al obtener detalle del pedido: 299810
+[2025-01-09 06:00:04.334 PM] error: 	undefined
+[2025-01-09 06:00:04.501 PM] error: 	Error al obtener detalle del pedido: 299859
+[2025-01-09 06:00:04.501 PM] error: 	undefined
+[2025-01-09 06:00:04.718 PM] error: 	Error al obtener detalle del pedido: 301482
+[2025-01-09 06:00:04.719 PM] error: 	undefined
+[2025-01-09 06:00:04.986 PM] error: 	Error al obtener detalle del pedido: 302197
+[2025-01-09 06:00:04.986 PM] error: 	undefined
+[2025-01-09 06:00:05.152 PM] error: 	Error al obtener detalle del pedido: 302760
+[2025-01-09 06:00:05.152 PM] error: 	undefined
+[2025-01-09 06:00:05.316 PM] error: 	Error al obtener detalle del pedido: 303643
+[2025-01-09 06:00:05.316 PM] error: 	undefined
+[2025-01-09 06:00:05.479 PM] error: 	Error al obtener detalle del pedido: 304055
+[2025-01-09 06:00:05.479 PM] error: 	undefined
+[2025-01-09 06:00:05.646 PM] error: 	Error al obtener detalle del pedido: 299509
+[2025-01-09 06:00:05.646 PM] error: 	undefined
+[2025-01-09 06:00:05.810 PM] error: 	Error al obtener detalle del pedido: 304340
+[2025-01-09 06:00:05.810 PM] error: 	undefined
+[2025-01-09 06:00:05.973 PM] error: 	Error al obtener detalle del pedido: 302756
+[2025-01-09 06:00:05.973 PM] error: 	undefined
+[2025-01-09 06:00:06.137 PM] error: 	Error al obtener detalle del pedido: 303985
+[2025-01-09 06:00:06.137 PM] error: 	undefined
+[2025-01-09 06:00:06.316 PM] error: 	Error al obtener detalle del pedido: 304437
+[2025-01-09 06:00:06.316 PM] error: 	undefined
+[2025-01-09 06:00:06.515 PM] error: 	Error al obtener detalle del pedido: 307745
+[2025-01-09 06:00:06.515 PM] error: 	undefined
+[2025-01-09 06:00:06.677 PM] error: 	Error al obtener detalle del pedido: 304094
+[2025-01-09 06:00:06.677 PM] error: 	undefined
+[2025-01-09 06:00:06.847 PM] error: 	Error al obtener detalle del pedido: 305596
+[2025-01-09 06:00:06.847 PM] error: 	undefined
+[2025-01-09 06:00:07.015 PM] error: 	Error al obtener detalle del pedido: 306459
+[2025-01-09 06:00:07.015 PM] error: 	undefined
+[2025-01-09 06:00:07.179 PM] error: 	Error al obtener detalle del pedido: 307142
+[2025-01-09 06:00:07.179 PM] error: 	undefined
+[2025-01-09 06:00:07.341 PM] error: 	Error al obtener detalle del pedido: 303233
+[2025-01-09 06:00:07.341 PM] error: 	undefined
+[2025-01-09 06:00:07.505 PM] error: 	Error al obtener detalle del pedido: 304167
+[2025-01-09 06:00:07.505 PM] error: 	undefined
+[2025-01-09 06:00:07.669 PM] error: 	Error al obtener detalle del pedido: 304062
+[2025-01-09 06:00:07.669 PM] error: 	undefined
+[2025-01-09 06:00:07.835 PM] error: 	Error al obtener detalle del pedido: 306443
+[2025-01-09 06:00:07.835 PM] error: 	undefined
+[2025-01-09 06:00:08.003 PM] error: 	Error al obtener detalle del pedido: 300076
+[2025-01-09 06:00:08.004 PM] error: 	undefined
+[2025-01-09 06:00:08.167 PM] error: 	Error al obtener detalle del pedido: 307114
+[2025-01-09 06:00:08.167 PM] error: 	undefined
+[2025-01-09 06:00:08.330 PM] error: 	Error al obtener detalle del pedido: 298850
+[2025-01-09 06:00:08.330 PM] error: 	undefined
+[2025-01-09 06:00:08.498 PM] error: 	Error al obtener detalle del pedido: 299198
+[2025-01-09 06:00:08.498 PM] error: 	undefined
+[2025-01-09 06:00:08.664 PM] error: 	Error al obtener detalle del pedido: 299483
+[2025-01-09 06:00:08.664 PM] error: 	undefined
+[2025-01-09 06:00:08.830 PM] error: 	Error al obtener detalle del pedido: 299556
+[2025-01-09 06:00:08.830 PM] error: 	undefined
+[2025-01-09 06:00:08.993 PM] error: 	Error al obtener detalle del pedido: 299747
+[2025-01-09 06:00:08.993 PM] error: 	undefined
+[2025-01-09 06:00:09.156 PM] error: 	Error al obtener detalle del pedido: 299748
+[2025-01-09 06:00:09.156 PM] error: 	undefined
+[2025-01-09 06:00:09.320 PM] error: 	Error al obtener detalle del pedido: 299749
+[2025-01-09 06:00:09.320 PM] error: 	undefined
+[2025-01-09 06:00:09.492 PM] error: 	Error al obtener detalle del pedido: 299751
+[2025-01-09 06:00:09.493 PM] error: 	undefined
+[2025-01-09 06:00:09.659 PM] error: 	Error al obtener detalle del pedido: 299753
+[2025-01-09 06:00:09.659 PM] error: 	undefined
+[2025-01-09 06:00:09.837 PM] error: 	Error al obtener detalle del pedido: 299865
+[2025-01-09 06:00:09.837 PM] error: 	undefined
+[2025-01-09 06:00:10.009 PM] error: 	Error al obtener detalle del pedido: 299866
+[2025-01-09 06:00:10.009 PM] error: 	undefined
+[2025-01-09 06:00:10.174 PM] error: 	Error al obtener detalle del pedido: 300366
+[2025-01-09 06:00:10.174 PM] error: 	undefined
+[2025-01-09 06:00:10.344 PM] error: 	Error al obtener detalle del pedido: 300665
+[2025-01-09 06:00:10.345 PM] error: 	undefined
+[2025-01-09 06:00:10.509 PM] error: 	Error al obtener detalle del pedido: 300666
+[2025-01-09 06:00:10.509 PM] error: 	undefined
+[2025-01-09 06:00:10.676 PM] error: 	Error al obtener detalle del pedido: 305701
+[2025-01-09 06:00:10.677 PM] error: 	undefined
+[2025-01-09 06:00:10.845 PM] error: 	Error al obtener detalle del pedido: 307701
+[2025-01-09 06:00:10.845 PM] error: 	undefined
+[2025-01-09 06:00:11.011 PM] error: 	Error al obtener detalle del pedido: 299371
+[2025-01-09 06:00:11.011 PM] error: 	undefined
+[2025-01-09 06:00:11.175 PM] error: 	Error al obtener detalle del pedido: 301799
+[2025-01-09 06:00:11.175 PM] error: 	undefined
+[2025-01-09 06:00:11.339 PM] error: 	Error al obtener detalle del pedido: 306083
+[2025-01-09 06:00:11.339 PM] error: 	undefined
+[2025-01-09 06:00:11.504 PM] error: 	Error al obtener detalle del pedido: 301481
+[2025-01-09 06:00:11.504 PM] error: 	undefined
+[2025-01-09 06:00:11.667 PM] error: 	Error al obtener detalle del pedido: 299035
+[2025-01-09 06:00:11.667 PM] error: 	undefined
+[2025-01-09 06:00:11.831 PM] error: 	Error al obtener detalle del pedido: 299551
+[2025-01-09 06:00:11.831 PM] error: 	undefined
+[2025-01-09 06:00:11.993 PM] error: 	Error al obtener detalle del pedido: 301276
+[2025-01-09 06:00:11.993 PM] error: 	undefined
+[2025-01-09 06:00:12.157 PM] error: 	Error al obtener detalle del pedido: 301277
+[2025-01-09 06:00:12.157 PM] error: 	undefined
+[2025-01-09 06:00:12.322 PM] error: 	Error al obtener detalle del pedido: 302570
+[2025-01-09 06:00:12.322 PM] error: 	undefined
+[2025-01-09 06:00:12.491 PM] error: 	Error al obtener detalle del pedido: 304283
+[2025-01-09 06:00:12.491 PM] error: 	undefined
+[2025-01-09 06:00:12.654 PM] error: 	Error al obtener detalle del pedido: 305783
+[2025-01-09 06:00:12.654 PM] error: 	undefined
+[2025-01-09 06:00:12.818 PM] error: 	Error al obtener detalle del pedido: 305835
+[2025-01-09 06:00:12.818 PM] error: 	undefined
+[2025-01-09 06:00:13.012 PM] error: 	Error al obtener detalle del pedido: 307568
+[2025-01-09 06:00:13.012 PM] error: 	undefined
+[2025-01-09 06:00:13.177 PM] error: 	Error al obtener detalle del pedido: 299911
+[2025-01-09 06:00:13.177 PM] error: 	undefined
+[2025-01-09 06:00:13.340 PM] error: 	Error al obtener detalle del pedido: 301430
+[2025-01-09 06:00:13.340 PM] error: 	undefined
+[2025-01-09 06:00:13.506 PM] error: 	Error al obtener detalle del pedido: 301872
+[2025-01-09 06:00:13.506 PM] error: 	undefined
+[2025-01-09 06:00:13.669 PM] error: 	Error al obtener detalle del pedido: 302352
+[2025-01-09 06:00:13.669 PM] error: 	undefined
+[2025-01-09 06:00:13.835 PM] error: 	Error al obtener detalle del pedido: 302353
+[2025-01-09 06:00:13.835 PM] error: 	undefined
+[2025-01-09 06:00:14.028 PM] error: 	Error al obtener detalle del pedido: 303126
+[2025-01-09 06:00:14.028 PM] error: 	undefined
+[2025-01-09 06:00:14.192 PM] error: 	Error al obtener detalle del pedido: 306781
+[2025-01-09 06:00:14.192 PM] error: 	undefined
+[2025-01-09 06:00:14.361 PM] error: 	Error al obtener detalle del pedido: 306782
+[2025-01-09 06:00:14.361 PM] error: 	undefined
+[2025-01-09 06:00:14.530 PM] error: 	Error al obtener detalle del pedido: 306783
+[2025-01-09 06:00:14.531 PM] error: 	undefined
+[2025-01-09 06:00:14.694 PM] error: 	Error al obtener detalle del pedido: 307173
+[2025-01-09 06:00:14.694 PM] error: 	undefined
+[2025-01-09 06:00:14.862 PM] error: 	Error al obtener detalle del pedido: 301112
+[2025-01-09 06:00:14.862 PM] error: 	undefined
+[2025-01-09 06:00:15.028 PM] error: 	Error al obtener detalle del pedido: 303274
+[2025-01-09 06:00:15.028 PM] error: 	undefined
+[2025-01-09 06:00:15.192 PM] error: 	Error al obtener detalle del pedido: 300039
+[2025-01-09 06:00:15.192 PM] error: 	undefined
+[2025-01-09 06:00:15.396 PM] error: 	Error al obtener detalle del pedido: 302908
+[2025-01-09 06:00:15.396 PM] error: 	undefined
+[2025-01-09 06:00:15.565 PM] error: 	Error al obtener detalle del pedido: 303961
+[2025-01-09 06:00:15.565 PM] error: 	undefined
+[2025-01-09 06:00:15.731 PM] error: 	Error al obtener detalle del pedido: 302269
+[2025-01-09 06:00:15.731 PM] error: 	undefined
+[2025-01-09 06:00:15.899 PM] error: 	Error al obtener detalle del pedido: 304132
+[2025-01-09 06:00:15.900 PM] error: 	undefined
+[2025-01-09 06:00:16.068 PM] error: 	Error al obtener detalle del pedido: 298646
+[2025-01-09 06:00:16.068 PM] error: 	undefined
+[2025-01-09 06:00:16.233 PM] error: 	Error al obtener detalle del pedido: 299006
+[2025-01-09 06:00:16.233 PM] error: 	undefined
+[2025-01-09 06:00:16.398 PM] error: 	Error al obtener detalle del pedido: 299065
+[2025-01-09 06:00:16.398 PM] error: 	undefined
+[2025-01-09 06:00:16.566 PM] error: 	Error al obtener detalle del pedido: 299108
+[2025-01-09 06:00:16.566 PM] error: 	undefined
+[2025-01-09 06:00:16.736 PM] error: 	Error al obtener detalle del pedido: 299122
+[2025-01-09 06:00:16.736 PM] error: 	undefined
+[2025-01-09 06:00:16.900 PM] error: 	Error al obtener detalle del pedido: 299308
+[2025-01-09 06:00:16.900 PM] error: 	undefined
+[2025-01-09 06:00:17.063 PM] error: 	Error al obtener detalle del pedido: 299436
+[2025-01-09 06:00:17.063 PM] error: 	undefined
+[2025-01-09 06:00:17.228 PM] error: 	Error al obtener detalle del pedido: 299437
+[2025-01-09 06:00:17.229 PM] error: 	undefined
+[2025-01-09 06:00:17.392 PM] error: 	Error al obtener detalle del pedido: 299444
+[2025-01-09 06:00:17.393 PM] error: 	undefined
+[2025-01-09 06:00:17.559 PM] error: 	Error al obtener detalle del pedido: 299499
+[2025-01-09 06:00:17.559 PM] error: 	undefined
+[2025-01-09 06:00:17.724 PM] error: 	Error al obtener detalle del pedido: 299568
+[2025-01-09 06:00:17.724 PM] error: 	undefined
+[2025-01-09 06:00:17.887 PM] error: 	Error al obtener detalle del pedido: 299597
+[2025-01-09 06:00:17.887 PM] error: 	undefined
+[2025-01-09 06:00:18.054 PM] error: 	Error al obtener detalle del pedido: 299598
+[2025-01-09 06:00:18.054 PM] error: 	undefined
+[2025-01-09 06:00:18.216 PM] error: 	Error al obtener detalle del pedido: 299606
+[2025-01-09 06:00:18.217 PM] error: 	undefined
+[2025-01-09 06:00:18.381 PM] error: 	Error al obtener detalle del pedido: 299607
+[2025-01-09 06:00:18.381 PM] error: 	undefined
+[2025-01-09 06:00:18.551 PM] error: 	Error al obtener detalle del pedido: 299613
+[2025-01-09 06:00:18.551 PM] error: 	undefined
+[2025-01-09 06:00:18.718 PM] error: 	Error al obtener detalle del pedido: 299614
+[2025-01-09 06:00:18.719 PM] error: 	undefined
+[2025-01-09 06:00:18.881 PM] error: 	Error al obtener detalle del pedido: 299615
+[2025-01-09 06:00:18.882 PM] error: 	undefined
+[2025-01-09 06:00:19.047 PM] error: 	Error al obtener detalle del pedido: 299616
+[2025-01-09 06:00:19.047 PM] error: 	undefined
+[2025-01-09 06:00:19.214 PM] error: 	Error al obtener detalle del pedido: 299649
+[2025-01-09 06:00:19.215 PM] error: 	undefined
+[2025-01-09 06:00:19.389 PM] error: 	Error al obtener detalle del pedido: 299650
+[2025-01-09 06:00:19.389 PM] error: 	undefined
+[2025-01-09 06:00:19.559 PM] error: 	Error al obtener detalle del pedido: 299652
+[2025-01-09 06:00:19.559 PM] error: 	undefined
+[2025-01-09 06:00:19.721 PM] error: 	Error al obtener detalle del pedido: 299653
+[2025-01-09 06:00:19.721 PM] error: 	undefined
+[2025-01-09 06:00:19.886 PM] error: 	Error al obtener detalle del pedido: 299818
+[2025-01-09 06:00:19.886 PM] error: 	undefined
+[2025-01-09 06:00:20.055 PM] error: 	Error al obtener detalle del pedido: 299819
+[2025-01-09 06:00:20.055 PM] error: 	undefined
+[2025-01-09 06:00:20.221 PM] error: 	Error al obtener detalle del pedido: 299912
+[2025-01-09 06:00:20.221 PM] error: 	undefined
+[2025-01-09 06:00:20.385 PM] error: 	Error al obtener detalle del pedido: 299943
+[2025-01-09 06:00:20.385 PM] error: 	undefined
+[2025-01-09 06:00:20.548 PM] error: 	Error al obtener detalle del pedido: 299949
+[2025-01-09 06:00:20.548 PM] error: 	undefined
+[2025-01-09 06:00:20.719 PM] error: 	Error al obtener detalle del pedido: 306699
+[2025-01-09 06:00:20.719 PM] error: 	undefined
+[2025-01-09 06:00:20.885 PM] error: 	Error al obtener detalle del pedido: 306887
+[2025-01-09 06:00:20.885 PM] error: 	undefined
+[2025-01-09 06:00:21.057 PM] error: 	Error al obtener detalle del pedido: 307239
+[2025-01-09 06:00:21.057 PM] error: 	undefined
+[2025-01-09 06:00:21.317 PM] error: 	Error al obtener detalle del pedido: 307244
+[2025-01-09 06:00:21.317 PM] error: 	undefined
+[2025-01-09 06:00:21.604 PM] error: 	Error al obtener detalle del pedido: 307245
+[2025-01-09 06:00:21.604 PM] error: 	undefined
+[2025-01-09 06:00:21.776 PM] error: 	Error al obtener detalle del pedido: 307313
+[2025-01-09 06:00:21.776 PM] error: 	undefined
+[2025-01-09 06:00:21.937 PM] error: 	Error al obtener detalle del pedido: 307380
+[2025-01-09 06:00:21.937 PM] error: 	undefined
+[2025-01-09 06:00:22.102 PM] error: 	Error al obtener detalle del pedido: 307463
+[2025-01-09 06:00:22.102 PM] error: 	undefined
+[2025-01-09 06:00:22.265 PM] error: 	Error al obtener detalle del pedido: 307464
+[2025-01-09 06:00:22.266 PM] error: 	undefined
+[2025-01-09 06:00:22.428 PM] error: 	Error al obtener detalle del pedido: 307486
+[2025-01-09 06:00:22.428 PM] error: 	undefined
+[2025-01-09 06:00:22.597 PM] error: 	Error al obtener detalle del pedido: 307612
+[2025-01-09 06:00:22.597 PM] error: 	undefined
+[2025-01-09 06:00:22.764 PM] error: 	Error al obtener detalle del pedido: 307621
+[2025-01-09 06:00:22.764 PM] error: 	undefined
+[2025-01-09 06:00:22.932 PM] error: 	Error al obtener detalle del pedido: 307747
+[2025-01-09 06:00:22.932 PM] error: 	undefined
+[2025-01-09 06:00:23.097 PM] error: 	Error al obtener detalle del pedido: 299154
+[2025-01-09 06:00:23.097 PM] error: 	undefined
+[2025-01-09 06:00:23.262 PM] error: 	Error al obtener detalle del pedido: 299612
+[2025-01-09 06:00:23.262 PM] error: 	undefined
+[2025-01-09 06:00:23.426 PM] error: 	Error al obtener detalle del pedido: 299956
+[2025-01-09 06:00:23.426 PM] error: 	undefined
+[2025-01-09 06:00:23.588 PM] error: 	Error al obtener detalle del pedido: 300217
+[2025-01-09 06:00:23.588 PM] error: 	undefined
+[2025-01-09 06:00:23.752 PM] error: 	Error al obtener detalle del pedido: 300705
+[2025-01-09 06:00:23.752 PM] error: 	undefined
+[2025-01-09 06:00:23.917 PM] error: 	Error al obtener detalle del pedido: 300971
+[2025-01-09 06:00:23.917 PM] error: 	undefined
+[2025-01-09 06:00:24.081 PM] error: 	Error al obtener detalle del pedido: 301160
+[2025-01-09 06:00:24.081 PM] error: 	undefined
+[2025-01-09 06:00:24.274 PM] error: 	Error al obtener detalle del pedido: 301615
+[2025-01-09 06:00:24.275 PM] error: 	undefined
+[2025-01-09 06:00:24.437 PM] error: 	Error al obtener detalle del pedido: 303182
+[2025-01-09 06:00:24.437 PM] error: 	undefined
+[2025-01-09 06:00:24.599 PM] error: 	Error al obtener detalle del pedido: 303339
+[2025-01-09 06:00:24.599 PM] error: 	undefined
+[2025-01-09 06:00:24.763 PM] error: 	Error al obtener detalle del pedido: 303621
+[2025-01-09 06:00:24.764 PM] error: 	undefined
+[2025-01-09 06:00:24.929 PM] error: 	Error al obtener detalle del pedido: 303624
+[2025-01-09 06:00:24.929 PM] error: 	undefined
+[2025-01-09 06:00:25.104 PM] error: 	Error al obtener detalle del pedido: 303966
+[2025-01-09 06:00:25.104 PM] error: 	undefined
+[2025-01-09 06:00:25.266 PM] error: 	Error al obtener detalle del pedido: 304001
+[2025-01-09 06:00:25.266 PM] error: 	undefined
+[2025-01-09 06:00:25.431 PM] error: 	Error al obtener detalle del pedido: 304023
+[2025-01-09 06:00:25.431 PM] error: 	undefined
+[2025-01-09 06:00:25.594 PM] error: 	Error al obtener detalle del pedido: 304336
+[2025-01-09 06:00:25.594 PM] error: 	undefined
+[2025-01-09 06:00:25.758 PM] error: 	Error al obtener detalle del pedido: 304411
+[2025-01-09 06:00:25.758 PM] error: 	undefined
+[2025-01-09 06:00:25.920 PM] error: 	Error al obtener detalle del pedido: 304549
+[2025-01-09 06:00:25.920 PM] error: 	undefined
+[2025-01-09 06:00:26.092 PM] error: 	Error al obtener detalle del pedido: 304564
+[2025-01-09 06:00:26.092 PM] error: 	undefined
+[2025-01-09 06:00:26.257 PM] error: 	Error al obtener detalle del pedido: 305771
+[2025-01-09 06:00:26.258 PM] error: 	undefined
+[2025-01-09 06:00:26.423 PM] error: 	Error al obtener detalle del pedido: 306508
+[2025-01-09 06:00:26.424 PM] error: 	undefined
+[2025-01-09 06:00:26.587 PM] error: 	Error al obtener detalle del pedido: 306510
+[2025-01-09 06:00:26.587 PM] error: 	undefined
+[2025-01-09 06:00:26.754 PM] error: 	Error al obtener detalle del pedido: 306694
+[2025-01-09 06:00:26.754 PM] error: 	undefined
+[2025-01-09 06:00:26.918 PM] error: 	Error al obtener detalle del pedido: 301171
+[2025-01-09 06:00:26.919 PM] error: 	undefined
+[2025-01-09 06:00:27.085 PM] error: 	Error al obtener detalle del pedido: 302357
+[2025-01-09 06:00:27.086 PM] error: 	undefined
+[2025-01-09 06:00:27.250 PM] error: 	Error al obtener detalle del pedido: 301743
+[2025-01-09 06:00:27.251 PM] error: 	undefined
+[2025-01-09 06:00:27.413 PM] error: 	Error al obtener detalle del pedido: 301744
+[2025-01-09 06:00:27.413 PM] error: 	undefined
+[2025-01-09 06:00:27.576 PM] error: 	Error al obtener detalle del pedido: 305694
+[2025-01-09 06:00:27.576 PM] error: 	undefined
+[2025-01-09 06:00:27.740 PM] error: 	Error al obtener detalle del pedido: 306016
+[2025-01-09 06:00:27.740 PM] error: 	undefined
+[2025-01-09 06:00:27.904 PM] error: 	Error al obtener detalle del pedido: 299312
+[2025-01-09 06:00:27.904 PM] error: 	undefined
+[2025-01-09 06:00:28.069 PM] error: 	Error al obtener detalle del pedido: 299510
+[2025-01-09 06:00:28.069 PM] error: 	undefined
+[2025-01-09 06:00:28.233 PM] error: 	Error al obtener detalle del pedido: 299901
+[2025-01-09 06:00:28.233 PM] error: 	undefined
+[2025-01-09 06:00:28.395 PM] error: 	Error al obtener detalle del pedido: 300183
+[2025-01-09 06:00:28.395 PM] error: 	undefined
+[2025-01-09 06:00:28.561 PM] error: 	Error al obtener detalle del pedido: 301601
+[2025-01-09 06:00:28.561 PM] error: 	undefined
+[2025-01-09 06:00:28.725 PM] error: 	Error al obtener detalle del pedido: 302757
+[2025-01-09 06:00:28.725 PM] error: 	undefined
+[2025-01-09 06:00:28.887 PM] error: 	Error al obtener detalle del pedido: 303287
+[2025-01-09 06:00:28.887 PM] error: 	undefined
+[2025-01-09 06:00:29.050 PM] error: 	Error al obtener detalle del pedido: 304258
+[2025-01-09 06:00:29.050 PM] error: 	undefined
+[2025-01-09 06:00:29.212 PM] error: 	Error al obtener detalle del pedido: 305606
+[2025-01-09 06:00:29.213 PM] error: 	undefined
+[2025-01-09 06:00:29.378 PM] error: 	Error al obtener detalle del pedido: 305775
+[2025-01-09 06:00:29.378 PM] error: 	undefined
+[2025-01-09 06:00:29.544 PM] error: 	Error al obtener detalle del pedido: 307143
+[2025-01-09 06:00:29.544 PM] error: 	undefined
+[2025-01-09 06:00:29.709 PM] error: 	Error al obtener detalle del pedido: 307451
+[2025-01-09 06:00:29.710 PM] error: 	undefined
+[2025-01-09 06:00:29.875 PM] error: 	Error al obtener detalle del pedido: 299206
+[2025-01-09 06:00:29.875 PM] error: 	undefined
+[2025-01-09 06:00:30.037 PM] error: 	Error al obtener detalle del pedido: 301050
+[2025-01-09 06:00:30.038 PM] error: 	undefined
+[2025-01-09 06:00:30.200 PM] error: 	Error al obtener detalle del pedido: 301153
+[2025-01-09 06:00:30.201 PM] error: 	undefined
+[2025-01-09 06:00:30.364 PM] error: 	Error al obtener detalle del pedido: 301240
+[2025-01-09 06:00:30.364 PM] error: 	undefined
+[2025-01-09 06:00:30.554 PM] error: 	Error al obtener detalle del pedido: 303610
+[2025-01-09 06:00:30.554 PM] error: 	undefined
+[2025-01-09 06:00:30.716 PM] error: 	Error al obtener detalle del pedido: 303686
+[2025-01-09 06:00:30.717 PM] error: 	undefined
+[2025-01-09 06:00:30.888 PM] error: 	Error al obtener detalle del pedido: 303697
+[2025-01-09 06:00:30.888 PM] error: 	undefined
+[2025-01-09 06:00:31.055 PM] error: 	Error al obtener detalle del pedido: 302401
+[2025-01-09 06:00:31.055 PM] error: 	undefined
+[2025-01-09 06:00:31.235 PM] error: 	Error al obtener detalle del pedido: 302402
+[2025-01-09 06:00:31.235 PM] error: 	undefined
+[2025-01-09 06:00:31.397 PM] error: 	Error al obtener detalle del pedido: 302822
+[2025-01-09 06:00:31.397 PM] error: 	undefined
+[2025-01-09 06:00:31.561 PM] error: 	Error al obtener detalle del pedido: 299708
+[2025-01-09 06:00:31.561 PM] error: 	undefined
+[2025-01-09 06:00:31.726 PM] error: 	Error al obtener detalle del pedido: 300630
+[2025-01-09 06:00:31.726 PM] error: 	undefined
+[2025-01-09 06:00:31.888 PM] error: 	Error al obtener detalle del pedido: 300631
+[2025-01-09 06:00:31.888 PM] error: 	undefined
+[2025-01-09 06:00:32.084 PM] error: 	Error al obtener detalle del pedido: 299124
+[2025-01-09 06:00:32.085 PM] error: 	undefined
+[2025-01-09 06:00:32.250 PM] error: 	Error al obtener detalle del pedido: 299313
+[2025-01-09 06:00:32.250 PM] error: 	undefined
+[2025-01-09 06:00:32.415 PM] error: 	Error al obtener detalle del pedido: 299820
+[2025-01-09 06:00:32.415 PM] error: 	undefined
+[2025-01-09 06:00:32.578 PM] error: 	Error al obtener detalle del pedido: 300045
+[2025-01-09 06:00:32.578 PM] error: 	undefined
+[2025-01-09 06:00:32.742 PM] error: 	Error al obtener detalle del pedido: 300635
+[2025-01-09 06:00:32.742 PM] error: 	undefined
+[2025-01-09 06:00:32.905 PM] error: 	Error al obtener detalle del pedido: 300706
+[2025-01-09 06:00:32.905 PM] error: 	undefined
+[2025-01-09 06:00:33.069 PM] error: 	Error al obtener detalle del pedido: 301793
+[2025-01-09 06:00:33.069 PM] error: 	undefined
+[2025-01-09 06:00:33.231 PM] error: 	Error al obtener detalle del pedido: 301800
+[2025-01-09 06:00:33.231 PM] error: 	undefined
+[2025-01-09 06:00:33.404 PM] error: 	Error al obtener detalle del pedido: 301879
+[2025-01-09 06:00:33.404 PM] error: 	undefined
+[2025-01-09 06:00:33.567 PM] error: 	Error al obtener detalle del pedido: 301931
+[2025-01-09 06:00:33.567 PM] error: 	undefined
+[2025-01-09 06:00:33.731 PM] error: 	Error al obtener detalle del pedido: 302270
+[2025-01-09 06:00:33.731 PM] error: 	undefined
+[2025-01-09 06:00:33.893 PM] error: 	Error al obtener detalle del pedido: 302315
+[2025-01-09 06:00:33.893 PM] error: 	undefined
+[2025-01-09 06:00:34.146 PM] error: 	Error al obtener detalle del pedido: 302440
+[2025-01-09 06:00:34.146 PM] error: 	undefined
+[2025-01-09 06:00:34.307 PM] error: 	Error al obtener detalle del pedido: 302498
+[2025-01-09 06:00:34.307 PM] error: 	undefined
+[2025-01-09 06:00:34.469 PM] error: 	Error al obtener detalle del pedido: 302552
+[2025-01-09 06:00:34.469 PM] error: 	undefined
+[2025-01-09 06:00:34.629 PM] error: 	Error al obtener detalle del pedido: 303967
+[2025-01-09 06:00:34.629 PM] error: 	undefined
+[2025-01-09 06:00:34.792 PM] error: 	Error al obtener detalle del pedido: 304112
+[2025-01-09 06:00:34.792 PM] error: 	undefined
+[2025-01-09 06:00:34.954 PM] error: 	Error al obtener detalle del pedido: 304294
+[2025-01-09 06:00:34.954 PM] error: 	undefined
+[2025-01-09 06:00:35.117 PM] error: 	Error al obtener detalle del pedido: 305602
+[2025-01-09 06:00:35.117 PM] error: 	undefined
+[2025-01-09 06:00:35.279 PM] error: 	Error al obtener detalle del pedido: 305605
+[2025-01-09 06:00:35.279 PM] error: 	undefined
+[2025-01-09 06:00:35.442 PM] error: 	Error al obtener detalle del pedido: 305774
+[2025-01-09 06:00:35.442 PM] error: 	undefined
+[2025-01-09 06:00:35.606 PM] error: 	Error al obtener detalle del pedido: 306132
+[2025-01-09 06:00:35.606 PM] error: 	undefined
+[2025-01-09 06:00:35.771 PM] error: 	Error al obtener detalle del pedido: 306784
+[2025-01-09 06:00:35.771 PM] error: 	undefined
+[2025-01-09 06:00:35.934 PM] error: 	Error al obtener detalle del pedido: 306999
+[2025-01-09 06:00:35.934 PM] error: 	undefined
+[2025-01-09 06:00:36.114 PM] error: 	Error al obtener detalle del pedido: 299662
+[2025-01-09 06:00:36.114 PM] error: 	undefined
+[2025-01-09 06:00:36.279 PM] error: 	Error al obtener detalle del pedido: 300790
+[2025-01-09 06:00:36.279 PM] error: 	undefined
+[2025-01-09 06:00:36.442 PM] error: 	Error al obtener detalle del pedido: 300982
+[2025-01-09 06:00:36.442 PM] error: 	undefined
+[2025-01-09 06:00:36.604 PM] error: 	Error al obtener detalle del pedido: 301275
+[2025-01-09 06:00:36.604 PM] error: 	undefined
+[2025-01-09 06:00:36.766 PM] error: 	Error al obtener detalle del pedido: 301469
+[2025-01-09 06:00:36.766 PM] error: 	undefined
+[2025-01-09 06:00:36.930 PM] error: 	Error al obtener detalle del pedido: 301480
+[2025-01-09 06:00:36.930 PM] error: 	undefined
+[2025-01-09 06:00:37.092 PM] error: 	Error al obtener detalle del pedido: 302922
+[2025-01-09 06:00:37.092 PM] error: 	undefined
+[2025-01-09 06:00:37.259 PM] error: 	Error al obtener detalle del pedido: 303165
+[2025-01-09 06:00:37.259 PM] error: 	undefined
+[2025-01-09 06:00:37.426 PM] error: 	Error al obtener detalle del pedido: 303685
+[2025-01-09 06:00:37.426 PM] error: 	undefined
+[2025-01-09 06:00:37.588 PM] error: 	Error al obtener detalle del pedido: 304436
+[2025-01-09 06:00:37.588 PM] error: 	undefined
+[2025-01-09 06:00:37.752 PM] error: 	Error al obtener detalle del pedido: 305679
+[2025-01-09 06:00:37.752 PM] error: 	undefined
+[2025-01-09 06:00:37.922 PM] error: 	Error al obtener detalle del pedido: 305855
+[2025-01-09 06:00:37.925 PM] error: 	undefined
+[2025-01-09 06:00:38.129 PM] error: 	Error al obtener detalle del pedido: 306511
+[2025-01-09 06:00:38.129 PM] error: 	undefined
+[2025-01-09 06:00:38.358 PM] error: 	Error al obtener detalle del pedido: 307407
+[2025-01-09 06:00:38.358 PM] error: 	undefined
+[2025-01-09 06:00:38.521 PM] error: 	Error al obtener detalle del pedido: 299948
+[2025-01-09 06:00:38.521 PM] error: 	undefined
+[2025-01-09 06:00:38.706 PM] error: 	Error al obtener detalle del pedido: 302697
+[2025-01-09 06:00:38.706 PM] error: 	undefined
+[2025-01-09 06:00:38.871 PM] error: 	Error al obtener detalle del pedido: 302755
+[2025-01-09 06:00:38.871 PM] error: 	undefined
+[2025-01-09 06:00:39.034 PM] error: 	Error al obtener detalle del pedido: 304412
+[2025-01-09 06:00:39.035 PM] error: 	undefined
+[2025-01-09 06:00:39.198 PM] error: 	Error al obtener detalle del pedido: 306002
+[2025-01-09 06:00:39.198 PM] error: 	undefined
+[2025-01-09 06:00:39.360 PM] error: 	Error al obtener detalle del pedido: 306082
+[2025-01-09 06:00:39.360 PM] error: 	undefined
+[2025-01-09 06:00:39.525 PM] error: 	Error al obtener detalle del pedido: 306640
+[2025-01-09 06:00:39.525 PM] error: 	undefined
+[2025-01-09 06:00:39.688 PM] error: 	Error al obtener detalle del pedido: 298910
+[2025-01-09 06:00:39.688 PM] error: 	undefined
+[2025-01-09 06:00:39.855 PM] error: 	Error al obtener detalle del pedido: 299030
+[2025-01-09 06:00:39.855 PM] error: 	undefined
+[2025-01-09 06:00:40.024 PM] error: 	Error al obtener detalle del pedido: 299074
+[2025-01-09 06:00:40.024 PM] error: 	undefined
+[2025-01-09 06:00:40.187 PM] error: 	Error al obtener detalle del pedido: 299123
+[2025-01-09 06:00:40.187 PM] error: 	undefined
+[2025-01-09 06:00:40.354 PM] error: 	Error al obtener detalle del pedido: 299166
+[2025-01-09 06:00:40.354 PM] error: 	undefined
+[2025-01-09 06:00:40.520 PM] error: 	Error al obtener detalle del pedido: 299658
+[2025-01-09 06:00:40.520 PM] error: 	undefined
+[2025-01-09 06:00:41.693 PM] error: 	Total pedidos grabados: 430
+[2025-01-09 06:00:41.693 PM] info: 	Finaliza guardado de Pedidos Next-Cloud
+[2025-01-09 06:00:41.694 PM] info: 	Comienza guardado Walmart en BD
+[2025-01-09 06:00:41.831 PM] info: 	Total pedidos encontrados: 0
+[2025-01-09 06:00:41.831 PM] info: 	Total sub pedidos encontrados: 0
+[2025-01-09 06:00:41.831 PM] info: 	Total pedidos grabados: 0
+[2025-01-09 06:00:41.831 PM] info: 	Finaliza guardado Walmart en BD
+[2025-01-09 06:00:41.832 PM] info: 	Comienza guardado de Notas de Credito Next-Cloud en BD - Token: 06DD7A89-9DC3-BAF4-C56C957224AF1229
+[2025-01-09 06:01:32.035 PM] error: 	Total pedidos grabados: 859
+[2025-01-09 06:01:32.094 PM] info: 	Finaliza Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 06:06:20.970 PM] info: 	Inicia Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART
+[2025-01-09 06:10:47.833 PM] info: 	Comienza exportado - 2025-01-09T18:10:47-06:00
+[2025-01-09 06:10:48.656 PM] info: 	Finaliza exportado con exito - 2025-01-09T18:10:48-06:00
+[2025-01-09 06:10:48.715 PM] info: 	Descarga de Excel correcta
+[2025-01-09 06:10:48.716 PM] info: 	Comienza lectura de excel - Pedidos_WALMART_sf_2025-01-09T181047-0600.xlsx
+[2025-01-09 06:11:15.107 PM] info: 	Comienza exportado - 2025-01-09T18:11:15-06:00
+[2025-01-09 06:11:15.432 PM] info: 	Finaliza exportado con exito - 2025-01-09T18:11:15-06:00
+[2025-01-09 06:11:15.435 PM] info: 	Descarga de Excel correcta
+[2025-01-09 06:11:15.435 PM] info: 	Comienza lectura de excel - Facturas_WALMART_sf_2025-01-09T181115-0600.xlsx
+[2025-01-09 06:11:36.746 PM] info: 	Comienza exportado - 2025-01-09T18:11:36-06:00
+[2025-01-09 06:11:37.162 PM] info: 	Finaliza exportado con exito - 2025-01-09T18:11:37-06:00
+[2025-01-09 06:11:37.267 PM] info: 	Descarga de Excel correcta
+[2025-01-09 06:11:37.267 PM] info: 	Comienza lectura de excel - NotasDeCredito_WALMART_sf_2025-01-09T181136-0600.xlsx
+[2025-01-09 06:11:37.552 PM] info: 	Comienza consulta de pedidos WFS-Walmart del 2025-01-05T00:00:00.000+0000 a 2025-01-09T23:59:59.999+0000
+[2025-01-09 06:11:37.552 PM] info: 	Cursor actual: *
+[2025-01-09 06:11:53.156 PM] info: 	Cursor actual: 100~-1~0
+[2025-01-09 06:12:05.562 PM] info: 	Total pedidos WFS: 171
+[2025-01-09 06:12:05.563 PM] error: 	Comienza consulta de pedidos Seller-Walmart del 2025-01-05T00:00:00.000 a 2025-01-05T23:59:59.999
+[2025-01-09 06:12:17.465 PM] info: 	Siguiente consulta: 2025-01-05T00:00:00.000-2025-01-05T23:59:59.999 -> 25
+[2025-01-09 06:12:30.461 PM] info: 	Siguiente consulta: 2025-01-06T00:00:00.000-2025-01-06T23:59:59.999 -> 40
+[2025-01-09 06:12:42.487 PM] info: 	Siguiente consulta: 2025-01-07T00:00:00.000-2025-01-07T23:59:59.999 -> 33
+[2025-01-09 06:12:53.910 PM] info: 	Siguiente consulta: 2025-01-08T00:00:00.000-2025-01-08T23:59:59.999 -> 37
+[2025-01-09 06:12:53.910 PM] error: 	Total pedidos Seller: 135
+[2025-01-09 06:13:16.853 PM] info: 	Comienza guardado Next-Cloud en BD - Token: 07723F3E-989C-8AC2-01B81A5C9838D900
+[2025-01-09 06:41:56.045 PM] error: 	Error: TypeError: fetch failed
+[2025-01-09 06:41:56.045 PM] error: 	Error al obtener detalle del pedido: 302922
+[2025-01-09 06:41:56.045 PM] error: 	false
+[2025-01-09 06:42:18.252 PM] error: 	Total pedidos grabados: 434
+[2025-01-09 06:42:18.252 PM] info: 	Finaliza guardado de Pedidos Next-Cloud
+[2025-01-09 06:42:18.253 PM] info: 	Comienza guardado Walmart en BD
+[2025-01-09 06:43:02.086 PM] info: 	Total pedidos encontrados: 306
+[2025-01-09 06:43:02.086 PM] info: 	Total sub pedidos encontrados: 329
+[2025-01-09 06:43:02.086 PM] info: 	Total pedidos grabados: 329
+[2025-01-09 06:43:02.086 PM] info: 	Finaliza guardado Walmart en BD
+[2025-01-09 06:43:02.087 PM] info: 	Comienza guardado de Facturas Next-Cloud en BD - Token: 07723F3E-989C-8AC2-01B81A5C9838D900
+[2025-01-09 06:43:05.853 PM] error: 	Total pedidos grabados: 63
+[2025-01-09 06:43:05.853 PM] info: 	Comienza guardado de Notas de Credito Next-Cloud en BD - Token: 07723F3E-989C-8AC2-01B81A5C9838D900
+[2025-01-09 07:15:12.015 PM] error: 	[34m[1mError al grabar registro: PoolClearedOnNetworkError: Connection to 213.210.13.30:27017 interrupted due to server monitor timeout[22m[39m
+[2025-01-09 07:15:12.367 PM] error: 	{"idCliente":156,"razonSocial":"DISTRIBUIDORA LIVERPOOL","folioNotaDeCredito":25130,"serie":"N","origen":"FACTC","origenFolio":234044,"serieReferencia":"E","fechaFactura":"18/DIC/2024","fechaPago":"2025-01-06T06:00:36.000Z","aplicacionFolio":234044,"aplicacionSerie":"E","monto":909,"iva":125.379986}
+[2025-01-09 07:16:16.552 PM] error: 	Total pedidos grabados: 858
+[2025-01-09 07:16:16.662 PM] info: 	Finaliza Conciliación de Tienda: WALMART - Fuente: WALMART / WALMART

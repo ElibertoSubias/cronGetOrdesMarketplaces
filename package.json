@@ -1,0 +1,34 @@
+{
+  "name": "conciliacion-de-datos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Eliberto Subias",
+  "license": "ISC",
+  "description": "Conciliar datos de plataformas de ventas con datos en Next-Cloud.",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "chalk": "^4.1.2",
+    "convert-excel-to-json": "^1.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-validator": "^7.2.0",
+    "http-errors": "^2.0.0",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.46",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
+    "node-cron": "^3.0.3",
+    "node-fs": "^0.1.7",
+    "nodemon": "^3.1.7",
+    "ora": "^5.4.1",
+    "puppeteer": "^23.6.1",
+    "uuid": "^11.0.2",
+    "winston": "^3.17.0"
+  }
+}
