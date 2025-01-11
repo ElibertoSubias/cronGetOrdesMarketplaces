@@ -715,11 +715,31 @@ exports.getFilters = async (req, res) => {
     ]);
 
     const ordenesDuplicadas = await PedidosNextCloud.aggregate([
-        {$group:{"_id":"$numOrden","numOrden":{$first:"$numOrden"},"count":{$sum:1}}},
-        {$match:{"count":{$gt:1}}},
-        {$project:{"numOrden":1,"_id":0}},
-        {$group:{"_id":null,"ordenesDuplicadas":{$push:"$numOrden"}}},
-        {$project:{"_id":0,"ordenesDuplicadas":1}}
+        {
+          $match: { marketplace: "WALMART" } // Filtra los documentos con marketPlace igual a "Amazon"
+        },
+        {
+          $group: {
+            _id: { numOrden: "$numOrden", marketplace: "$marketplace" }, // Agrupa por numOrden y marketPlace
+            numOrden: { $first: "$numOrden" },
+            count: { $sum: 1 } // Cuenta los documentos en cada grupo
+          }
+        },
+        {
+          $match: { count: { $gt: 1 } } // Filtra grupos con más de un documento
+        },
+        {
+          $group: {
+            _id: null,
+            numOrdenesDuplicadas: { $addToSet: "$numOrden" } // Crea un array único de `numOrden`
+          }
+        },
+        {
+          $project: {
+            _id: 0,
+            ordenesDuplicadas: "$numOrdenesDuplicadas" // Solo mantiene el array de `numOrden`
+          }
+        }
     ]);
 
     let ordenesPorStatus = {};
