@@ -556,19 +556,19 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
 
                 const detallePedidoWalmart = await PedidosNextCloud.find({numOrden: guia}).sort({"factura" : -1}).limit(1);
 
-                if (detallePedidoWalmart && detallePedidoWalmart.length && detallePedidoWalmart[0]._id) {
+                // if (detallePedidoWalmart && detallePedidoWalmart.length && detallePedidoWalmart[0]._id) {
 
                     const pedido = new PedidosWalmart({
                         IDOrderPlatform: item["customerOrderId"],
-                        IDOrdenNextCloud: detallePedidoWalmart[0]._id,
+                        IDOrdenNextCloud: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0]._id : null,
                         IDTienda: 9,
                         tienda: "WALMART",
                         IDFuente: 43,
                         fuente: "WALMART",
                         numOrden: subItem.soPrimeLineSubLineNo ? subItem.soPrimeLineSubLineNo : "" ,
-                        pedido: detallePedidoWalmart[0].pedido,
-                        formadePago: detallePedidoWalmart[0].formadePago,
-                        factura: detallePedidoWalmart[0].factura,
+                        pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : 0,
+                        formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
+                        factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : 0,
                         fechaFactura: item.orderDate ? item.orderDate : "",
                         cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
                         razonSocial: "",
@@ -636,9 +636,9 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                                 tienda: "WALMART",
                                 IDFuente: 43,
                                 fuente: "WALMART",
-                                pedido: detallePedidoWalmart[0].pedido,
-                                formadePago: detallePedidoWalmart[0].formadePago,
-                                factura: detallePedidoWalmart[0].factura,
+                                pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : "",
+                                formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
+                                factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : "",
                                 fechaFactura: item.orderDate ? item.orderDate : "",
                                 cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
                                 importeFactura: subItem.item.unitPriceWithoutTax.amount,
@@ -663,9 +663,9 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                         serviceBLogger.error(JSON.stringify(item));
                     }
 
-                } else {
-                    serviceBLogger.error("Error, Guia no existe en Next-Cloud: " + guia);
-                }
+                // } else {
+                //     serviceBLogger.error("Error, Guia no existe en Next-Cloud: " + guia);
+                // }
 
             }
             
