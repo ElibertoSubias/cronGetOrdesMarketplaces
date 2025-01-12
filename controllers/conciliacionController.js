@@ -113,6 +113,7 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
         if (!marketplaces || !marketplaces.length) {
             serviceBLogger.error('No se encontrarón Marketplaces para consultar.');
         } else {
+        
             for (let marketPlace of marketplaces) {
 
                 serviceBLogger.info("Inicia Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
@@ -134,16 +135,10 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
 
 const main = async (fechaInicio, fechaFin, tienda, fuente) => {
 
-    let fechaInicioNextCloud = fechaInicio ? moment(fechaInicio).subtract(1, 'days') : moment( moment().subtract(parseInt(process.env.DIAS_A_CONCILIAR)+1, 'days') ).format("YYYY-MM-DD");
-    let fechaFinNextCloud = fechaFin ? fechaFin : moment().format("YYYY-MM-DD");
     let fechaInicioMarketplace = "";
     let fechaFinMarketplace = "";
-    let pedidosMarketplace = [];
-    let pedidosNextCloud = {};
     const fechaInicioProceso = moment(moment( moment() ).format("YYYY-MM-DD")).set({ hour: moment().hour(), minute: moment().minute(), second: moment().second() }).format("YYYY-MM-DD HH:mm:ss");
-    let result = false;
-
-    // pedidosNextCloud = await obtenerPedidosNextCloud(fechaInicioNextCloud, fechaFinNextCloud, tienda, fuente);
+    let totalPedidosEncontrados = 0;
     
     // Una vez guardada la info de Next-Cloud podemos proseguir
     // con la información de Marketplace
@@ -155,93 +150,65 @@ const main = async (fechaInicio, fechaFin, tienda, fuente) => {
     switch(tienda) {
         case "WALMART":
 
-            pedidosMarketplace = await obtenerPedidosPlataformaWalmart(fechaInicioMarketplace, fechaFinMarketplace, tienda, fuente);
-            
-            if (pedidosMarketplace) {
+            await getWalmartData(fechaInicioMarketplace, fechaFinMarketplace).then(async (pedidosWFS) => {
 
-                // Guardamos los Pedidos Walmart en BD
-                await saveWalmartDataDB(pedidosMarketplace).then(async (resultTotal) => {
+                if (pedidosWFS) {
 
-                    let startDateTime = moment(fechaInicioMarketplace).format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
-                    let endDateTime = moment(fechaFinMarketplace).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
-            
-                    const conciliacion = new Conciliacion({
-                        fechaInicioProceso: fechaInicioProceso,
-                        fechaFinProceso: moment(moment( moment() ).format("YYYY-MM-DD")).set({ hour: moment().hour(), minute: moment().minute(), second: moment().second() }).format("YYYY-MM-DD HH:mm:ss"),
-                        fechaInicio: startDateTime,
-                        fechaFin: endDateTime,
-                        totalPedidosNextCloud: 0,
-                        totalPedidosMarketplace: result && result > 0 ? result : 0,
-                        status: result && result > 0 ? true : false,
-                        proceso: "plataformas"
+                    // Guardamos los Pedidos Walmart en BD
+                    await saveWalmartDataDB(pedidosWFS).then(async (resultTotal) => {
+                        totalPedidosEncontrados += resultTotal;
+                    }).catch(function(err) {
+                        serviceBLogger.error("Error grabando información en BD: Walmart: " + err);
                     });
-                
-                    await conciliacion.save();
+            
+                } else {
+            
+                    serviceBLogger.error("No se encontrarón pedidos en Plataforma: " + tienda);
+            
+                }
+        
+            }).catch(function(err) {
+                serviceBLogger.error("Error obteniendo datos de Walmart: " + err);
+            });
 
+            await getWalmartDataByRangeDate(fechaInicioMarketplace, fechaFinMarketplace).then(async (pedidosSeller) => {
+        
+                // Guardamos los Pedidos Walmart en BD
+                await saveWalmartDataDB(pedidosSeller).then(async (resultTotal) => {
+                    totalPedidosEncontrados += resultTotal;
                 }).catch(function(err) {
                     serviceBLogger.error("Error grabando información en BD: Walmart: " + err);
                 });
-        
-            } else {
-        
-                serviceBLogger.error("No se encontrarón pedidos en Plataforma: " + tienda);
-        
-            }
+    
+            }).catch(function(err) {
+                serviceBLogger.error("Error obteniendo datos de Walmart: " + err);
+            });
 
+            let startDateTime = moment(fechaInicioMarketplace).format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
+            let endDateTime = moment(fechaFinMarketplace).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
+    
+            const conciliacion = new Conciliacion({
+                fechaInicioProceso: fechaInicioProceso,
+                fechaFinProceso: moment(moment( moment() ).format("YYYY-MM-DD")).set({ hour: moment().hour(), minute: moment().minute(), second: moment().second() }).format("YYYY-MM-DD HH:mm:ss"),
+                fechaInicio: startDateTime,
+                fechaFin: endDateTime,
+                totalPedidosNextCloud: 0,
+                totalPedidosMarketplace: 0,
+                status: true,
+                proceso: "plataformas"
+            });
+                
+            return await conciliacion.save();
+
+        case "default": 
+            console.log("No se encontro la plataforma.");
         break;
 
     }
 
-    let startDateTime = moment(fechaInicioMarketplace).format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
-    let endDateTime = moment(fechaFinMarketplace).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
-
-    const conciliacion = new Conciliacion({
-        fechaInicioProceso: fechaInicioProceso,
-        fechaFinProceso: moment(moment( moment() ).format("YYYY-MM-DD")).set({ hour: moment().hour(), minute: moment().minute(), second: moment().second() }).format("YYYY-MM-DD HH:mm:ss"),
-        fechaInicio: startDateTime,
-        fechaFin: endDateTime,
-        totalPedidosNextCloud: 0,
-        totalPedidosMarketplace: 0,
-        status: false,
-        proceso: "plataformas"
-    });
-
-    return await conciliacion.save();
-
-}
-
-const obtenerPedidosPlataformaWalmart = async (fechaInicio, fechaFin, tienda, fuente) => {
-
-    let result = [];
-
-    await getWalmartData(fechaInicio, fechaFin).then(async (pedidosWFS) => {
-
-        await getWalmartDataByRangeDate(fechaInicio, fechaFin).then(async (pedidosSeller) => {
-
-            if (!pedidosSeller.length) {
-                serviceBLogger.warn("No se encontrarón pedidos Seller.");
-            }
-
-            if (!pedidosWFS.length) {
-                serviceBLogger.warn("No se encontrarón pedidos WFS.");
-            }
-
-            result = [...pedidosWFS,...pedidosSeller];
-
-        }).catch(function(err) {
-            serviceBLogger.error("Error obteniendo datos de Walmart: " + err);
-        });
-
-    }).catch(function(err) {
-        serviceBLogger.error("Error obteniendo datos de Walmart: " + err);
-    });
-
-    return result;
-
 }
 
 const sleep = ms => new Promise(res => setTimeout(res, ms));
-
 
 /**
  * Obtiene un nuevo token valido para el consumo de la API de Walmart
@@ -338,23 +305,6 @@ const getDataByCursor = async (cursor, fechaInicio, fechaFin) => {
         serviceBLogger.error("Error 02 en consumo de API: " + error);
         return null;
     }
-}
-
-let diccionario =
-{
-  "á" : "a",
-  "é" : "e",
-  "í" : "i",
-  "ó" : "o",
-  "ú" : "u"
-};
-
-function removeAccents (frase) {
-
-    remove = frase.replace(/á|é|í|ó|ú/g,function(a){
-      return diccionario[a];
-    });
-    return remove;
 }
 
 /**
