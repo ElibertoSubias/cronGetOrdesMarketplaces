@@ -150,39 +150,11 @@ const main = async (fechaInicio, fechaFin, tienda, fuente) => {
     switch(tienda) {
         case "WALMART":
 
-            await getWalmartData(fechaInicioMarketplace, fechaFinMarketplace).then(async (pedidosWFS) => {
+            let resultadoPedidosSeller = await getWalmartData(fechaInicioMarketplace, fechaFinMarketplace);
+            serviceBLogger.info("Total pedidos Seller: " + (resultadoPedidosSeller[0]+resultadoPedidosSeller[1]));
 
-                if (pedidosWFS) {
-
-                    // Guardamos los Pedidos Walmart en BD
-                    await saveWalmartDataDB(pedidosWFS).then(async (resultTotal) => {
-                        totalPedidosEncontrados += resultTotal;
-                    }).catch(function(err) {
-                        serviceBLogger.error("Error grabando información en BD: Walmart: " + err);
-                    });
-            
-                } else {
-            
-                    serviceBLogger.error("No se encontrarón pedidos en Plataforma: " + tienda);
-            
-                }
-        
-            }).catch(function(err) {
-                serviceBLogger.error("Error obteniendo datos de Walmart: " + err);
-            });
-
-            await getWalmartDataByRangeDate(fechaInicioMarketplace, fechaFinMarketplace).then(async (pedidosSeller) => {
-        
-                // Guardamos los Pedidos Walmart en BD
-                await saveWalmartDataDB(pedidosSeller).then(async (resultTotal) => {
-                    totalPedidosEncontrados += resultTotal;
-                }).catch(function(err) {
-                    serviceBLogger.error("Error grabando información en BD: Walmart: " + err);
-                });
-    
-            }).catch(function(err) {
-                serviceBLogger.error("Error obteniendo datos de Walmart: " + err);
-            });
+            let resultadoPedidosWFS = await getWalmartDataByRangeDate(fechaInicioMarketplace, fechaFinMarketplace);
+            serviceBLogger.info("Total pedidos WFS: " + (resultadoPedidosWFS[0]+resultadoPedidosWFS[1]) );
 
             let startDateTime = moment(fechaInicioMarketplace).format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
             let endDateTime = moment(fechaFinMarketplace).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
@@ -193,10 +165,14 @@ const main = async (fechaInicio, fechaFin, tienda, fuente) => {
                 fechaInicio: startDateTime,
                 fechaFin: endDateTime,
                 totalPedidosNextCloud: 0,
-                totalPedidosMarketplace: 0,
+                totalPedidosMarketplace: (resultadoPedidosSeller[0]+resultadoPedidosSeller[1]+resultadoPedidosWFS[0]+resultadoPedidosWFS[1]),
                 status: true,
                 proceso: "plataformas"
             });
+            
+            serviceBLogger.info("Total pedidos grabados: " + (resultadoPedidosSeller[0]+resultadoPedidosWFS[0]));
+            serviceBLogger.info("Total pedidos Actualizados: " + (resultadoPedidosSeller[1]+resultadoPedidosWFS[1]));
+            serviceBLogger.info("Finaliza guardado Walmart en BD");
                 
             return await conciliacion.save();
 
@@ -316,7 +292,8 @@ const getDataByCursor = async (cursor, fechaInicio, fechaFin) => {
 const getWalmartData = async (fechaInicio, fechaFin) => {
     
     let cursorActual = "*";
-    let pedidos = [];
+    let totalPedidosGrabados = 0;
+    let totalPedidosActualizados = 0;
 
     let startDateTime = moment(fechaInicio).format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
     let endDateTime = moment(fechaFin).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS") + "+0000";
@@ -333,7 +310,10 @@ const getWalmartData = async (fechaInicio, fechaFin) => {
             
             // Validamos que exista el array de pedidos
             if (result && result["order"] && result["order"].length) {
-                pedidos = [...pedidos,...result["order"]];   
+                // Guardamos los Pedidos Walmart en BD
+                let resultado = await saveWalmartDataDB(result["order"]);
+                totalPedidosGrabados += resultado[0];
+                totalPedidosActualizados += resultado[1];
             }
 
             if (result && result["meta"] && result["meta"]["nextCursorMark"] == "-1") {
@@ -350,16 +330,15 @@ const getWalmartData = async (fechaInicio, fechaFin) => {
         
     } while (cursorActual != "-1");
 
-    serviceBLogger.info("Total pedidos WFS: " + pedidos.length );
-
-    return pedidos;
+    return [totalPedidosGrabados, totalPedidosActualizados];
     
 }
 
 const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
     
     let cursorActual = "*";
-    let pedidos = [];
+    let totalPedidosGrabados = 0;
+    let totalPedidosActualizados = 0;
 
     let startDateTime = moment(fechaInicio).format("YYYY-MM-DDTHH:mm:ss.SSS");
     let endDateTime = moment(fechaInicio).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS");
@@ -382,7 +361,10 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
             result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
             serviceBLogger.error(result["meta"]["totalCount"]);
             if (result && result["order"] && result["order"].length) {
-                pedidos = [...pedidos,...result["order"]]; 
+                // Guardamos los Pedidos Walmart en BD
+                let resultado = await saveWalmartDataDB(result["order"]); 
+                totalPedidosGrabados += resultado[0];
+                totalPedidosActualizados += resultado[1];
             }
 
             startDateTime = endDateTime;
@@ -391,7 +373,10 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
             result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
             serviceBLogger.error(result["meta"]["totalCount"]);
             if (result && result["order"] && result["order"].length) {
-                pedidos = [...pedidos,...result["order"]]; 
+                // Guardamos los Pedidos Walmart en BD
+                let resultado = await saveWalmartDataDB(result["order"]);
+                totalPedidosGrabados += resultado[0];
+                totalPedidosActualizados += resultado[1];
             }
 
             startDateTime = moment(startDateTime).add(1, 'days').startOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS");
@@ -400,8 +385,12 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
         } else {
 
             if (result && result["order"] && result["order"].length) {
-                pedidos = [...pedidos,...result["order"]]; 
+                // Guardamos los Pedidos Walmart en BD
+                let resultado = await saveWalmartDataDB(result["order"]);
+                totalPedidosGrabados += resultado[0];
+                totalPedidosActualizados += resultado[1];
             }
+
             startDateTime = moment(startDateTime).add(1, 'days').startOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS");
             endDateTime = moment(startDateTime).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS");
 
@@ -414,9 +403,7 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
         
     } while (cursorActual != "-1");
 
-    serviceBLogger.info("Total pedidos Seller: " + pedidos.length);
-
-    return pedidos;
+    return [totalPedidosGrabados, totalPedidosActualizados];
     
 }
 
@@ -474,14 +461,9 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
     let contadorPedidosGrabados = 0;
     let contadorPedidosActualizados = 0;
     let contadorSubPedidos = 0;
-    serviceBLogger.info("Comienza guardado Walmart en BD");
     
     try {
         
-        // if (pedidosWalmart && pedidosWalmart.length) {
-        //     await Tmp_PedidosWalmart.deleteMany({});
-        // }
-
         for (let item of pedidosWalmart) {
 
             for (let subItem of item["orderLines"]) {
@@ -506,128 +488,116 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
 
                 const detallePedidoWalmart = await PedidosNextCloud.find({numOrden: guia}).sort({"factura" : -1}).limit(1);
 
-                // if (detallePedidoWalmart && detallePedidoWalmart.length && detallePedidoWalmart[0]._id) {
+                const pedido = new PedidosWalmart({
+                    IDOrderPlatform: item["customerOrderId"],
+                    IDOrdenNextCloud: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0]._id : null,
+                    IDTienda: 9,
+                    tienda: "WALMART",
+                    IDFuente: 43,
+                    fuente: "WALMART",
+                    numOrden: subItem.soPrimeLineSubLineNo ? subItem.soPrimeLineSubLineNo : "" ,
+                    pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : 0,
+                    formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
+                    factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : 0,
+                    fechaFactura: item.orderDate ? item.orderDate : "",
+                    cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
+                    razonSocial: "",
+                    estadoFactura: "",
+                    importeFactura: subItem.item.unitPriceWithoutTax.amount,
+                    fleteFactura: "",
+                    imptoFactura: subItem.charges[0].tax[0].taxAmount.amount,
+                    totalFactura: item.orderTotal.amount ? item.orderTotal.amount : "",
+                    sku: subItem.item.sku,
+                    SKUDescripcion: subItem.item.productName,
+                    SKUNumParte: "",
+                    cantFact: subItem.orderLineQuantity.amount,
+                    precioUnitario: subItem.item.unitPriceWithoutTax.amount,
+                    imptoUnitario: subItem.charges[0].tax[0].taxAmount.amount,
+                    embarque: "",
+                    entrega: "",
+                    estadoEntrega: "",
+                    medio: medioEmbarque,
+                    guia: item["shipments"][0]["trackingNumber"],
+                    domicilio: "",
+                    colonia: "",
+                    ciudad: "",
+                    estado: "",
+                    cp: "",
+                    detalleUbicacion: "",
+                    emisionPedido: "",
+                    fechaAutorizacion: "",
+                    fechaAsignacion: "",
+                    fechaSalida: "",
+                    fechaEntrega: "",
+                    personaRecibe: "",
+                    personaRecibe2: "",
+                    fechaConfirmacion: "",
+                    observaciones: "",
+                    telefono: "",
+                    telefono2: "",
+                    lote: "",
+                    peso: "",
+                    emailCliente: "",
+                    telefonoCliente: "",
+                    telefono2Cliente: "",
+                    costo: "",
+                    IDSeccion: "",
+                    seccion: "",
+                    IDCategoria: "",
+                    categoria: "",
+                    IDLinea: "",
+                    linea: "",
+                    marketplace: "",
+                    tipoEnvio: subItem.isWFSEnabled ? subItem.isWFSEnabled == "Y" ? "Fulfillment" : subItem.isWFSEnabled == "N" ? "Dropshipping" : "" : "",
+                    shipmentStatus: item["shipments"][0]["status"],
+                    orderLineStatus: subItem.orderLineStatus && subItem.orderLineStatus[0] ? subItem.orderLineStatus[0].status : ""
+                });
 
-                    const pedido = new PedidosWalmart({
-                        IDOrderPlatform: item["customerOrderId"],
-                        IDOrdenNextCloud: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0]._id : null,
-                        IDTienda: 9,
-                        tienda: "WALMART",
-                        IDFuente: 43,
-                        fuente: "WALMART",
-                        numOrden: subItem.soPrimeLineSubLineNo ? subItem.soPrimeLineSubLineNo : "" ,
-                        pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : 0,
-                        formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
-                        factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : 0,
-                        fechaFactura: item.orderDate ? item.orderDate : "",
-                        cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
-                        razonSocial: "",
-                        estadoFactura: "",
-                        importeFactura: subItem.item.unitPriceWithoutTax.amount,
-                        fleteFactura: "",
-                        imptoFactura: subItem.charges[0].tax[0].taxAmount.amount,
-                        totalFactura: item.orderTotal.amount ? item.orderTotal.amount : "",
-                        sku: subItem.item.sku,
-                        SKUDescripcion: subItem.item.productName,
-                        SKUNumParte: "",
-                        cantFact: subItem.orderLineQuantity.amount,
-                        precioUnitario: subItem.item.unitPriceWithoutTax.amount,
-                        imptoUnitario: subItem.charges[0].tax[0].taxAmount.amount,
-                        embarque: "",
-                        entrega: "",
-                        estadoEntrega: "",
-                        medio: medioEmbarque,
-                        guia: item["shipments"][0]["trackingNumber"],
-                        domicilio: "",
-                        colonia: "",
-                        ciudad: "",
-                        estado: "",
-                        cp: "",
-                        detalleUbicacion: "",
-                        emisionPedido: "",
-                        fechaAutorizacion: "",
-                        fechaAsignacion: "",
-                        fechaSalida: "",
-                        fechaEntrega: "",
-                        personaRecibe: "",
-                        personaRecibe2: "",
-                        fechaConfirmacion: "",
-                        observaciones: "",
-                        telefono: "",
-                        telefono2: "",
-                        lote: "",
-                        peso: "",
-                        emailCliente: "",
-                        telefonoCliente: "",
-                        telefono2Cliente: "",
-                        costo: "",
-                        IDSeccion: "",
-                        seccion: "",
-                        IDCategoria: "",
-                        categoria: "",
-                        IDLinea: "",
-                        linea: "",
-                        marketplace: "",
-                        tipoEnvio: subItem.isWFSEnabled ? subItem.isWFSEnabled == "Y" ? "Fulfillment" : subItem.isWFSEnabled == "N" ? "Dropshipping" : "" : "",
-                        shipmentStatus: item["shipments"][0]["status"],
-                        orderLineStatus: subItem.orderLineStatus && subItem.orderLineStatus[0] ? subItem.orderLineStatus[0].status : ""
-                    });
+                try {
 
-                    try {
-
-                        let respuesta = await PedidosWalmart.findOne({ numOrden: pedido.numOrden });
-                        
-                        if(!respuesta){
-                            await pedido.save();
-                            contadorPedidosGrabados++;
-                        }else{
-                            let respuestaUpdate = await PedidosWalmart.updateOne({ numOrden: pedido.numOrden }, { $set: {
-                                IDTienda: 9,
-                                tienda: "WALMART",
-                                IDFuente: 43,
-                                fuente: "WALMART",
-                                pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : "",
-                                formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
-                                factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : "",
-                                fechaFactura: item.orderDate ? item.orderDate : "",
-                                cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
-                                importeFactura: subItem.item.unitPriceWithoutTax.amount,
-                                fleteFactura: "",
-                                imptoFactura: subItem.charges[0].tax[0].taxAmount.amount,
-                                totalFactura: item.orderTotal.amount ? item.orderTotal.amount : "",
-                                sku: subItem.item.sku,
-                                SKUDescripcion: subItem.item.productName,
-                                cantFact: subItem.orderLineQuantity.amount,
-                                precioUnitario: subItem.item.unitPriceWithoutTax.amount,
-                                imptoUnitario: subItem.charges[0].tax[0].taxAmount.amount,
-                                medio: medioEmbarque,
-                                guia: item["shipments"][0]["trackingNumber"],
-                                tipoEnvio: subItem.isWFSEnabled ? subItem.isWFSEnabled == "Y" ? "Fulfillment" : subItem.isWFSEnabled == "N" ? "Dropshipping" : "" : "",
-                                shipmentStatus: item["shipments"][0]["status"],
-                                orderLineStatus: subItem.orderLineStatus && subItem.orderLineStatus[0] ? subItem.orderLineStatus[0].status : ""
-                            }});
-                            contadorPedidosActualizados++;
-                        }
-                    } catch (error) {
-                        serviceBLogger.error("Error al grabar registro: " + error);
-                        serviceBLogger.error(JSON.stringify(item));
+                    let respuesta = await PedidosWalmart.findOne({ numOrden: pedido.numOrden });
+                    
+                    if(!respuesta){
+                        await pedido.save();
+                        contadorPedidosGrabados++;
+                    }else{
+                        let respuestaUpdate = await PedidosWalmart.updateOne({ numOrden: pedido.numOrden }, { $set: {
+                            IDTienda: 9,
+                            tienda: "WALMART",
+                            IDFuente: 43,
+                            fuente: "WALMART",
+                            pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : "",
+                            formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
+                            factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : "",
+                            fechaFactura: item.orderDate ? item.orderDate : "",
+                            cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
+                            importeFactura: subItem.item.unitPriceWithoutTax.amount,
+                            fleteFactura: "",
+                            imptoFactura: subItem.charges[0].tax[0].taxAmount.amount,
+                            totalFactura: item.orderTotal.amount ? item.orderTotal.amount : "",
+                            sku: subItem.item.sku,
+                            SKUDescripcion: subItem.item.productName,
+                            cantFact: subItem.orderLineQuantity.amount,
+                            precioUnitario: subItem.item.unitPriceWithoutTax.amount,
+                            imptoUnitario: subItem.charges[0].tax[0].taxAmount.amount,
+                            medio: medioEmbarque,
+                            guia: item["shipments"][0]["trackingNumber"],
+                            tipoEnvio: subItem.isWFSEnabled ? subItem.isWFSEnabled == "Y" ? "Fulfillment" : subItem.isWFSEnabled == "N" ? "Dropshipping" : "" : "",
+                            shipmentStatus: item["shipments"][0]["status"],
+                            orderLineStatus: subItem.orderLineStatus && subItem.orderLineStatus[0] ? subItem.orderLineStatus[0].status : ""
+                        }});
+                        contadorPedidosActualizados++;
                     }
-
-                // } else {
-                //     serviceBLogger.error("Error, Guia no existe en Next-Cloud: " + guia);
-                // }
+                } catch (error) {
+                    serviceBLogger.error("Error al grabar registro: " + error);
+                    serviceBLogger.error(JSON.stringify(item));
+                }
 
             }
             
         }
 
-        serviceBLogger.info("Total pedidos encontrados: " + pedidosWalmart.length);
-        serviceBLogger.info("Total sub pedidos encontrados: " + contadorSubPedidos);
-        
-        serviceBLogger.info("Total pedidos grabados: " + contadorPedidosGrabados);
-        serviceBLogger.info("Total pedidos Actualizados: " + contadorPedidosActualizados);
-        serviceBLogger.info("Finaliza guardado Walmart en BD");
-        return contadorPedidosGrabados;
+        return [contadorPedidosGrabados, contadorPedidosActualizados];
 
     } catch (error) {
         serviceBLogger.error("Error leyendo elementos: " + error);
