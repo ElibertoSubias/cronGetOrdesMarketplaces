@@ -584,7 +584,8 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                             guia: item["shipments"][0]["trackingNumber"],
                             tipoEnvio: subItem.isWFSEnabled ? subItem.isWFSEnabled == "Y" ? "Fulfillment" : subItem.isWFSEnabled == "N" ? "Dropshipping" : "" : "",
                             shipmentStatus: item["shipments"][0]["status"],
-                            orderLineStatus: subItem.orderLineStatus && subItem.orderLineStatus[0] ? subItem.orderLineStatus[0].status : ""
+                            orderLineStatus: subItem.orderLineStatus && subItem.orderLineStatus[0] ? subItem.orderLineStatus[0].status : "",
+                            IDOrdenNextCloud: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0]._id : ""
                         }});
                         contadorPedidosActualizados++;
                     }
