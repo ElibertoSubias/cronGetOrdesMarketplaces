@@ -680,107 +680,139 @@ exports.getFilters = async (req, res) => {
     const tiposEnvio = await PedidosWalmart.distinct( "tipoEnvio" );
 
     let ordenesConNC = await PedidosWalmart.aggregate([
-        {"$lookup":{
+        // Filtrar documentos de la colección Walmart con IDOrdenNextCloud no nulo
+        { $match: { IDOrdenNextCloud: { $ne: null } } },
+    
+        // Hacer lookup con pedidosnextclouds usando IDOrdenNextCloud
+        {
+            $lookup: {
+                from: "pedidosnextclouds",
+                localField: "IDOrdenNextCloud",
+                foreignField: "_id",
+                as: "pedidosNext"
+            }
+        },
+    
+        // Desanidar resultados de pedidosNext
+        { $unwind: { path: "$pedidosNext", preserveNullAndEmptyArrays: true } },
+    
+        // Hacer lookup con facturasnextclouds usando el campo factura
+        {
+            $lookup: {
+                from: "facturasnextclouds",
+                localField: "factura",
+                foreignField: "folioFactura",
+                as: "facturas"
+            }
+        },
+    
+        // Desanidar resultados de facturas y filtrar aquellos sin coincidencias
+        { $unwind: { path: "$facturas", preserveNullAndEmptyArrays: false } },
+    
+        // Hacer lookup con notascreditonextclouds usando factura como origenFolio
+        {
+            $lookup: {
+                from: "notascreditonextclouds",
+                localField: "factura",
+                foreignField: "origenFolio",
+                as: "notasDeCredito"
+            }
+        },
+    
+        // Desanidar resultados de notasDeCredito y filtrar aquellos sin coincidencias
+        { $unwind: { path: "$notasDeCredito", preserveNullAndEmptyArrays: false } },
+    
+        // Proyectar únicamente el campo numOrden
+        {
+            $project: {
+                _id: 0, // Excluir _id
+                numOrden: 1
+            }
+        },
+    
+        // Agrupar por valores únicos de numOrden
+        {
+            $group: {
+                _id: null,
+                data: { $addToSet: "$numOrden" } // Crear un array con valores únicos
+            }
+        },
+    
+        // Proyectar el resultado final
+        {
+            $project: {
+                _id: 0, // Excluir _id
+                data: 1 // Incluir solo el array de numOrden
+            }
+        }
+    ]);
+    
+    
+
+    const ordenesDuplicadas = await PedidosNextCloud.aggregate([
+        { $match: { marketplace: "WALMART" } },
+        { $group: { _id: "$numOrden", count: { $sum: 1 } } },
+        { $match: { count: { $gt: 1 } } },
+        { $group: { _id: null, ordenesDuplicadas: { $push: "$_id" } } },
+        { $project: { _id: 0, ordenesDuplicadas: 1 } }
+      ], { allowDiskUse: true });
+      
+
+    let result = await PedidosWalmart.aggregate([
+        { 
+          $match: { 
+            IDOrdenNextCloud: { $ne: null }, 
+            ...(startDate && endDate ? { fechaFactura: { $gte: startDate, $lte: endDate } } : {})
+          } 
+        },
+        {
+          $lookup: {
             from: "pedidosnextclouds",
             localField: "IDOrdenNextCloud",
             foreignField: "_id",
             as: "pedidosNext"
-        }},
-        { $unwind: "$pedidosNext" },
-        {"$lookup":{
-            "from":"facturasnextclouds",
-            "localField":"factura",
-            "foreignField":"folioFactura",
-            "as":"facturas"
-        }},
-        { $unwind: "$facturas" },
-        {
-            $addFields: {
-                numOrden: '$numOrden',
-            }
-        },
-        {
-            "$project": {
-                _id: 0,
-                numOrden: 1
-            }
-        },
-        {$group: {_id: null, data: {$addToSet: "$numOrden"}}},
-        {
-            "$project": {
-                _id: 0,
-                data: 1
-            },
-        }
-    ]);
-
-    const ordenesDuplicadas = await PedidosNextCloud.aggregate([
-        {
-          $match: { marketplace: "WALMART" } // Filtra los documentos con marketPlace igual a "Amazon"
-        },
-        {
-          $group: {
-            _id: { numOrden: "$numOrden", marketplace: "$marketplace" }, // Agrupa por numOrden y marketPlace
-            numOrden: { $first: "$numOrden" },
-            count: { $sum: 1 } // Cuenta los documentos en cada grupo
           }
         },
-        {
-          $match: { count: { $gt: 1 } } // Filtra grupos con más de un documento
+        { 
+          $unwind: { path: "$pedidosNext", preserveNullAndEmptyArrays: true } 
         },
         {
+          $addFields: {
+            estatusEmbarque: "$pedidosNext.estadoEntrega",
+            fecha_pedido_marketplace: "$pedidosNext.fechaFactura"
+          }
+        },
+        { 
+          $match: { 
+            estatusEmbarque: { $in: statusEmbarques } 
+          } 
+        },
+        { 
           $group: {
-            _id: null,
-            numOrdenesDuplicadas: { $addToSet: "$numOrden" } // Crea un array único de `numOrden`
+            _id: "$estatusEmbarque",
+            total: { $sum: 1 }
           }
         },
         {
           $project: {
             _id: 0,
-            ordenesDuplicadas: "$numOrdenesDuplicadas" // Solo mantiene el array de `numOrden`
+            estatusEmbarque: "$_id",
+            total: 1
           }
         }
-    ]);
-
-    let ordenesPorStatus = {};
-
-    for(let statusEmbarque of statusEmbarques) {
-        let obj = {};
-        let nombreStatus = statusEmbarque.replace(/\s/g, '').replace('.', '').normalize('NFD').replace(/[\u0300-\u036f]/g,"");
-        // obj[nombreStatus] = await PedidosNextCloud.countDocuments({estadoEntrega: statusEmbarque});
-        let result = await PedidosWalmart.aggregate([
-            {
-                $lookup:
-                {
-                    from: "pedidosnextclouds",
-                    localField: "IDOrdenNextCloud",
-                    foreignField: "_id",
-                    as: "pedidosNext"
-                }
-            },
-            { $unwind: "$pedidosNext" },
-            {
-                $addFields: {
-                    estatusEmbarque: '$pedidosNext.estadoEntrega',
-                    fecha_pedido_next: '$fechaFactura',
-                    fecha_pedido_marketplace: '$pedidosNext.fechaFactura',
-                }
-            },
-            {
-                $match:{
-                    'estatusEmbarque': statusEmbarque,
-                    ...startDate && endDate ? filtroPorFechas : {}
-                }
-            },
-            {
-                $count: "total"
-            }
-        ]);
-
-        ordenesPorStatus[nombreStatus] = result && result[0] && result[0].total ? result[0].total : 0
-        
-        // ordenesPorStatus.push(obj);
-    }
+      ]);
+      
+      // Convertir el resultado en un objeto
+      let ordenesPorStatus = {};
+      for (let item of result) {
+        let nombreStatus = item.estatusEmbarque
+          .replace(/\s/g, '')
+          .replace('.', '')
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, "");
+        ordenesPorStatus[nombreStatus] = item.total;
+      }
+      
 
     res.json({data: {
         statusOrders,
