@@ -652,8 +652,8 @@ exports.getFilters = async (req, res) => {
     let fechaFin = endDate;
 
     if (startDate && endDate) {
-        fechaInicio = moment(startDate).startOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS");
-        fechaFin = moment(endDate).endOf('day').format("YYYY-MM-DDTHH:mm:ss.SSS");
+        fechaInicio = moment(startDate).startOf('day').format("YYYY-MM-DD HH:mm:ss");
+        fechaFin = moment(endDate).endOf('day').format("YYYY-MM-DD HH:mm:ss");
     }
 
     let filtroPorFechas = {
@@ -759,51 +759,84 @@ exports.getFilters = async (req, res) => {
       
 
     let result = await PedidosWalmart.aggregate([
-        { 
-          $match: { 
-            IDOrdenNextCloud: { $ne: null }, 
-            ...(startDate && endDate ? { fechaFactura: { $gte: startDate, $lte: endDate } } : {})
-          } 
-        },
+        // Filtrar pedidos que tienen IDOrdenNextCloud no nulo
         {
-          $lookup: {
-            from: "pedidosnextclouds",
-            localField: "IDOrdenNextCloud",
-            foreignField: "_id",
-            as: "pedidosNext"
-          }
+            $match: {
+                IDOrdenNextCloud: { $ne: null }
+            }
         },
-        { 
-          $unwind: { path: "$pedidosNext", preserveNullAndEmptyArrays: true } 
-        },
+    
+        // Relacionar con pedidosnextclouds
         {
-          $addFields: {
-            estatusEmbarque: "$pedidosNext.estadoEntrega",
-            fecha_pedido_marketplace: "$pedidosNext.fechaFactura"
-          }
+            $lookup: {
+                from: "pedidosnextclouds",
+                localField: "IDOrdenNextCloud",
+                foreignField: "_id",
+                as: "pedidosNext"
+            }
         },
-        { 
-          $match: { 
-            estatusEmbarque: { $in: statusEmbarques } 
-          } 
-        },
-        { 
-          $group: {
-            _id: "$estatusEmbarque",
-            total: { $sum: 1 }
-          }
-        },
+    
+        // Desanidar resultados de pedidosNext y excluir nulos
         {
-          $project: {
-            _id: 0,
-            estatusEmbarque: "$_id",
-            total: 1
-          }
+            $unwind: {
+                path: "$pedidosNext",
+                preserveNullAndEmptyArrays: false
+            }
+        },
+    
+        // Agregar campos adicionales para usar en los filtros y el resultado
+        {
+            $addFields: {
+                estatusEmbarque: "$pedidosNext.estadoEntrega", // Estado del pedido
+                fecha_pedido_next: { 
+                    $dateToString: { 
+                        format: "%Y-%m-%d %H:%M:%S:%L%z", 
+                        date: { 
+                            "$convert": { "input": '$pedidosNext.fechaFactura', "to": "date" } 
+                        }, timezone: 'America/Mazatlan'
+                    }
+                }, // Fecha del pedido
+                fecha_pedido_marketplace: { 
+                    $dateToString: { 
+                        format: "%Y-%m-%d %H:%M:%S:%L%z", 
+                        date: { 
+                            "$convert": { "input": "$fechaFactura", "to": "date" } 
+                        }, timezone: 'America/Mazatlan'
+                    } 
+                } // Fecha del pedido
+            }
+        },
+    
+        // Filtrar por estado de embarque y rango de fechas
+        {
+            $match: {
+                estatusEmbarque: { $in: statusEmbarques }, // Filtrar por estatus
+                ...startDate && endDate ? filtroPorFechas : {}
+            }
+        },
+    
+        // Agrupar por estatus de embarque y contar los totales
+        {
+            $group: {
+                _id: "$estatusEmbarque",
+                total: { $sum: 1 }
+            }
+        },
+    
+        // Proyectar el resultado final con estatus y total
+        {
+            $project: {
+                _id: 0,
+                estatusEmbarque: "$_id",
+                total: 1
+            }
         }
-      ]);
+    ]);
+    
       
       // Convertir el resultado en un objeto
       let ordenesPorStatus = {};
+
       for (let item of result) {
         let nombreStatus = item.estatusEmbarque
           .replace(/\s/g, '')
