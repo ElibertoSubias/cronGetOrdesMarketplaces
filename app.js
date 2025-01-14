@@ -25,7 +25,6 @@ app.use(cors(opcionesCors));
 
 // Rutas de la app
 app.use('/api/conciliacion', require('./routes/conciliacion'));
-app.use('/api/conciliacion-pedidos/v1', require('./routes/pedidos'));
 app.use('/api/marketplace', require('./routes/marketplace'));
 
 // catch 404 and forward to error handler
