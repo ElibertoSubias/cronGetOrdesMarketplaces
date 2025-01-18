@@ -108,6 +108,14 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
 
         serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketplaces.tienda.toUpperCase() + " - Fuente: " + marketplaces.fuente.toUpperCase());
 
+        if (job_conciliacion) {
+            await job_conciliacion.start();
+            serviceBLogger.info("Tarea Conciliación Reiniciada");
+        } else {
+            serviceBLogger.info("Tarea Conciliación iniciada");
+            await this.startJob();
+        }
+
     } else {
         //Para Buscar Pedidos en NEXT-Cloud de Todas las plataformas
         if (!marketplaces || !marketplaces.length) {
@@ -127,6 +135,15 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                 serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
 
             }
+
+            if (job_conciliacion) {
+                await job_conciliacion.start();
+                serviceBLogger.info("Tarea Conciliación Reiniciada");
+            } else {
+                serviceBLogger.info("Tarea Conciliación iniciada");
+                await this.startJob();
+            }
+
         }
 
     }

@@ -34,11 +34,15 @@ app.use(function(req, res, next) {
 
 const port = process.env.PORT || 8001;
 
+async function iniciar(){
+  console.log('ejecutarConciliacion')
+  await ejecutarConciliacion();
+}
+
+iniciar();
 
 app.listen(port, () => {
   console.log(`El servidor esta funcionando en el puerto ${process.env.PORT}`);
-  ejecutarConciliacion();
-  startJob();
 });
 
 
