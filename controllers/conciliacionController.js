@@ -376,7 +376,7 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
             endDateTime = moment(startDateTime).add(12,'hours').format("YYYY-MM-DDTHH:mm:ss.SSS");
 
             result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
-            serviceBLogger.log(result["meta"]["totalCount"]);
+            serviceBLogger.info(result["meta"]["totalCount"]);
             if (result && result["order"] && result["order"].length) {
                 // Guardamos los Pedidos Walmart en BD
                 let resultado = await saveWalmartDataDB(result["order"]); 
@@ -388,7 +388,7 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
             endDateTime = moment(startDateTime).add(12,'hours').format("YYYY-MM-DDTHH:mm:ss.SSS");
 
             result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
-            serviceBLogger.log(result["meta"]["totalCount"]);
+            serviceBLogger.info(result["meta"]["totalCount"]);
             if (result && result["order"] && result["order"].length) {
                 // Guardamos los Pedidos Walmart en BD
                 let resultado = await saveWalmartDataDB(result["order"]);
