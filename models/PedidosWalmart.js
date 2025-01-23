@@ -54,7 +54,7 @@ const PedidosWalmartSchema = mongoose.Schema({
         require: true
     },
     cliente: {
-        type: Number,
+        type: String,
         require: true
     },
     razonSocial: {

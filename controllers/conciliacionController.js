@@ -32,35 +32,35 @@ exports.startJob = async (req, res) => {
     }
 
     // Declaramos Cron Job para encender mediente metodo PUT
-    const task = cron.schedule(
-        process.env.CRON_DEFAULT,
-        async () => {
-            const marketplaces = await MarketPlace.find({status: true});
-            if (!marketplaces || !marketplaces.length) {
-                serviceBLogger.error('No se encontrarón Marketplaces para consultar.');
-            } else {
-                for (let marketPlace of marketplaces) {
-                    serviceBLogger.info("Inicia Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
-                    await main(null, null, marketPlace.tienda.toUpperCase(), marketPlace.fuente.toUpperCase());
-                    serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
-                }
-            }
-        },
-        {
-            scheduled: false,
-        },
-        { name: "conciliacion-job" }
-    );
+    // const task = cron.schedule(
+    //     process.env.CRON_DEFAULT,
+    //     async () => {
+    //         const marketplaces = await MarketPlace.find({status: true});
+    //         if (!marketplaces || !marketplaces.length) {
+    //             serviceBLogger.error('No se encontrarón Marketplaces para consultar.');
+    //         } else {
+    //             for (let marketPlace of marketplaces) {
+    //                 serviceBLogger.info("Inicia Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+    //                 await main(null, null, marketPlace.tienda.toUpperCase(), marketPlace.fuente.toUpperCase());
+    //                 serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+    //             }
+    //         }
+    //     },
+    //     {
+    //         scheduled: false,
+    //     },
+    //     { name: "conciliacion-job" }
+    // );
 
-    url_taskMap["conciliacion"] = task;
+    // url_taskMap["conciliacion"] = task;
 
-    let job_conciliacion = url_taskMap["conciliacion"];
+    // let job_conciliacion = url_taskMap["conciliacion"];
     
-    job_conciliacion.start();
+    // job_conciliacion.start();
 
-    console.log("Job iniciado")
+    // console.log("Job iniciado")
     
-    // res.json({"result": "Job iniciado"});
+    res.json({"result": "Job iniciado"});
 }
 
 exports.stopJob = async (req, res) => {
@@ -75,15 +75,6 @@ exports.stopJob = async (req, res) => {
 exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => {
 
     const marketplaces = await MarketPlace.find({status: true});
-
-    let result = false;
-
-    let job_conciliacion = url_taskMap["conciliacion"];
-
-    if (job_conciliacion) {
-        job_conciliacion.stop();
-        serviceBLogger.info("Tarea Conciliación Detenida");
-    }
 
     if (tienda && fuente) {
         //Para Buscar Pedidos en NEXT-Cloud de una plataforma en especifico
@@ -108,14 +99,6 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
 
         serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketplaces.tienda.toUpperCase() + " - Fuente: " + marketplaces.fuente.toUpperCase());
 
-        if (job_conciliacion) {
-            await job_conciliacion.start();
-            serviceBLogger.info("Tarea Conciliación Reiniciada");
-        } else {
-            serviceBLogger.info("Tarea Conciliación iniciada");
-            await this.startJob();
-        }
-
     } else {
         //Para Buscar Pedidos en NEXT-Cloud de Todas las plataformas
         if (!marketplaces || !marketplaces.length) {
@@ -124,25 +107,43 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
         
             for (let marketPlace of marketplaces) {
 
+                if (marketPlace.tienda.toUpperCase() !== "WALMART") {
+                    continue;
+                }
+
                 serviceBLogger.info("Inicia Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
                 
                 if (fechaInicio && fechaFin) {
-                    await main(fechaInicio, fechaFin, marketPlace.tienda, marketPlace.fuente);
+
+                    await main(fechaInicio, fechaFin, marketPlace.tienda, marketPlace.fuente).then(async (data) => {
+                        
+                        serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+
+                        await sleep(300000);
+                        this.ejecutarConciliacion();
+
+                    }).catch(function(err) {
+                        serviceBLogger.error("Error descargar archivo Excel: " + err);
+                    });
+
                 } else {
-                    await main(null, null, marketPlace.tienda, marketPlace.fuente);
+
+                    await main(null, null, marketPlace.tienda, marketPlace.fuente).then(async (data) => {
+
+                        serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+
+                        await sleep(300000);
+                        this.ejecutarConciliacion();
+
+                    }).catch(function(err) {
+                        serviceBLogger.error("Error descargar archivo Excel: " + err);
+                    });
+
                 }
-                
-                serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
 
             }
 
-            if (job_conciliacion) {
-                await job_conciliacion.start();
-                serviceBLogger.info("Tarea Conciliación Reiniciada");
-            } else {
-                serviceBLogger.info("Tarea Conciliación iniciada");
-                await this.startJob();
-            }
+            
 
         }
 
@@ -260,9 +261,9 @@ const getDataByCursor = async (cursor, fechaInicio, fechaFin) => {
 
     const url = `${process.env.BASE_URL_PLATAFORMA_WALMARTH}/orders/wfsorders/cursor?createdStartDate=${fechaInicio}&createdEndDate=${fechaFin}&limit=100&cursorMark=${cursor}`;
 
-    await sleep(10000);
-
     const token = await getToken(); 
+
+    await sleep(5000);
 
     try {
 
@@ -428,9 +429,9 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
 
     const url = `${process.env.BASE_URL_PLATAFORMA_WALMARTH}/orders?createdStartDate=${fechaInicio}&createdEndDate=${fechaFin}&limit=100`;
 
-    await sleep(10000);
-
     const token = await getToken(); 
+
+    await sleep(5000);
 
     try {
 
@@ -517,7 +518,7 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                     formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
                     factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : 0,
                     fechaFactura: item.orderDate ? item.orderDate : "",
-                    cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
+                    cliente: item["shippingInfo"] && item["shippingInfo"]["postalAddress"] && item["shippingInfo"]["postalAddress"]["name"] ? item["shippingInfo"]["postalAddress"]["name"] : "",
                     razonSocial: "",
                     estadoFactura: "",
                     importeFactura: subItem.item.unitPriceWithoutTax.amount,
@@ -587,7 +588,7 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                             formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
                             factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : "",
                             fechaFactura: item.orderDate ? item.orderDate : "",
-                            cliente: item["shipments"] && item["shipments"]["postalAddress"] && item["shipments"]["postalAddress"]["name"] ? item["shipments"]["postalAddress"]["name"] : "",
+                            cliente: item["shippingInfo"] && item["shippingInfo"]["postalAddress"] && item["shippingInfo"]["postalAddress"]["name"] ? item["shippingInfo"]["postalAddress"]["name"] : "",
                             importeFactura: subItem.item.unitPriceWithoutTax.amount,
                             fleteFactura: "",
                             imptoFactura: subItem.charges[0].tax[0].taxAmount.amount,
