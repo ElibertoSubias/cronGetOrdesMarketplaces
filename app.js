@@ -35,8 +35,8 @@ app.use(function(req, res, next) {
 const port = process.env.PORT || 8001;
 
 async function iniciar(){
-  console.log('ejecutarConciliacion')
-  await ejecutarConciliacion();
+  // console.log('ejecutarConciliacion')
+  // await ejecutarConciliacion();
 }
 
 iniciar();

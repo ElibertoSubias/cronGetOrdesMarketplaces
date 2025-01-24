@@ -32,33 +32,33 @@ exports.startJob = async (req, res) => {
     }
 
     // Declaramos Cron Job para encender mediente metodo PUT
-    // const task = cron.schedule(
-    //     process.env.CRON_DEFAULT,
-    //     async () => {
-    //         const marketplaces = await MarketPlace.find({status: true});
-    //         if (!marketplaces || !marketplaces.length) {
-    //             serviceBLogger.error('No se encontrarón Marketplaces para consultar.');
-    //         } else {
-    //             for (let marketPlace of marketplaces) {
-    //                 serviceBLogger.info("Inicia Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
-    //                 await main(null, null, marketPlace.tienda.toUpperCase(), marketPlace.fuente.toUpperCase());
-    //                 serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
-    //             }
-    //         }
-    //     },
-    //     {
-    //         scheduled: false,
-    //     },
-    //     { name: "conciliacion-job" }
-    // );
+    const task = cron.schedule(
+        process.env.CRON_DEFAULT,
+        async () => {
+            const marketplaces = await MarketPlace.find({status: true});
+            if (!marketplaces || !marketplaces.length) {
+                serviceBLogger.error('No se encontrarón Marketplaces para consultar.');
+            } else {
+                for (let marketPlace of marketplaces) {
+                    serviceBLogger.info("Inicia Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+                    await main(null, null, marketPlace.tienda.toUpperCase(), marketPlace.fuente.toUpperCase());
+                    serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+                }
+            }
+        },
+        {
+            scheduled: false,
+        },
+        { name: "conciliacion-job" }
+    );
 
-    // url_taskMap["conciliacion"] = task;
+    url_taskMap["conciliacion"] = task;
 
-    // let job_conciliacion = url_taskMap["conciliacion"];
+    let job_conciliacion = url_taskMap["conciliacion"];
     
-    // job_conciliacion.start();
+    job_conciliacion.start();
 
-    // console.log("Job iniciado")
+    console.log("Job iniciado")
     
     res.json({"result": "Job iniciado"});
 }
@@ -119,8 +119,8 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                         
                         serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
 
-                        await sleep(300000);
-                        this.ejecutarConciliacion();
+                        // await sleep(300000);
+                        // this.ejecutarConciliacion();
 
                     }).catch(function(err) {
                         serviceBLogger.error("Error descargar archivo Excel: " + err);
@@ -132,8 +132,8 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
 
                         serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
 
-                        await sleep(300000);
-                        this.ejecutarConciliacion();
+                        // await sleep(300000);
+                        // this.ejecutarConciliacion();
 
                     }).catch(function(err) {
                         serviceBLogger.error("Error descargar archivo Excel: " + err);
