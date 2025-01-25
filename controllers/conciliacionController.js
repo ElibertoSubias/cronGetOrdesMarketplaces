@@ -119,8 +119,8 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                         
                         serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
 
-                        // await sleep(300000);
-                        // this.ejecutarConciliacion();
+                        await sleep(300000);
+                        this.ejecutarConciliacion();
 
                     }).catch(function(err) {
                         serviceBLogger.error("Error descargar archivo Excel: " + err);
@@ -132,8 +132,8 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
 
                         serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
 
-                        // await sleep(300000);
-                        // this.ejecutarConciliacion();
+                        await sleep(300000);
+                        this.ejecutarConciliacion();
 
                     }).catch(function(err) {
                         serviceBLogger.error("Error descargar archivo Excel: " + err);
