@@ -169,7 +169,7 @@ const main = async (fechaInicio, fechaFin, tienda, fuente) => {
     // Una vez guardada la info de Next-Cloud podemos proseguir
     // con la información de Marketplace
     fechaInicioMarketplace = fechaInicio ? fechaInicio : moment( moment().subtract(parseInt(process.env.DIAS_A_CONCILIAR), 'days') ).format("YYYY-MM-DD");
-    fechaFinMarketplace = fechaFin ? fechaFin : moment().format("YYYY-MM-DD");
+    fechaFinMarketplace = fechaFin ? fechaFin : moment().add(1, 'days').format("YYYY-MM-DD");
     fechaInicioMarketplace = moment( fechaInicioMarketplace ).set({ hour: 0, minute: 0, second: 0 }).format("YYYY-MM-DD HH:mm:ss");
     fechaFinMarketplace = moment(fechaFinMarketplace).set({ hour: moment().hour(), minute: moment().minute(), second: moment().second() }).format("YYYY-MM-DD HH:mm:ss");
 
