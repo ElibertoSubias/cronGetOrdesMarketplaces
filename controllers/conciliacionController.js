@@ -261,9 +261,9 @@ const getDataByCursor = async (cursor, fechaInicio, fechaFin) => {
 
     const url = `${process.env.BASE_URL_PLATAFORMA_WALMARTH}/orders/wfsorders/cursor?createdStartDate=${fechaInicio}&createdEndDate=${fechaFin}&limit=100&cursorMark=${cursor}`;
 
-    const token = await getToken(); 
-
     await sleep(5000);
+
+    const token = await getToken(); 
 
     try {
 
@@ -429,9 +429,9 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
 
     const url = `${process.env.BASE_URL_PLATAFORMA_WALMARTH}/orders?createdStartDate=${fechaInicio}&createdEndDate=${fechaFin}&limit=100`;
 
-    const token = await getToken(); 
-
     await sleep(5000);
+
+    const token = await getToken();
 
     try {
 
@@ -459,7 +459,7 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
             }
         })
         .catch(error => {
-            serviceBLogger.error("Error 01 en consumo de API: " + error);
+            serviceBLogger.error("Error 02 en consumo de API: " + error);
             return null;
         });
         
