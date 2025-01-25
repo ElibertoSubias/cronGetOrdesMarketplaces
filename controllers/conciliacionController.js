@@ -120,7 +120,7 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                         
                             serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
     
-                            await sleep(300000);
+                            await sleep(1200000);
                             this.ejecutarConciliacion();
     
                         }).catch(function(err) {
@@ -137,7 +137,7 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
 
                             serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
     
-                            await sleep(300000);
+                            await sleep(1200000);
                             this.ejecutarConciliacion();
     
                         }).catch(function(err) {
