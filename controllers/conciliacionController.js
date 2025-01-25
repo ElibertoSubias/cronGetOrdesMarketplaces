@@ -261,7 +261,7 @@ const getDataByCursor = async (cursor, fechaInicio, fechaFin) => {
 
     const url = `${process.env.BASE_URL_PLATAFORMA_WALMARTH}/orders/wfsorders/cursor?createdStartDate=${fechaInicio}&createdEndDate=${fechaFin}&limit=100&cursorMark=${cursor}`;
 
-    await sleep(5000);
+    await sleep(1200000);
 
     const token = await getToken(); 
 
@@ -429,7 +429,7 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
 
     const url = `${process.env.BASE_URL_PLATAFORMA_WALMARTH}/orders?createdStartDate=${fechaInicio}&createdEndDate=${fechaFin}&limit=100`;
 
-    await sleep(5000);
+    await sleep(1200000);
 
     const token = await getToken();
 
