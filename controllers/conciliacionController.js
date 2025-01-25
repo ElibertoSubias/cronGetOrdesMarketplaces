@@ -115,29 +115,37 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                 
                 if (fechaInicio && fechaFin) {
 
-                    await main(fechaInicio, fechaFin, marketPlace.tienda, marketPlace.fuente).then(async (data) => {
+                    try {
+                        await main(fechaInicio, fechaFin, marketPlace.tienda, marketPlace.fuente).then(async (data) => {
                         
-                        serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
-
-                        await sleep(300000);
-                        this.ejecutarConciliacion();
-
-                    }).catch(function(err) {
-                        serviceBLogger.error("Error descargar archivo Excel: " + err);
-                    });
+                            serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+    
+                            await sleep(300000);
+                            this.ejecutarConciliacion();
+    
+                        }).catch(function(err) {
+                            serviceBLogger.error("Error al consumir main: " + err);
+                        });
+                    } catch (error) {
+                        serviceBLogger.error("Error al ejecutar main: " + err);
+                    }
 
                 } else {
 
-                    await main(null, null, marketPlace.tienda, marketPlace.fuente).then(async (data) => {
+                    try {
+                        await main(null, null, marketPlace.tienda, marketPlace.fuente).then(async (data) => {
 
-                        serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
-
-                        await sleep(300000);
-                        this.ejecutarConciliacion();
-
-                    }).catch(function(err) {
-                        serviceBLogger.error("Error descargar archivo Excel: " + err);
-                    });
+                            serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
+    
+                            await sleep(300000);
+                            this.ejecutarConciliacion();
+    
+                        }).catch(function(err) {
+                            serviceBLogger.error("Error al consumir main: " + err);
+                        });
+                    } catch (error) {
+                        serviceBLogger.error("Error al ejecutar main: " + err);
+                    }
 
                 }
 
@@ -286,7 +294,8 @@ const getDataByCursor = async (cursor, fechaInicio, fechaFin) => {
             if (data["meta"] && data["meta"]["nextCursorMark"]) {
                 return data;
             } else {
-                serviceBLogger.error("Error al consumir API Walmart: " + cursor + " . Error: " + JSON.stringify(data));
+                serviceBLogger.error("Error al consumir API Walmart: " + cursor + ", Error: " + JSON.stringify(data));
+                serviceBLogger.error("API Request: " + cursor + ", Error: " + JSON.stringify(request));
                 return null;
             }
         })
@@ -367,7 +376,10 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
 
         // Consultar API 
         let result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
-        serviceBLogger.info("Siguiente consulta: " + startDateTime + "-" + endDateTime + " -> " + result["meta"]["totalCount"]);
+
+        if (result && result["meta"]) {
+            serviceBLogger.info("Siguiente consulta: " + startDateTime + "-" + endDateTime + " -> " + result["meta"]["totalCount"]);
+        }
 
         // Validar si se agrega un dia extra para la sigueinte consulta o se divide en dos 
 
@@ -377,8 +389,9 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
             endDateTime = moment(startDateTime).add(12,'hours').format("YYYY-MM-DDTHH:mm:ss.SSS");
 
             result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
-            serviceBLogger.info(result["meta"]["totalCount"]);
+            
             if (result && result["order"] && result["order"].length) {
+                serviceBLogger.info(result["meta"]["totalCount"]);
                 // Guardamos los Pedidos Walmart en BD
                 let resultado = await saveWalmartDataDB(result["order"]); 
                 totalPedidosGrabados += resultado[0];
@@ -389,8 +402,9 @@ const getWalmartDataByRangeDate = async (fechaInicio, fechaFin) => {
             endDateTime = moment(startDateTime).add(12,'hours').format("YYYY-MM-DDTHH:mm:ss.SSS");
 
             result = await getDataByDate(cursorActual, startDateTime + "+0000", endDateTime + "+0000");
-            serviceBLogger.info(result["meta"]["totalCount"]);
+            
             if (result && result["order"] && result["order"].length) {
+                serviceBLogger.info(result["meta"]["totalCount"]);
                 // Guardamos los Pedidos Walmart en BD
                 let resultado = await saveWalmartDataDB(result["order"]);
                 totalPedidosGrabados += resultado[0];
@@ -454,18 +468,19 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
             if (data["meta"] && data["meta"]["nextCursorMark"]) {
                 return data;
             } else {
-                serviceBLogger.error("Error al consumir API Walmart: " + cursor + " . Error: " + JSON.stringify(data));
-                return null;
+                serviceBLogger.error("Error al consumir API Walmart: " + cursor + ", Error: " + JSON.stringify(data));
+                serviceBLogger.error("API Request: " + cursor + ", Error: " + JSON.stringify(request));
+                return [];
             }
         })
         .catch(error => {
             serviceBLogger.error("Error 02 en consumo de API: " + error);
-            return null;
+            return [];
         });
         
     } catch (error) {
         serviceBLogger.error("Error 02 en consumo de API: " + error);
-        return null;
+        return [];
     }
 }
 
