@@ -8,6 +8,10 @@ const { v4: uuidv4 } = require('uuid');
 const Conciliacion = require('../models/Conciliacion');
 require('../util/logger.js');
 const winston = require('winston');
+const Cookies = require('js-cookie');
+const Axios = require('axios');
+const { header } = require('express-validator');
+const cheerio = require('cheerio');
 
 const serviceBLogger = winston.loggers.get('serviceBLogger');
 
@@ -72,7 +76,72 @@ exports.stopJob = async (req, res) => {
     res.json({"result": "Job detenido"});
 }
 
+function htmlToJson(html) {
+    const $ = cheerio.load(html);
+    const rowHeader = [];
+    const data = [];
+    $('table tr').each((i, row) => {
+        if (i == 13) {
+            $(row).find('td').each((j, cell) => {
+                let valor = $(cell).text().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace('.', '').replace(/\s/g, '').replace('.', '');
+                if (valor.length) {
+                    rowHeader.push(valor);
+                }
+            });
+        } 
+    });
+
+    $('table tr').each((i, row) => {
+        if (i > 13) {
+            // for(let columna of rowHeader) {
+            //     data[columna] = 
+            // }
+            let obj = {};
+            $(row).find('td').each((j, cell) => {
+                if (cell.attribs && cell.attribs["data-tableuuid"]) {
+                    let valor = $(cell).text().trim();
+                    if (valor.length) {
+                        obj[rowHeader[j-1]] = valor;
+                        console.log(obj);
+                    }
+                    if (rowHeader[j-1] == "Linea") {
+                        data.push(obj);
+                    }   
+                }
+            });
+        } 
+    });
+
+    return JSON.stringify(data);
+  }
+
 exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => {
+
+    let JSESSIONID = 'AB88754D9F57C0511D109D6DB6F5AF47';
+    let idFormulario = '';
+    let idValidacion = '';
+
+    let response = await getIDFormulario(JSESSIONID);
+    
+    if (response && response.status == 200) {
+        idFormulario = response.requestId;
+        response = await getIDValidador(JSESSIONID, idFormulario);
+        if (response && response.status == 200) {
+            idValidacion = response.id;
+            if (response && response.status == 200) {
+                response = await getDataFormulario(JSESSIONID, idFormulario, idValidacion);
+                if (response && response.status == 200) {
+                    console.log(htmlToJson(response.data));
+                }
+            }
+        } else {
+            console.log("Error al obtener ID de validación");
+        }
+    } else {
+        console.log("Error al obtener ID para formulario");
+    }
+
+    return;
 
     const marketplaces = await MarketPlace.find({status: true});
 
@@ -258,6 +327,292 @@ const getToken = async () => {
     }
 
 }
+
+/**
+ * Obtiene ID de Request de formulario
+ * @returns Token
+ */
+const getIDFormulario = async (JSESSIONID) => {
+
+    const url = `https://jasper.next-cloud.mx:8443/jasperserver-pro/rest_v2/reportExecutions`;
+
+    try {
+
+        let response = await Axios({
+            method: 'POST',
+            url: url,
+            headers: {
+                Cookie: `ajs_anonymous_id=%22302b80f5-96de-4039-af94-cc0c609b7347%22;userLocale=en; userTimezone=UTC;JSESSIONID=${JSESSIONID};`,
+                "Accept": "application/json",
+                "Accept-Language": "en",
+                "Cache-Control": "no-cache, no-store",
+                "Connection": "keep-alive",
+                "Content-Type": "application/json",
+                "Origin": "application/json",
+                "Pragma": "no-cache",
+                "Referer": "https://empresas.next-cloud.mx",
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-site",
+                "Sec-Fetch-Dest": "empty",
+                "X-Remote-Domain": "https://empresas.next-cloud.mx"
+            },
+            data: {
+                "reportUnitUri": "/reports/Pedidos_por_Sitio_sf",
+                "async": true,
+                "allowInlineScripts": false,
+                "markupType": "embeddable",
+                "interactive": true,
+                "freshData": false,
+                "saveDataSnapshot": false,
+                "transformerKey": null,
+                "pages": 1,
+                "attachmentsPrefix": "https://jasper.next-cloud.mx:8443/jasperserver-pro/rest_v2/reportExecutions/{reportExecutionId}/exports/{exportExecutionId}/attachments/",
+                "baseUrl": "https://jasper.next-cloud.mx:8443/jasperserver-pro",
+                "parameters": {
+                    "reportParameter": [
+                        {
+                            "name": "titulo",
+                            "value": ["Pedidos_por_Sitio"]
+                        },
+                        {
+                            "name": "cnx",
+                            "value": ["easyshop"]
+                        },
+                        {
+                            "name": "emp",
+                            "value": ["1"]
+                        },
+                        {
+                            "name": "token",
+                            "value": ["D7C190B7-FED2-6C64-E99C1A9C39ACBBC4"]
+                        },
+                        {
+                            "name": "file",
+                            "value": ["rep_ped_xsitio"]
+                        },
+                        {
+                            "name": "subdominio",
+                            "value": ["empresas.next-cloud.mx"]
+                        },
+                        {
+                            "name": "uid",
+                            "value": ["botb2b"]
+                        },
+                        {
+                            "name": "id",
+                            "value": ["1142"]
+                        },
+                        {
+                            "name": "tienda_1",
+                            "value": ["3"]
+                        },
+                        {
+                            "name": "fuente_1",
+                            "value": ["3A38"]
+                        },
+                        {
+                            "name": "tipo_1",
+                            "value": ["C"]
+                        },
+                        {
+                            "name": "medio_1",
+                            "value": ["0"]
+                        },
+                        {
+                            "name": "formato_1",
+                            "value": ["JX"]
+                        },
+                        {
+                            "name": "id_uid",
+                            "value": ["285"]
+                        },
+                        {
+                            "name": "rnd",
+                            "value": ["5155"]
+                        },
+                        {
+                            "name": "s3Path",
+                            "value": ["https://s3-us-west-2.amazonaws.com/s3-next-cloud/easyshop/"]
+                        },
+                        {
+                            "name": "emp_id",
+                            "value": ["1"]
+                        },
+                        {
+                            "name": "pswJasper",
+                            "value": ["jasper"]
+                        },
+                        {
+                            "name": "dominio",
+                            "value": ["https://jasper.next-cloud.mx:8443"]
+                        },
+                        {
+                            "name": "TituloReal",
+                            "value": ["Pedidos por Sitio"]
+                        },
+                        {
+                            "name": "f1",
+                            "value": ["20250208"]
+                        },
+                        {
+                            "name": "f2",
+                            "value": ["20250208"]
+                        }
+                    ]
+                }
+            }
+        }).then(response => {
+            if (response.status == 200) {
+                return {
+                    status: 200,
+                    requestId: response.data.requestId
+                };
+            } else if (response.status == 401) {
+                return {
+                    status: 401
+                }
+            } else {
+                return {
+                    status: response.status
+                }
+            }
+        }).catch(function(err) {
+            serviceBLogger.error("Error 01: " + err);
+            return null;
+        });
+        return response;
+
+    } catch (error) {
+        serviceBLogger.error("Error 02: " + error);
+        return null;
+    }
+
+}
+
+/**
+ * Obtiene ID de Validacion de formulario
+ * @returns Token
+ */
+const getIDValidador = async (JSESSIONID, idFormulario) => {
+
+    const url = `https://jasper.next-cloud.mx:8443/jasperserver-pro/rest_v2/reportExecutions/${idFormulario}/exports`;
+
+    try {
+
+        let response = await Axios({
+            method: 'POST',
+            url: url,
+            headers: {
+                Cookie: `ajs_anonymous_id=%22302b80f5-96de-4039-af94-cc0c609b7347%22;userLocale=en; userTimezone=UTC;JSESSIONID=${JSESSIONID};`,
+                "Accept": "application/json",
+                "Accept-Language": "en",
+                "Cache-Control": "no-cache, no-store",
+                "Connection": "keep-alive",
+                "Content-Type": "application/json",
+                "Origin": "application/json",
+                "Pragma": "no-cache",
+                "Referer": "https://empresas.next-cloud.mx",
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-site",
+                "Sec-Fetch-Dest": "empty",
+                "X-Remote-Domain": "https://empresas.next-cloud.mx"
+            },
+            data: {
+                "outputFormat": "html",
+                "pages": 1,
+                "attachmentsPrefix": "https://jasper.next-cloud.mx:8443/jasperserver-pro/rest_v2/reportExecutions/{reportExecutionId}/exports/{exportExecutionId}/attachments/",
+                "allowInlineScripts": false,
+                "markupType": "embeddable",
+                "baseUrl": "https://jasper.next-cloud.mx:8443/jasperserver-pro",
+                "clearContextCache": true
+            }
+        }).then(response => {
+            if (response.status == 200) {
+                return {
+                    status: 200,
+                    id: response.data.id
+                };
+            } else if (response.status == 401) {
+                return {
+                    status: 401
+                }
+            } else {
+                return {
+                    status: response.status
+                }
+            }
+        }).catch(function(err) {
+            serviceBLogger.error("Error 01: " + err);
+            return null;
+        });
+        return response;
+
+    } catch (error) {
+        serviceBLogger.error("Error 02: " + error);
+        return null;
+    }
+
+}
+
+/**
+ * Obtiene Data de Formulario
+ * @returns Token
+ */
+const getDataFormulario = async (JSESSIONID, idFormulario, idValidacion) => {
+
+    const url = `https://jasper.next-cloud.mx:8443/jasperserver-pro/rest_v2/reportExecutions/${idFormulario}/exports/${idValidacion}/outputResource`;
+
+    try {
+
+        let response = await Axios({
+            method: 'GET',
+            url: url,
+            headers: {
+                Cookie: `ajs_anonymous_id=%22302b80f5-96de-4039-af94-cc0c609b7347%22;userLocale=en; userTimezone=UTC;JSESSIONID=${JSESSIONID};`,
+                "Accept": "text/html, application/json",
+                "Accept-Language": "en",
+                "Cache-Control": "no-cache, no-store",
+                "Connection": "keep-alive",
+                "Origin": "application/json",
+                "Pragma": "no-cache",
+                "Referer": "https://empresas.next-cloud.mx",
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-site",
+                "Sec-Fetch-Dest": "empty",
+                "X-Remote-Domain": "https://empresas.next-cloud.mx"
+            }
+        }).then(response => {
+            if (response.status == 200) {
+                return {
+                    status: 200,
+                    data: response.data
+                };
+            } else if (response.status == 401) {
+                return {
+                    status: 401
+                }
+            } else {
+                return {
+                    status: response.status
+                }
+            }
+        }).catch(function(err) {
+            console.log(err);
+            serviceBLogger.error("Error 01: " + err);
+            return null;
+        });
+        return response;
+
+    } catch (error) {
+        serviceBLogger.error("Error 02: " + error);
+        return null;
+    }
+
+}
+
 
 /**
  * Consume API de Walmart las N veces necesarias
