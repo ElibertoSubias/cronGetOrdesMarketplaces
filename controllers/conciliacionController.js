@@ -117,28 +117,34 @@ function htmlToJson(html) {
 
 exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => {
 
-    let JSESSIONID = 'AB88754D9F57C0511D109D6DB6F5AF47';
+    let JSESSIONID = '';
     let idFormulario = '';
     let idValidacion = '';
 
-    let response = await getIDFormulario(JSESSIONID);
-    
+    let response = await getJSESSIONID();
     if (response && response.status == 200) {
-        idFormulario = response.requestId;
-        response = await getIDValidador(JSESSIONID, idFormulario);
+        
+        JSESSIONID = response.JSESSIONID;
+
+        response = await getIDFormulario(JSESSIONID);
+    
         if (response && response.status == 200) {
-            idValidacion = response.id;
+            idFormulario = response.requestId;
+            response = await getIDValidador(JSESSIONID, idFormulario);
             if (response && response.status == 200) {
-                response = await getDataFormulario(JSESSIONID, idFormulario, idValidacion);
+                idValidacion = response.id;
                 if (response && response.status == 200) {
-                    console.log(htmlToJson(response.data));
+                    response = await getDataFormulario(JSESSIONID, idFormulario, idValidacion);
+                    if (response && response.status == 200) {
+                        console.log(htmlToJson(response.data));
+                    }
                 }
+            } else {
+                console.log("Error al obtener ID de validación");
             }
         } else {
-            console.log("Error al obtener ID de validación");
+            console.log("Error al obtener ID para formulario");
         }
-    } else {
-        console.log("Error al obtener ID para formulario");
     }
 
     return;
@@ -589,6 +595,62 @@ const getDataFormulario = async (JSESSIONID, idFormulario, idValidacion) => {
                 return {
                     status: 200,
                     data: response.data
+                };
+            } else if (response.status == 401) {
+                return {
+                    status: 401
+                }
+            } else {
+                return {
+                    status: response.status
+                }
+            }
+        }).catch(function(err) {
+            console.log(err);
+            serviceBLogger.error("Error 01: " + err);
+            return null;
+        });
+        return response;
+
+    } catch (error) {
+        serviceBLogger.error("Error 02: " + error);
+        return null;
+    }
+
+}
+
+/**
+ * Obtiene Data de Formulario
+ * @returns Token
+ */
+const getJSESSIONID = async (JSESSIONID, idFormulario, idValidacion) => {
+
+    const url = `https://jasper.next-cloud.mx:8443/jasperserver-pro/j_spring_security_check?j_username=easyshop&j_password=jasper&orgId=organization_1&userLocale=en&userTimezone=UTC`;
+
+    try {
+
+        let response = await Axios({
+            method: 'GET',
+            url: url,
+            headers: {
+                "Accept": "application/json",
+                "Accept-Language": "en",
+                "Cache-Control": "no-cache, no-store",
+                "Connection": "keep-alive",
+                "Origin": "application/json",
+                "Pragma": "no-cache",
+                "Referer": "https://empresas.next-cloud.mx",
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-site",
+                "Sec-Fetch-Dest": "empty",
+                "X-Remote-Domain": "https://empresas.next-cloud.mx"
+            }
+        }).then(response => {
+            if (response.status == 200) {
+                return {
+                    status: 200,
+                    JSESSIONID: response.request.res.responseUrl.split("=")[1]
                 };
             } else if (response.status == 401) {
                 return {
