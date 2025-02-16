@@ -121,7 +121,7 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                             serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
     
                             // await sleep(1200000);
-                            this.ejecutarConciliacion();
+                            await this.startJob();
     
                         }).catch(function(err) {
                             serviceBLogger.error("Error al consumir main: " + err);
@@ -138,7 +138,7 @@ exports.ejecutarConciliacion = async (fechaInicio, fechaFin, tienda, fuente) => 
                             serviceBLogger.info("Finaliza Conciliación de Tienda: " + marketPlace.tienda.toUpperCase() + " - Fuente: " + marketPlace.fuente.toUpperCase());
     
                             // await sleep(1200000);
-                            this.ejecutarConciliacion();
+                            await this.startJob();
     
                         }).catch(function(err) {
                             serviceBLogger.error("Error al consumir main: " + err);
