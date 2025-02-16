@@ -486,7 +486,8 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
 }
 
 const convertirFechaUTC = (fechaString) => {
-    const [dia, mes, anio, hora, minutos] = fechaString.split(/[/ :]/);
+    let fecha = momentTimeZone.tz(fechaString, "Pacific/Auckland").toString();
+    const [dia, mes, anio, hora, minutos] = fecha.split(/[/ :]/);
     return new Date(Date.UTC(anio, mes - 1, dia, hora ? hora : 0, minutos ? minutos : 0));
 }
 
@@ -538,7 +539,7 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                     pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : 0,
                     formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
                     factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : 0,
-                    fechaFactura: item.orderDate ? momentTimeZone.tz(item.orderDate, "America/Los_Angeles").format() : "",
+                    fechaFactura: item.orderDate ? convertirFechaUTC(item.orderDate) : "",
                     cliente: item["shippingInfo"] && item["shippingInfo"]["postalAddress"] && item["shippingInfo"]["postalAddress"]["name"] ? item["shippingInfo"]["postalAddress"]["name"] : "",
                     razonSocial: "",
                     estadoFactura: "",
@@ -608,7 +609,7 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                             pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : "",
                             formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
                             factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : "",
-                            fechaFactura: item.orderDate ? momentTimeZone.tz(item.orderDate, "America/Los_Angeles").format() : "",
+                            fechaFactura: item.orderDate ? convertirFechaUTC(item.orderDate) : "",
                             cliente: item["shippingInfo"] && item["shippingInfo"]["postalAddress"] && item["shippingInfo"]["postalAddress"]["name"] ? item["shippingInfo"]["postalAddress"]["name"] : "",
                             importeFactura: subItem.item.unitPriceWithoutTax.amount,
                             fleteFactura: "",
