@@ -50,7 +50,7 @@ const PedidosWalmartSchema = mongoose.Schema({
         require: true
     },
     fechaFactura: {
-        type: String,
+        type: Date,
         require: true
     },
     cliente: {
