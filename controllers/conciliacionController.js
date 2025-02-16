@@ -8,6 +8,7 @@ const { v4: uuidv4 } = require('uuid');
 const Conciliacion = require('../models/Conciliacion');
 require('../util/logger.js');
 const winston = require('winston');
+const momentTimeZone = require('moment-timezone');
 
 const serviceBLogger = winston.loggers.get('serviceBLogger');
 
@@ -537,7 +538,7 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                     pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : 0,
                     formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
                     factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : 0,
-                    fechaFactura: item.orderDate ? convertirFechaUTC(item.orderDate) : "",
+                    fechaFactura: item.orderDate ? momentTimeZone.tz(item.orderDate, "America/Mazatlan").format() : "",
                     cliente: item["shippingInfo"] && item["shippingInfo"]["postalAddress"] && item["shippingInfo"]["postalAddress"]["name"] ? item["shippingInfo"]["postalAddress"]["name"] : "",
                     razonSocial: "",
                     estadoFactura: "",
@@ -607,7 +608,7 @@ const saveWalmartDataDB = async (pedidosWalmart) => {
                             pedido: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].pedido : "",
                             formadePago: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].formadePago : "",
                             factura: detallePedidoWalmart && detallePedidoWalmart[0] ? detallePedidoWalmart[0].factura : "",
-                            fechaFactura: item.orderDate ? convertirFechaUTC(item.orderDate) : "",
+                            fechaFactura: item.orderDate ? momentTimeZone.tz(item.orderDate, "America/Mazatlan").format() : "",
                             cliente: item["shippingInfo"] && item["shippingInfo"]["postalAddress"] && item["shippingInfo"]["postalAddress"]["name"] ? item["shippingInfo"]["postalAddress"]["name"] : "",
                             importeFactura: subItem.item.unitPriceWithoutTax.amount,
                             fleteFactura: "",
