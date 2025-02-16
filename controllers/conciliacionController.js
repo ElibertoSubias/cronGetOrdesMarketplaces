@@ -486,9 +486,8 @@ const getDataByDate = async (cursor, fechaInicio, fechaFin) => {
 }
 
 const convertirFechaUTC = (fechaString) => {
-    let fecha = momentTimeZone.tz(fechaString, "Pacific/Auckland").toString();
-    const [dia, mes, anio, hora, minutos] = fecha.split(/[/ :]/);
-    return new Date(Date.UTC(anio, mes - 1, dia, hora ? hora : 0, minutos ? minutos : 0));
+    let fecha = new Date(fechaString);
+    return fecha;
 }
 
 /**
